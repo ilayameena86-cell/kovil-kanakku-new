@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ta"><head>
+<meta name="theme-color" content="#5b0309"/>
+<link rel="stylesheet" href="../css/app.css"/>
+<script src="../js/app.js" defer></script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>புதிய நிர்வாகி சேர்த்தல் - கோவில் கணக்கு</title>
+<!-- Google Fonts: Noto Serif Tamil, Noto Sans Tamil & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&amp;family=Noto+Serif+Tamil:wght@600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#410004",
+            "on-surface": "#1c1c18",
+            "on-primary-fixed-variant": "#842322",
+            "surface-dim": "#dcdad4",
+            "secondary-fixed-dim": "#fbbb56",
+            "primary-container": "#7a1c1c",
+            "background": "#fcf9f3",
+            "surface-tint": "#a43b37",
+            "surface-container": "#f0eee8",
+            "inverse-primary": "#ffb3ad",
+            "inverse-on-surface": "#f3f0ea",
+            "outline": "#8a716f",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#0d512f",
+            "primary": "#5b0309",
+            "on-tertiary-container": "#79b98e",
+            "on-secondary-container": "#734c00",
+            "on-secondary-fixed": "#291800",
+            "on-background": "#1c1c18",
+            "inverse-surface": "#31312d",
+            "on-primary-container": "#ff8981",
+            "secondary-container": "#febd59",
+            "on-primary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "primary-fixed": "#ffdad7",
+            "surface": "#fcf9f3",
+            "surface-bright": "#fcf9f3",
+            "surface-variant": "#e5e2dc",
+            "surface-container-high": "#ebe8e2",
+            "on-error-container": "#93000a",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#94d5a7",
+            "on-secondary-fixed-variant": "#624000",
+            "tertiary-fixed": "#aff2c2",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#574240",
+            "secondary-fixed": "#ffddb1",
+            "tertiary": "#003119",
+            "primary-fixed-dim": "#ffb3ad",
+            "surface-container-low": "#f6f3ed",
+            "tertiary-container": "#014a28",
+            "on-error": "#ffffff",
+            "secondary": "#815600",
+            "outline-variant": "#ddc0bd",
+            "on-tertiary-fixed": "#00210f",
+            "surface-container-highest": "#e5e2dc"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "margin": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-xl": "2rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Noto Sans", "Noto Sans Tamil", "sans-serif"],
+            "label-md": ["Noto Sans", "Noto Sans Tamil", "sans-serif"],
+            "title-md": ["Noto Serif", "Noto Serif Tamil", "serif"],
+            "headline-xl-mobile": ["Noto Serif", "Noto Serif Tamil", "serif"],
+            "headline-lg": ["Noto Serif", "Noto Serif Tamil", "serif"],
+            "headline-lg-mobile": ["Noto Serif", "Noto Serif Tamil", "serif"],
+            "body-md": ["Noto Sans", "Noto Sans Tamil", "sans-serif"],
+            "headline-xl": ["Noto Serif", "Noto Serif Tamil", "serif"],
+            "ledger-amount-lg": ["Noto Serif", "Noto Serif Tamil", "serif"],
+            "label-lg": ["Noto Sans", "Noto Sans Tamil", "sans-serif"],
+            "label-sm": ["Noto Sans", "Noto Sans Tamil", "sans-serif"],
+            "body-sm": ["Noto Sans", "Noto Sans Tamil", "sans-serif"],
+            "ledger-amount-md": ["Noto Serif", "Noto Serif Tamil", "serif"]
+          },
+          "fontSize": {
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+            "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "headline-xl-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}],
+            "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+            "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "headline-xl": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+            "ledger-amount-lg": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "700"}],
+            "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+            "ledger-amount-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #ddc0bd;
+      border-radius: 4px;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body data-screen="add-admin" class="bg-background text-on-surface font-body-md antialiased min-h-screen flex justify-center selection:bg-primary-fixed selection:text-primary">
+<!-- Mobile Screen Frame Simulator -->
+<div class="w-full max-w-[440px] min-h-screen relative overflow-hidden bg-surface-container flex flex-col shadow-2xl">
+<!-- BACKGROUND SCREEN (Dimmed & Frosted: Security & Trustee Management Canvas) -->
+<div class="w-full flex-1 flex flex-col pointer-events-none select-none opacity-40 filter blur-[1.5px] p-margin space-y-4">
+<!-- Mock TopAppBar in background -->
+<div class="flex justify-between items-center py-2 border-b border-outline-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">temple_hindu</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">கோவில் கணக்கு</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">settings</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/60 shadow-sm">
+<div class="flex justify-between items-center mb-3">
+<h3 class="font-title-md text-title-md text-primary">நிர்வாகிகள் &amp; தணிக்கை குழு</h3>
+<span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded font-bold">5 உறுப்பினர்கள்</span>
+</div>
+<div class="space-y-3">
+<div class="p-3 bg-surface rounded-lg flex items-center justify-between border border-surface-variant">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container text-white flex items-center justify-center font-bold text-xs">சு</div>
+<div>
+<p class="font-label-lg text-label-lg font-bold">சுப்பிரமணியன் செட்டியார்</p>
+<p class="text-xs text-on-surface-variant">தலைமை அறங்காவலர் (Super Admin)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-sm">verified_user</span>
+</div>
+<div class="p-3 bg-surface rounded-lg flex items-center justify-between border border-surface-variant">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-xs">க</div>
+<div>
+<p class="font-label-lg text-label-lg font-bold">கருப்பையா பிள்ளை</p>
+<p class="text-xs text-on-surface-variant">பொருளாளர் (Treasurer)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-sm">shield</span>
+</div>
+</div>
+</div>
+<!-- Sacred visual backdrop banner -->
+<div class="rounded-xl overflow-hidden border border-outline-variant relative h-36 bg-primary-container">
+<img class="w-full h-full object-cover opacity-35" data-alt="Sacred South Indian Dravidian Hindu Temple gopuram architecture during ceremonial dusk with golden lights, vermilion garlands, brass temple bells, and traditional stone mandapam in rich auspicious atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS4tdS_6lgWT5Ex6RXW6tUxxvi0WjcdVqynWoORMbu3bsm73B6rpnGf6PJ4wqqgtlkizQRub5T5lrdyTiHZPILbKhKPZMFRWdKtLChSmMGK304twcKzhVz-BRpfNIhY7NqjSo1CGE0MOedPcDQBTR5_bLS8Ra3ARWUHAFR7AF0R2duGwf7rzzYFpu5tpE1JuQZ9w2P9GDld6ODPQsTleaTqrCx6Ps53ylY0BL_Eh3vB-cl0Fx72Zzk"/>
+<div class="absolute inset-0 p-3 flex flex-col justify-end text-white">
+<p class="text-xs text-secondary-container font-semibold">நம்பகத்தன்மை &amp; வெளிப்படைத்தன்மை</p>
+<p class="text-sm font-title-md font-bold">ஸ்ரீ ஏழைகாத்த அம்மன் தேவஸ்தானம்</p>
+</div>
+</div>
+</div>
+<!-- MODAL BACKDROP OVERLAY -->
+<div class="absolute inset-0 bg-on-surface/50 backdrop-blur-sm z-30 transition-opacity"></div>
+<!-- ELEVATED BOTTOM SHEET MODAL (Task Screen: Add New Admin) -->
+<div class="absolute inset-x-0 bottom-0 max-h-[813px] z-40 bg-surface-container-lowest rounded-t-[1.5rem] flex flex-col shadow-[0_-8px_32px_rgba(91,3,9,0.18)] border-t-2 border-secondary overflow-hidden animate-in slide-in-from-bottom duration-300">
+<!-- Top Drag Handle & Sacred Header -->
+<div class="pt-2 px-margin pb-3 bg-surface border-b border-outline-variant/60 relative">
+<!-- Drag Handle Pill -->
+<div class="w-12 h-1.5 bg-outline-variant rounded-full mx-auto mb-2.5"></div>
+<!-- Sacred Temple Identity Badge -->
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 bg-surface-container-high px-2.5 py-1 rounded-full border border-secondary-container/40">
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">temple_hindu</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold tracking-tight">ஶ்ரீ ஏழைகாத்த அம்மன் , வல்லடிகார சுவாமி திருக்கோவில்</span>
+</div>
+<!-- Close Button -->
+<button aria-label="Close modal" class="w-8 h-8 rounded-full flex items-center justify-center bg-surface-container text-on-surface-variant hover:bg-surface-variant active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Sheet Headline -->
+<div class="mt-2 flex items-baseline justify-between">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">புதிய நிர்வாகி சேர்த்தல்</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Add Admin / Officer Account &amp; Access Permissions</p>
+</div>
+<span class="material-symbols-outlined text-primary-container text-2xl" style="font-variation-settings: 'FILL' 1;">person_add</span>
+</div>
+</div>
+<!-- SCROLLABLE FORM CANVAS -->
+<div class="overflow-y-auto custom-scrollbar px-margin py-4 space-y-5 flex-1 bg-surface">
+<!-- SECTION 1: நிர்வாகி அடிப்படை விவரங்கள் -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/70 shadow-sm space-y-3">
+<div class="flex items-center gap-2 border-b border-outline-variant/40 pb-2">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">badge</span>
+<h2 class="font-title-md text-sm text-primary font-bold">1. நிர்வாகி அடிப்படை விவரங்கள்</h2>
+</div>
+<!-- Full Name -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">
+              நிர்வாகியின் முழுப் பெயர் (Full Name in Tamil &amp; English) <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg text-body-md py-2.5 px-3 pr-10 text-on-surface transition-colors" placeholder="எ.கா: மு. பழனிவேல் அம்பலம்" type="text" value="மு. பழனிவேல் அம்பலம்"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-secondary text-xl">account_circle</span>
+</div>
+</div>
+<!-- Designation -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">
+              பொறுப்பு / பதவி (Designation / Title) <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg text-body-md py-2.5 px-3 pr-10 text-on-surface transition-colors" placeholder="எ.கா: உதவிச் செயலாளர் / கிராமப் பெரியதனக்காரர்" type="text" value="உதவிச் செயலாளர் &amp; கொடையாளர் தொடர்பாளர்"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant text-xl">military_tech</span>
+</div>
+</div>
+<!-- Mobile Number with OTP Verification Badge -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">
+              அலைபேசி எண் (Mobile Number - OTP &amp; Login) <span class="text-error">*</span>
+</label>
+<div class="flex items-center gap-2">
+<div class="relative flex-1 flex items-center">
+<span class="absolute left-3 font-label-md font-bold text-on-surface-variant border-r border-outline-variant pr-2">+91</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary rounded-lg text-body-md py-2.5 pl-14 pr-3 text-on-surface tracking-wider font-semibold" placeholder="98765 43210" type="tel" value="98421 76540"/>
+</div>
+<div class="bg-tertiary/10 border border-tertiary-container text-tertiary px-2.5 py-2 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-[10px] uppercase tracking-wider font-bold">OTP சரிபார்க்கப்பட்டது</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: பயனர்பெயர் & கடவுச்சொல் உருவாக்கம் -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/70 shadow-sm space-y-3">
+<div class="flex items-center gap-2 border-b border-outline-variant/40 pb-2">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">lock_person</span>
+<h2 class="font-title-md text-sm text-primary font-bold">2. பயனர்பெயர் &amp; கடவுச்சொல் உருவாக்கம்</h2>
+</div>
+<!-- Login Username -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<label class="font-label-md text-label-md text-on-surface">உள்நுழைவுப் பயனர்பெயர் (Login Username)</label>
+<span class="text-[11px] font-semibold text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">check</span> கிடைக்கக்கூடியது
+              </span>
+</div>
+<div class="relative">
+<span class="absolute left-3 top-2.5 text-secondary font-bold text-body-md">@</span>
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary rounded-lg text-body-md py-2.5 pl-8 pr-3 text-on-surface font-mono" type="text" value="palnivel_ambalam"/>
+</div>
+</div>
+<!-- Temporary PIN with Auto Generate Button -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<label class="font-label-md text-label-md text-on-surface">தற்காலிகக் கடவுச்சொல் / PIN</label>
+<button class="text-primary hover:text-primary-container text-xs font-bold flex items-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-xs">sync</span> தானாக உருவாக்கு
+              </button>
+</div>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-lowest border border-outline-variant focus:border-primary rounded-lg text-body-md py-2.5 px-3 pr-10 text-on-surface font-mono" type="password" value="Kovil@2024#Palan"/>
+<button class="absolute right-3 text-on-surface-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</div>
+<!-- Force change password checkbox -->
+<label class="flex items-start gap-2.5 pt-1 cursor-pointer">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface leading-tight">
+              முதல் முறை உள்நுழையும்போது புதிய ரகசியக் கடவுச்சொல்லை மாற்றக் கட்டாயப்படுத்துக (Mandate PIN change on 1st login)
+            </span>
+</label>
+</div>
+<!-- SECTION 3: நிர்வாக அணுகல் உரிமை & பொறுப்பு (Role & Access Level) -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/70 shadow-sm space-y-3">
+<div class="flex items-center gap-2 border-b border-outline-variant/40 pb-2">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>
+<h2 class="font-title-md text-sm text-primary font-bold">3. நிர்வாக அணுகல் உரிமை (Access Role)</h2>
+</div>
+<div class="space-y-2.5">
+<!-- Role Option 1 -->
+<label class="flex items-start gap-3 p-2.5 rounded-lg border border-outline-variant bg-surface hover:bg-surface-container-high transition-colors cursor-pointer">
+<input class="mt-1 w-4 h-4 text-primary focus:ring-primary border-outline-variant" name="access_role" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-primary font-bold">தலைமை நிர்வாகி (Super Admin)</span>
+<span class="material-symbols-outlined text-sm text-secondary">workspace_premium</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant leading-normal mt-0.5">
+                  அனைத்து வரவு, செலவு வவுச்சர்கள், அறங்காவலர் அமைப்புகள் மற்றும் தணிக்கை முழு அதிகாரம்.
+                </p>
+</div>
+</label>
+<!-- Role Option 2 (Selected Active) -->
+<label class="flex items-start gap-3 p-2.5 rounded-lg border-2 border-primary bg-primary-fixed/20 shadow-sm cursor-pointer relative">
+<input checked="" class="mt-1 w-4 h-4 text-primary focus:ring-primary border-primary" name="access_role" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-primary font-bold flex items-center gap-1">
+                    பொருளாளர் / கணக்காளர் (Treasurer)
+                    <span class="bg-primary text-white text-[10px] px-1.5 py-0.2 rounded font-semibold">பரிந்துரை</span>
+</span>
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant leading-normal mt-0.5">
+                  வரவு, செலவு வவுச்சர் பதிவு செய்தல், தினசரி ரொக்கம் &amp; வங்கி கணக்கு நிர்வகிக்கும் அதிகாரம்.
+                </p>
+</div>
+</label>
+<!-- Role Option 3 -->
+<label class="flex items-start gap-3 p-2.5 rounded-lg border border-outline-variant bg-surface hover:bg-surface-container-high transition-colors cursor-pointer">
+<input class="mt-1 w-4 h-4 text-primary focus:ring-primary border-outline-variant" name="access_role" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">ரசீது வசூலிப்பாளர் (Cashier / Clerk)</span>
+<span class="material-symbols-outlined text-sm text-on-surface-variant">receipt</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant leading-normal mt-0.5">
+                  தலைக்கட்டு வரி மற்றும் சிறப்பு பூஜை நன்கொடை ரசீதுகள் மட்டுமே உருவாக்க முடியும்.
+                </p>
+</div>
+</label>
+<!-- Role Option 4 -->
+<label class="flex items-start gap-3 p-2.5 rounded-lg border border-outline-variant bg-surface hover:bg-surface-container-high transition-colors cursor-pointer">
+<input class="mt-1 w-4 h-4 text-primary focus:ring-primary border-outline-variant" name="access_role" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">தணிக்கையாளர் / பார்வையாளர் (Auditor)</span>
+<span class="material-symbols-outlined text-sm text-on-surface-variant">find_in_page</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant leading-normal mt-0.5">
+                  வரவு-செலவு கணக்குகளைப் பார்வையிடுதல் மற்றும் வருடாந்திர ஆடிட் அறிக்கைகள் பதிவிறக்கம் மட்டும்.
+                </p>
+</div>
+</label>
+</div>
+</div>
+<!-- SECTION 4: அனுமதிக் கட்டுப்பாடுகள் (Fine-grained Permissions) -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/70 shadow-sm space-y-3">
+<div class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">tune</span>
+<h2 class="font-title-md text-sm text-primary font-bold">4. அனுமதிக் கட்டுப்பாடுகள் (Permissions)</h2>
+</div>
+<span class="text-[11px] text-secondary font-bold">3 இயங்குகிறது</span>
+</div>
+<div class="space-y-3 pt-1">
+<!-- Toggle 1: Expense Vouchers Approval -->
+<div class="flex items-center justify-between gap-3">
+<div>
+<p class="font-label-md text-label-md text-on-surface">செலவு வவுச்சர் ஒப்புதல் அனுமதி</p>
+<p class="text-[11px] text-on-surface-variant">Approve &amp; sign expense vouchers</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 2: Karai Tax Modification -->
+<div class="flex items-center justify-between gap-3 pt-2 border-t border-outline-variant/30">
+<div>
+<p class="font-label-md text-label-md text-on-surface">தலைக்கட்டு வரி தள்ளுபடி / திருத்தம்</p>
+<p class="text-[11px] text-on-surface-variant">Modify village family tax records</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 3: Bank Statements -->
+<div class="flex items-center justify-between gap-3 pt-2 border-t border-outline-variant/30">
+<div>
+<p class="font-label-md text-label-md text-on-surface">வங்கி பரிவர்த்தனை கணக்கு அணுகல்</p>
+<p class="text-[11px] text-on-surface-variant">Live access to Temple Bank Statements</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- SECTION 5: WhatsApp & SMS Credential Delivery -->
+<div class="bg-[#eaf5ee] p-3 rounded-xl border border-[#b2dec3] flex items-start gap-3">
+<span class="material-symbols-outlined text-[#1e5e3a] text-xl mt-0.5" style="font-variation-settings: 'FILL' 1;">chat</span>
+<div class="flex-1">
+<label class="flex items-start gap-2 cursor-pointer">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-tertiary focus:ring-tertiary border-[#b2dec3]" type="checkbox"/>
+<div>
+<span class="font-label-md text-label-md text-[#1e5e3a] font-bold block">
+                  வாட்ஸ்அப் மூலம் உள்நுழைவு விவரங்களை அனுப்புக
+                </span>
+<span class="text-[11px] text-[#0d512f] leading-tight block mt-0.5">
+                  நிர்வாகியின் கைபேசிக்கு (@palnivel_ambalam) கடவுச்சொல் மற்றும் உள்நுழைவு இணைப்பு உடனே அனுப்பப்படும்.
+                </span>
+</div>
+</label>
+</div>
+</div>
+<!-- Sacred Trust Assurance Seal -->
+<div class="flex items-center justify-center gap-2 py-1 text-on-surface-variant/80">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="text-[11px] tracking-tight">கோவில் நிர்வாக விதிகளின்படி தணிக்கை செய்யப்படுகிறது</span>
+</div>
+</div>
+<!-- STICKY ACTION BUTTONS DOCK (Strict 48px Touch Targets) -->
+<div class="p-margin bg-surface-container-lowest border-t border-outline-variant/60 flex items-center gap-3">
+<!-- Cancel Button -->
+<button class="w-1/3 min-h-[48px] py-2 px-3 rounded-lg border border-primary text-primary bg-surface-container-low hover:bg-surface-container font-label-lg text-label-lg font-bold active:scale-[0.98] transition-transform flex items-center justify-center gap-1" type="button">
+          ரத்து செய்க
+        </button>
+<!-- Save & Create Admin Button -->
+<button class="w-2/3 min-h-[48px] py-2 px-3 rounded-lg bg-primary hover:bg-[#410004] text-white font-label-lg text-label-lg font-bold shadow-md active:scale-[0.98] transition-transform flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+          உறுதிசெய்து சேர்க்க
+        </button>
+</div>
+</div>
+</div>
+</body></html>

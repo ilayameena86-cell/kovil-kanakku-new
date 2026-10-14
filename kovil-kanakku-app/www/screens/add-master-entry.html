@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="ta"><head>
+<meta name="theme-color" content="#5b0309"/>
+<link rel="stylesheet" href="../css/app.css"/>
+<script src="../js/app.js" defer></script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>கோவில் கணக்கு - புதிய உள்ளீடு சேர்த்தல்</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Noto Serif Tamil, Noto Sans Tamil & Latin -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&amp;family=Noto+Serif+Tamil:wght@600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;family=Noto+Serif:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error-container": "#93000a",
+            "outline-variant": "#ddc0bd",
+            "tertiary-fixed": "#aff2c2",
+            "secondary-fixed-dim": "#fbbb56",
+            "background": "#fcf9f3",
+            "outline": "#8a716f",
+            "surface-variant": "#e5e2dc",
+            "on-primary-container": "#ff8981",
+            "on-secondary-fixed": "#291800",
+            "inverse-surface": "#31312d",
+            "secondary": "#815600",
+            "surface-tint": "#a43b37",
+            "on-primary-fixed-variant": "#842322",
+            "secondary-fixed": "#ffddb1",
+            "on-surface-variant": "#574240",
+            "inverse-primary": "#ffb3ad",
+            "surface-container-highest": "#e5e2dc",
+            "on-primary": "#ffffff",
+            "inverse-on-surface": "#f3f0ea",
+            "on-tertiary-fixed-variant": "#0d512f",
+            "primary": "#5b0309",
+            "on-background": "#1c1c18",
+            "surface-container-high": "#ebe8e2",
+            "surface-container-lowest": "#ffffff",
+            "secondary-container": "#febd59",
+            "surface-container": "#f0eee8",
+            "on-secondary-container": "#734c00",
+            "primary-container": "#7a1c1c",
+            "error": "#ba1a1a",
+            "tertiary": "#003119",
+            "surface": "#fcf9f3",
+            "tertiary-fixed-dim": "#94d5a7",
+            "on-tertiary": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#79b98e",
+            "tertiary-container": "#014a28",
+            "on-tertiary-fixed": "#00210f",
+            "on-secondary-fixed-variant": "#624000",
+            "on-surface": "#1c1c18",
+            "surface-bright": "#fcf9f3",
+            "primary-fixed": "#ffdad7",
+            "primary-fixed-dim": "#ffb3ad",
+            "surface-container-low": "#f6f3ed",
+            "surface-dim": "#dcdad4",
+            "on-primary-fixed": "#410004",
+            "on-secondary": "#ffffff",
+            "on-error": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "label-lg": ["Noto Sans Tamil", "Noto Sans", "sans-serif"],
+            "body-lg": ["Noto Sans Tamil", "Noto Sans", "sans-serif"],
+            "body-md": ["Noto Sans Tamil", "Noto Sans", "sans-serif"],
+            "headline-xl": ["Noto Serif Tamil", "Noto Serif", "serif"],
+            "ledger-amount-md": ["Noto Serif Tamil", "Noto Serif", "serif"],
+            "label-sm": ["Noto Sans Tamil", "Noto Sans", "sans-serif"],
+            "body-sm": ["Noto Sans Tamil", "Noto Sans", "sans-serif"],
+            "ledger-amount-lg": ["Noto Serif Tamil", "Noto Serif", "serif"],
+            "title-md": ["Noto Serif Tamil", "Noto Serif", "serif"],
+            "headline-xl-mobile": ["Noto Serif Tamil", "Noto Serif", "serif"],
+            "label-md": ["Noto Sans Tamil", "Noto Sans", "sans-serif"],
+            "headline-lg": ["Noto Serif Tamil", "Noto Serif", "serif"],
+            "headline-lg-mobile": ["Noto Serif Tamil", "Noto Serif", "serif"]
+          },
+          "fontSize": {
+            "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "headline-xl": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+            "ledger-amount-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "700"}],
+            "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+            "ledger-amount-lg": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+            "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "headline-xl-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}],
+            "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+            "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+            "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Smooth custom scrollbar for modal content */
+    .custom-scroll::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #f6f3ed;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #ddc0bd;
+      border-radius: 4px;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body data-screen="add-master-entry" class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- ========================================================= -->
+<!-- BACKGROUND APP SCREEN (SETTINGS / MASTER CONFIG CANVAS)    -->
+<!-- ========================================================= -->
+<!-- TopAppBar Component (from Shared Components JSON) -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline flex justify-between items-center w-full px-margin py-space-sm max-w-full z-10 select-none shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary cursor-pointer hover:bg-surface-container dark:hover:bg-surface-container-high p-1 rounded-xl transition-colors active:opacity-85" data-icon="temple_hindu">temple_hindu</span>
+<div class="flex flex-col">
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile font-title-md text-primary dark:text-inverse-primary tracking-tight">கோவில் கணக்கு</h1>
+<span class="text-[10px] font-label-sm text-on-surface-variant leading-none">ஶ்ரீ ஏழைகாத்த அம்மன் கோவில்</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="அறிவிப்புகள்" class="w-10 h-10 flex items-center justify-center rounded-xl text-primary dark:text-inverse-primary hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors active:opacity-85" type="button">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<!-- Background Inactive Settings Workspace (Filtered and blurred by dialog backdrop) -->
+<main aria-hidden="true" class="flex-1 px-margin py-space-md max-w-md mx-auto w-full pb-24 space-y-4 opacity-40 select-none pointer-events-none">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-sm">
+<div class="flex justify-between items-center pb-space-sm border-b border-surface-container">
+<div>
+<h2 class="font-title-md text-title-md text-primary">முதன்மை அமைப்புகள் (Master Setup)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">திருவிழாக்கள், கரைகள் மற்றும் கட்டளைகள் விவரம்</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="settings">settings</span>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-3">
+<div class="p-3 bg-surface-container-low rounded-lg border border-outline-variant/60">
+<span class="text-label-sm font-label-sm text-on-surface-variant">மொத்த கரைகள்</span>
+<p class="font-ledger-amount-md text-ledger-amount-md text-primary">8 கரைகள்</p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg border border-outline-variant/60">
+<span class="text-label-sm font-label-sm text-on-surface-variant">ஆண்டு திருவிழாக்கள்</span>
+<p class="font-ledger-amount-md text-ledger-amount-md text-secondary">6 நிகழ்வுகள்</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md">
+<h3 class="font-label-lg text-label-lg text-on-surface mb-2">நடப்பு திருவிழாக்கள்</h3>
+<div class="space-y-2">
+<div class="p-3 bg-background rounded border border-surface-variant flex justify-between items-center">
+<div>
+<p class="font-label-md text-label-md text-primary">பங்குனி உத்திர பெருவிழா 2025</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">10 நாட்கள் • பங்குனி 15 - 25</p>
+</div>
+<span class="px-2 py-0.5 text-[11px] font-semibold rounded bg-[#EAF5EE] text-[#1E5E3A] border border-[#B2DEC3]">நடப்பில்</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Component (Preserved as Base Shell underneath modal) -->
+<nav aria-label="முதன்மை வழிகாட்டி" class="fixed bottom-0 left-0 w-full z-10 flex justify-around items-center px-gutter py-space-xs bg-surface dark:bg-inverse-surface border-t border-outline-variant dark:border-outline opacity-40 pointer-events-none">
+<div class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary font-bold bg-primary-fixed dark:bg-primary-container rounded-xl px-space-md py-space-xs">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span class="text-label-sm font-label-sm">முகப்பு</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="text-label-sm font-label-sm">வரவு</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-label-sm font-label-sm">செலவு</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs">
+<span class="material-symbols-outlined" data-icon="assessment">assessment</span>
+<span class="text-label-sm font-label-sm">அறிக்கை</span>
+</div>
+</nav>
+<!-- ========================================================= -->
+<!-- MODAL DIALOG / BOTTOM SHEET POPUP (PRIMARY CANVAS)         -->
+<!-- ========================================================= -->
+<div aria-labelledby="modal-title" aria-modal="true" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/65 backdrop-blur-[2px] p-0 sm:p-4 transition-all duration-300" role="dialog">
+<!-- Modal Container -->
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl sm:rounded-2xl border-t-2 sm:border border-[#C88E2D] shadow-2xl flex flex-col max-h-[813px] sm:max-h-[777px] overflow-hidden animate-in slide-in-from-bottom-6 duration-200">
+<!-- Top Decorative Brass Bar & Grab Handle -->
+<div class="flex flex-col items-center pt-2 pb-1 bg-surface-container-low border-b border-[#EFE8D3] relative">
+<div class="w-10 h-1 rounded-full bg-outline-variant/70 sm:hidden mb-1"></div>
+<div class="flex items-center gap-1.5 text-[11px] font-label-sm text-secondary uppercase tracking-widest">
+<span class="material-symbols-outlined text-[13px] text-secondary" data-icon="flare" style="font-variation-settings: 'FILL' 1;">flare</span>
+<span>திருக்கோவில் கணக்கு அமைவு</span>
+<span class="material-symbols-outlined text-[13px] text-secondary" data-icon="flare" style="font-variation-settings: 'FILL' 1;">flare</span>
+</div>
+</div>
+<!-- Modal Header -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex justify-between items-start border-b border-outline-variant/50">
+<div class="flex items-start gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[22px]" data-icon="festival">festival</span>
+</div>
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary leading-tight" id="modal-title">
+              புதிய உள்ளீடு சேர்த்தல் (Add Master Entry)
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="temple_hindu">temple_hindu</span>
+<span>ஶ்ரீ ஏழைகாத்த அம்மன் , வல்லடிகார சுவாமி திருக்கோவில்</span>
+</p>
+</div>
+</div>
+<button aria-label="மூடுக" class="w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors -mr-1" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="close">close</span>
+</button>
+</div>
+<!-- Segmented Tab Switcher -->
+<div class="px-space-md pt-space-sm pb-2 bg-surface-container-low border-b border-outline-variant/40">
+<div class="grid grid-cols-2 p-1 bg-surface-container rounded-xl gap-1 border border-outline-variant/60" role="tablist">
+<!-- Tab 1: Active -->
+<button aria-selected="true" class="flex items-center justify-center gap-1.5 py-2 px-2 text-center rounded-lg bg-surface-container-lowest text-primary shadow-sm border border-[#E5DCB8] font-label-md text-label-md transition-all" id="tab-festival-btn" role="tab" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="celebration" style="font-variation-settings: 'FILL' 1;">celebration</span>
+<span class="truncate font-semibold">🎉 புதிய திருவிழா / விசேஷம்</span>
+</button>
+<!-- Tab 2: Inactive Preview -->
+<button aria-selected="false" class="flex items-center justify-center gap-1.5 py-2 px-2 text-center rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low font-label-md text-label-md transition-all" id="tab-karai-btn" role="tab" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="groups">groups</span>
+<span class="truncate font-semibold">👥 புதிய கிராமக் கரை</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Form Body -->
+<div class="flex-1 overflow-y-auto custom-scroll px-space-md py-space-md space-y-4 bg-background">
+<!-- =============================================== -->
+<!-- FESTIVAL FORM CONTENT (ACTIVE VIEW)              -->
+<!-- =============================================== -->
+<form class="space-y-4" id="festival-form">
+<!-- 1. திருவிழாவின் பெயர் (தமிழ்) -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-primary font-bold" for="festival-tamil-name">
+              1. திருவிழாவின் பெயர் (தமிழ்) <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-3.5 text-body-md font-body-md rounded-lg bg-surface-container-lowest border border-[#D4C9A8] text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" id="festival-tamil-name" name="festival_tamil_name" placeholder="எ.கா: வைகாசி விசாகப் பெருந்திருவிழா" required="" type="text" value="வைகாசி விசாகப் பெருந்திருவிழா"/>
+<span class="absolute right-3 top-3 material-symbols-outlined text-outline-variant text-[20px]" data-icon="edit_note">edit_note</span>
+</div>
+<p class="text-[11px] font-body-sm text-on-surface-variant">ரசீது மற்றும் வரவு/செலவு பட்டியலில் அச்சிடப்படும் முதன்மைப் பெயர்</p>
+</div>
+<!-- 2. Festival Name in English -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface-variant font-medium" for="festival-english-name">
+              2. Festival Name in English <span class="text-[11px] font-normal">(விருப்பத்தேர்வு / Optional)</span>
+</label>
+<input class="w-full h-11 px-3.5 text-body-md font-body-md rounded-lg bg-surface-container-lowest border border-[#D4C9A8] text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" id="festival-english-name" name="festival_english_name" placeholder="e.g. Vaikasi Visakam Festival" type="text" value="Vaikasi Visakam Festival"/>
+</div>
+<!-- 3 & 4. தமிழ் மாதம், தேதி வரம்பு & நாட்கள் எண்ணிக்கை -->
+<div class="p-3.5 bg-surface-container-low rounded-xl border border-outline-variant/60 space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="calendar_month">calendar_month</span>
+                3. தமிழ் மாதம் &amp; கால அவகாசம்
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm border border-[#C88E2D]/40">
+<span class="material-symbols-outlined text-[14px]" data-icon="timelapse">timelapse</span>
+                4. விழா நாட்கள்: <strong class="ml-0.5">10 நாட்கள்</strong>
+</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+<div>
+<label class="block text-[11px] font-label-sm text-on-surface-variant mb-1" for="tamil-month-select">தமிழ் மாதம்</label>
+<select class="w-full h-10 px-2.5 text-body-sm font-body-sm rounded-lg bg-surface-container-lowest border border-[#D4C9A8] text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container" id="tamil-month-select">
+<option value="chithirai">சித்திரை மாதம் (ஏப்ரல் - மே)</option>
+<option selected="" value="vaikasi">வைகாசி மாதம் (மே - ஜூன்)</option>
+<option value="aani">ஆனி மாதம் (ஜூன் - ஜூலை)</option>
+<option value="aadi">ஆடி மாதம் (ஜூலை - ஆகஸ்ட்)</option>
+<option value="avani">ஆவணி மாதம் (ஆகஸ்ட் - செப்)</option>
+<option value="purattasi">புரட்டாசி மாதம் (செப் - அக்)</option>
+<option value="aippasi">ஐப்பசி மாதம் (அக் - நவ)</option>
+<option value="karthigai">கார்த்திகை மாதம் (நவ - டிச)</option>
+<option value="margazhi">மார்கழி மாதம் (டிச - ஜன)</option>
+<option value="thai">தை மாதம் (ஜன - பிப்)</option>
+<option value="masi">மாசி மாதம் (பிப் - மார்ச்)</option>
+<option value="panguni">பங்குனி மாதம் (மார்ச் - ஏப்)</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-1.5">
+<div>
+<label class="block text-[11px] font-label-sm text-on-surface-variant mb-1" for="start-date">துவக்க தேதி</label>
+<input class="w-full h-10 px-2 text-[12px] font-body-sm rounded-lg bg-surface-container-lowest border border-[#D4C9A8] text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container" id="start-date" type="date" value="2025-05-28"/>
+</div>
+<div>
+<label class="block text-[11px] font-label-sm text-on-surface-variant mb-1" for="end-date">நிறைவு தேதி</label>
+<input class="w-full h-10 px-2 text-[12px] font-body-sm rounded-lg bg-surface-container-lowest border border-[#D4C9A8] text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container" id="end-date" type="date" value="2025-06-06"/>
+</div>
+</div>
+</div>
+</div>
+<!-- 5 & 6. வரி தொகை (₹) & நிதி ஒதுக்கீடு (Bento Row) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- 5. இயல்புநிலை தலைக்கட்டு வரி தொகை -->
+<div class="p-3 bg-surface-container-lowest rounded-xl border border-[#E5DCB8] shadow-sm">
+<label class="block font-label-md text-label-md text-primary font-bold mb-1" for="tax-per-head">
+                5. இயல்புநிலை தலைக்கட்டு வரி
+              </label>
+<p class="text-[11px] font-body-sm text-on-surface-variant mb-2">குடும்பத்திற்கு நிர்ணயிக்கப்பட்ட வரி</p>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-ledger-amount-md text-primary font-bold">₹</span>
+<input class="w-full h-11 pl-8 pr-3 text-ledger-amount-md font-ledger-amount-md font-bold text-primary rounded-lg bg-surface-container-low border border-[#D4C9A8] focus:border-primary-container focus:ring-1 focus:ring-primary-container" id="tax-per-head" type="text" value="1,500"/>
+</div>
+</div>
+<!-- 6. நிதி ஒதுக்கீடு & இலக்கு தொகை -->
+<div class="p-3 bg-surface-container-lowest rounded-xl border border-[#E5DCB8] shadow-sm">
+<label class="block font-label-md text-label-md text-secondary font-bold mb-1" for="budget-target">
+                6. நிதி ஒதுக்கீடு (Budget Target)
+              </label>
+<p class="text-[11px] font-body-sm text-on-surface-variant mb-2">திருவிழா செலவு திட்ட வரம்பு</p>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-ledger-amount-md text-secondary font-bold">₹</span>
+<input class="w-full h-11 pl-8 pr-3 text-ledger-amount-md font-ledger-amount-md font-bold text-secondary rounded-lg bg-surface-container-low border border-[#D4C9A8] focus:border-secondary focus:ring-1 focus:ring-secondary" id="budget-target" type="text" value="5,00,000"/>
+</div>
+</div>
+</div>
+<!-- 7. முக்கிய நிகழ்வுகள் & விசேஷங்கள் (Tags / Chips) -->
+<div class="space-y-1.5 p-3.5 bg-surface-container-low rounded-xl border border-outline-variant/60">
+<div class="flex justify-between items-center">
+<label class="block font-label-md text-label-md text-primary font-bold">
+                7. முக்கிய நிகழ்வுகள் &amp; விசேஷங்கள்
+              </label>
+<span class="text-[11px] font-label-sm text-secondary">4 சேர்த்தவை</span>
+</div>
+<p class="text-[11px] font-body-sm text-on-surface-variant">கட்டளை தாரர்கள் தேர்வு செய்ய உள்ள விசேஷங்கள்</p>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest border border-[#C88E2D] text-on-surface font-label-sm text-label-sm shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>காப்புக் கட்டுதல்</span>
+<button aria-label="நீக்கு" class="material-symbols-outlined text-[14px] text-outline hover:text-error ml-0.5" data-icon="close" type="button">close</button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest border border-[#C88E2D] text-on-surface font-label-sm text-label-sm shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>தேரோட்டம்</span>
+<button aria-label="நீக்கு" class="material-symbols-outlined text-[14px] text-outline hover:text-error ml-0.5" data-icon="close" type="button">close</button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest border border-[#C88E2D] text-on-surface font-label-sm text-label-sm shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>பரிவேட்டை</span>
+<button aria-label="நீக்கு" class="material-symbols-outlined text-[14px] text-outline hover:text-error ml-0.5" data-icon="close" type="button">close</button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest border border-[#C88E2D] text-on-surface font-label-sm text-label-sm shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>பாலாபிஷேகம்</span>
+<button aria-label="நீக்கு" class="material-symbols-outlined text-[14px] text-outline hover:text-error ml-0.5" data-icon="close" type="button">close</button>
+</span>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-fixed border border-dashed border-primary text-primary font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]" data-icon="add">add</span>
+<span>புதிய நிகழ்வு</span>
+</button>
+</div>
+</div>
+<!-- 8. பயன்பாட்டு நிலை (Status Toggle Switch) -->
+<div class="flex items-center justify-between p-3.5 bg-surface-container-lowest rounded-xl border border-[#E5DCB8]">
+<div class="pr-2">
+<label class="font-label-md text-label-md text-on-surface font-bold block cursor-pointer" for="status-toggle">
+                8. பயன்பாட்டு நிலை (Active Status)
+              </label>
+<p class="font-body-sm text-body-sm text-on-surface-variant">வரவு / செலவு படிவங்களின் பட்டியலில் உடனே காண்பி</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="status-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Quick Karai Structure Preview (Collapsible Accordion / Blueprint Card) -->
+<div class="pt-2 border-t border-dashed border-[#EFE8D3]">
+<details class="group bg-surface-container-low rounded-xl border border-outline-variant/60 p-3 open:pb-4 transition-all">
+<summary class="flex justify-between items-center cursor-pointer list-none font-label-md text-label-md text-secondary font-semibold select-none">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="visibility">visibility</span>
+<span>'புதிய கிராமக் கரை' உள்ளீட்டு மாதிரி (Karai Preview)</span>
+</span>
+<span class="material-symbols-outlined text-outline-variant group-open:rotate-180 transition-transform text-[20px]" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="mt-3 pt-3 border-t border-surface-variant text-[12px] space-y-2 text-on-surface-variant">
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-lowest p-2 rounded border border-[#E5DCB8]">
+<span class="font-bold text-on-surface block">கரையின் பெயர்:</span>
+<span>எ.கா: வடகரை / புதுத்தெரு கரை</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded border border-[#E5DCB8]">
+<span class="font-bold text-on-surface block">குடும்பங்கள் எண்ணிக்கை:</span>
+<span>எ.கா: 120 குடும்பங்கள்</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded border border-[#E5DCB8]">
+<span class="font-bold text-on-surface block">கரை நாட்டாமை / பெரியதனக்காரர்:</span>
+<span>பெயர் &amp; அலைபேசி எண் (+91 9842X XXXXX)</span>
+</div>
+</div>
+</details>
+</div>
+</form>
+</div>
+<!-- Modal Footer (Action CTAs adhering strictly to Design Tokens) -->
+<div class="px-space-md py-space-sm bg-surface-container-low border-t border-outline-variant/50 flex items-center justify-between gap-3">
+<!-- Secondary CTA (ரத்து செய்க / Cancel) -->
+<button class="min-h-[48px] px-4 py-2.5 rounded text-primary font-label-md text-label-md font-semibold border border-primary-container bg-[#F4EEDF] hover:bg-[#EFE8D3] transition-colors active:scale-95 text-center flex items-center justify-center gap-1.5 flex-1 sm:flex-initial" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="cancel">cancel</span>
+<span>ரத்து செய்க (Cancel)</span>
+</button>
+<!-- Primary CTA (உறுதிசெய்து சேமிக்க / Save & Activate) -->
+<button class="min-h-[48px] px-6 py-2.5 rounded bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-primary transition-colors active:scale-95 text-center flex items-center justify-center gap-2 flex-1 sm:flex-initial" form="festival-form" type="submit">
+<span class="material-symbols-outlined text-[20px]" data-icon="check_circle">check_circle</span>
+<span>உறுதிசெய்து சேமிக்க (Save)</span>
+</button>
+</div>
+<!-- Cultural Fine Footer Motif -->
+<div class="h-1.5 bg-gradient-to-r from-primary via-[#C88E2D] to-primary"></div>
+</div>
+</div>
+</body></html>

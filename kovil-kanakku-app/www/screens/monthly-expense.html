@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ta"><head>
+<meta name="theme-color" content="#5b0309"/>
+<link rel="stylesheet" href="../css/app.css"/>
+<script src="../js/app.js" defer></script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>மாதாந்திர &amp; திருவிழா வாரியான செலவு அறிக்கை | கோவில் கணக்கு</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;family=Noto+Serif:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed-dim": "#fbbb56",
+            "inverse-primary": "#ffb3ad",
+            "on-secondary": "#ffffff",
+            "secondary": "#815600",
+            "background": "#fcf9f3",
+            "on-secondary-fixed-variant": "#624000",
+            "on-tertiary-fixed": "#00210f",
+            "surface-tint": "#a43b37",
+            "surface-container-high": "#ebe8e2",
+            "primary-container": "#7a1c1c",
+            "surface": "#fcf9f3",
+            "tertiary-container": "#014a28",
+            "on-secondary-container": "#734c00",
+            "on-secondary-fixed": "#291800",
+            "on-surface": "#1c1c18",
+            "error-container": "#ffdad6",
+            "primary-fixed-dim": "#ffb3ad",
+            "secondary-fixed": "#ffddb1",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#ffdad7",
+            "surface-container-lowest": "#ffffff",
+            "tertiary": "#003119",
+            "surface-container-low": "#f6f3ed",
+            "on-background": "#1c1c18",
+            "on-error": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-primary-fixed": "#410004",
+            "on-primary-container": "#ff8981",
+            "surface-container-highest": "#e5e2dc",
+            "outline-variant": "#ddc0bd",
+            "outline": "#8a716f",
+            "error": "#ba1a1a",
+            "on-surface-variant": "#574240",
+            "on-tertiary-fixed-variant": "#0d512f",
+            "tertiary-fixed": "#aff2c2",
+            "surface-dim": "#dcdad4",
+            "surface-bright": "#fcf9f3",
+            "tertiary-fixed-dim": "#94d5a7",
+            "on-primary-fixed-variant": "#842322",
+            "on-tertiary-container": "#79b98e",
+            "inverse-surface": "#31312d",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#f0eee8",
+            "inverse-on-surface": "#f3f0ea",
+            "primary": "#5b0309",
+            "secondary-container": "#febd59",
+            "surface-variant": "#e5e2dc"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "label-lg": ["Noto Sans"],
+            "ledger-amount-lg": ["Noto Serif"],
+            "body-sm": ["Noto Sans"],
+            "title-md": ["Noto Serif"],
+            "headline-lg-mobile": ["Noto Serif"],
+            "headline-lg": ["Noto Serif"],
+            "headline-xl-mobile": ["Noto Serif"],
+            "headline-xl": ["Noto Serif"],
+            "body-lg": ["Noto Sans"],
+            "label-md": ["Noto Sans"],
+            "ledger-amount-md": ["Noto Serif"],
+            "label-sm": ["Noto Sans"],
+            "body-md": ["Noto Sans"]
+          },
+          "fontSize": {
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "ledger-amount-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "headline-xl-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "700" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "ledger-amount-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body data-screen="monthly-expense" class="bg-background text-on-surface antialiased min-h-screen pb-28 selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top App Bar (Shared Component Anchor) -->
+<header class="sticky top-0 z-40 bg-surface text-primary shadow-[0_2px_8px_rgba(122,28,28,0.06)]">
+<div class="flex justify-between items-center w-full px-margin py-space-sm max-w-full">
+<div class="flex items-center gap-space-sm">
+<button aria-label="பின்செல்க" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container active:opacity-85 transition-colors text-primary" type="button">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-title-md font-title-md" data-icon="temple_hindu">temple_hindu</span>
+<span class="text-label-md font-label-md text-primary font-bold tracking-tight line-clamp-1">ஶ்ரீ ஏழைக்காத்த அம்மன் வல்லடிகார சுவாமி திருக்கோயில்</span>
+</div>
+<h1 class="text-title-md font-title-md text-on-surface font-bold">மொத்த செலவு அறிக்கை &amp; தணிக்கை</h1>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="பகிர்" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container active:opacity-85 text-on-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+<button aria-label="அச்சிடு" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container active:opacity-85 text-on-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined" data-icon="print">print</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Container (4-column mobile standard, 8px cadence) -->
+<main class="px-margin mt-space-md max-w-xl mx-auto space-y-space-md">
+<!-- Section 2: Audit Context, Segmented Controller & Festival Picker -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-[0_2px_8px_rgba(122,28,28,0.04)] space-y-space-md">
+<!-- Financial Year & Audit Pill -->
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-label-md font-label-md" data-icon="calendar_month">calendar_month</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">நிதியாண்டு: 2024 - 2025</span>
+</div>
+<div class="inline-flex items-center gap-1 bg-tertiary-fixed text-on-tertiary-fixed px-2.5 py-1 rounded-lg text-label-sm font-label-sm border border-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified">verified</span>
+<span>சரிபார்க்கப்பட்ட கணக்கு</span>
+</div>
+</div>
+<!-- Segmented Tab Navigation -->
+<div class="grid grid-cols-3 gap-1 p-1 bg-surface-container rounded-xl">
+<button class="py-2 px-1 text-center rounded-lg bg-surface-container-lowest text-primary font-bold shadow-sm text-label-sm font-label-sm transition-all border border-outline-variant/60" type="button">
+          திருவிழா வாரியாக
+        </button>
+<button class="py-2 px-1 text-center rounded-lg text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm transition-all" type="button">
+          மாதாந்திர அறிக்கை
+        </button>
+<button class="py-2 px-1 text-center rounded-lg text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm transition-all" type="button">
+          திருப்பணி வாரியாக
+        </button>
+</div>
+<!-- Festival Selector Dropdown Styled Card -->
+<div class="space-y-1.5">
+<label class="block text-label-sm font-label-sm text-on-surface-variant" for="festival-select">தேர்வு செய்யப்பட்ட விசேஷம் / திருவிழா</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low border border-outline-variant text-on-surface font-title-md text-body-md rounded-lg py-3 pl-10 pr-10 focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container font-semibold" id="festival-select">
+<option selected="">பங்குனி உத்திர பெருந்திருவிழா 2025</option>
+<option>சித்திரைத் திருவிழா 2025</option>
+<option>ஆடிப் பெருக்கு உற்சவம் 2024</option>
+<option>கும்பாபிஷேக மண்டல திருப்பணி</option>
+</select>
+<div class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary">
+<span class="material-symbols-outlined text-title-md font-title-md" data-icon="celebration">celebration</span>
+</div>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-title-md font-title-md" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+</div>
+</div>
+<!-- Date Span & Duration Badge -->
+<div class="flex items-center justify-between text-body-sm font-body-sm bg-surface-container-low px-3 py-2 rounded-lg border border-outline-variant/40">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="date_range">date_range</span>
+<span>01 மார்ச் 2025 – 29 மார்ச் 2025</span>
+</div>
+<span class="font-semibold text-primary">29 நாட்கள்</span>
+</div>
+<!-- Quick Filter Chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 text-label-sm font-label-sm no-scrollbar">
+<button class="shrink-0 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-bold">அனைத்து செலவுகள்</button>
+<button class="shrink-0 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high border border-outline-variant">திருப்பணி மட்டும்</button>
+<button class="shrink-0 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high border border-outline-variant">விழா மட்டும்</button>
+<button class="shrink-0 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high border border-outline-variant">அன்னதானம்</button>
+</div>
+</section>
+<!-- Section 3: Grand Total Expense Hero Banner -->
+<section class="bg-primary-container text-on-primary rounded-xl p-space-md shadow-[0_8px_24px_rgba(31,26,23,0.12)] border-t-2 border-secondary-container relative overflow-hidden">
+<!-- Ambient Traditional Motif Watermark -->
+<div class="absolute -right-6 -bottom-6 opacity-10 pointer-events-none text-white">
+<span class="material-symbols-outlined text-[140px]" data-icon="temple_hindu">temple_hindu</span>
+</div>
+<div class="relative z-10 space-y-3">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-label-sm font-label-sm tracking-wider text-primary-fixed uppercase font-semibold">செலவுக் கணக்கு சுருக்கம்</span>
+<p class="text-body-sm font-body-sm text-on-primary-container">காலகட்ட மொத்த செலவுத் தொகை (Total Expenses)</p>
+</div>
+<span class="bg-white/10 text-white text-label-sm font-label-sm px-2.5 py-1 rounded border border-white/20">தணிக்கை முடிந்தது ✓</span>
+</div>
+<!-- Big Amount Display -->
+<div class="flex items-baseline gap-2">
+<span class="text-ledger-amount-lg font-ledger-amount-lg font-bold tracking-tight text-white">₹ 3,42,850</span>
+<span class="text-body-sm font-body-sm text-primary-fixed">/ 64 வவுச்சர்கள்</span>
+</div>
+<!-- Progress Indicator for Payment Modes -->
+<div class="space-y-1.5 pt-2 border-t border-white/15">
+<div class="flex justify-between text-label-sm font-label-sm text-white/90">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary-fixed"></span> ரொக்கம் (Cash Paid): 54.0%</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span> வங்கி / UPI: 46.0%</span>
+</div>
+<div class="w-full h-2.5 bg-black/25 rounded-full overflow-hidden flex">
+<div class="bg-secondary-fixed h-full" style="width: 54%;"></div>
+<div class="bg-tertiary-fixed h-full" style="width: 46%;"></div>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm text-white/80 pt-0.5">
+<span>₹ 1,85,000 (ரொக்கம்)</span>
+<span>₹ 1,57,850 (டிஜிட்டல் / வங்கி)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Major Head-wise Expenditure Breakdown -->
+<section class="space-y-space-sm">
+<div class="flex justify-between items-center px-1">
+<h2 class="text-title-md font-title-md font-bold text-on-surface">செலவு முதன்மை வகை வாரியான சுருக்கம்</h2>
+<span class="text-label-sm font-label-sm text-secondary font-bold">4 பிரிவுகள்</span>
+</div>
+<!-- Bento-style Expenditure Head Cards -->
+<div class="grid grid-cols-1 gap-3">
+<!-- Category 1: Renovation -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-3.5 shadow-sm space-y-2 border-l-4 border-l-primary">
+<div class="flex justify-between items-start">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-title-md font-title-md" data-icon="architecture">architecture</span>
+<h3 class="text-body-md font-body-md font-bold text-on-surface">1. கோவில் திருப்பணி &amp; பராமரிப்பு</h3>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">கருங்கல் சிற்ப வேலை, மண்டப சாரம் கட்டுதல், சிமெண்ட்</p>
+</div>
+<div class="text-right">
+<div class="text-title-md font-ledger-amount-md font-bold text-primary">₹ 1,48,000</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-medium">43.2% • 18 வவுச்சர்கள்</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 43.2%;"></div>
+</div>
+</div>
+<!-- Category 2: Festival Celebrations -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-3.5 shadow-sm space-y-2 border-l-4 border-l-secondary">
+<div class="flex justify-between items-start">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-title-md font-title-md" data-icon="festival">festival</span>
+<h3 class="text-body-md font-body-md font-bold text-on-surface">2. திருவிழா விசேஷ செலவுகள்</h3>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">வானவேடிக்கை (பட்டாசு), நாதஸ்வரம்/மேளம், மின் அலங்காரம், பந்தல்</p>
+</div>
+<div class="text-right">
+<div class="text-title-md font-ledger-amount-md font-bold text-secondary">₹ 1,12,600</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-medium">32.8% • 26 வவுச்சர்கள்</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 32.8%;"></div>
+</div>
+</div>
+<!-- Category 3: Annadhanam & Prasadam -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-3.5 shadow-sm space-y-2 border-l-4 border-l-tertiary">
+<div class="flex justify-between items-start">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-title-md font-title-md" data-icon="restaurant">restaurant</span>
+<h3 class="text-body-md font-body-md font-bold text-on-surface">3. அன்னதானம் &amp; பிரசாதம்</h3>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">மளிகைப் பொருட்கள், காய்கறிகள், சமையல் கூலி, நெய் பாத்திர வாடகை</p>
+</div>
+<div class="text-right">
+<div class="text-title-md font-ledger-amount-md font-bold text-tertiary">₹ 54,250</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-medium">15.8% • 12 வவுச்சர்கள்</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 15.8%;"></div>
+</div>
+</div>
+<!-- Category 4: Daily Maintenance & Pooja -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-3.5 shadow-sm space-y-2 border-l-4 border-l-on-surface-variant">
+<div class="flex justify-between items-start">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant text-title-md font-title-md" data-icon="cleaning_services">cleaning_services</span>
+<h3 class="text-body-md font-body-md font-bold text-on-surface">4. தினசரி பராமரிப்பு &amp; இதர செலவுகள்</h3>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">மின் கட்டணம், பூசாரிகள் தட்சிணை, தூய்மைப் பணியாளர் கூலி, மாலைகள்</p>
+</div>
+<div class="text-right">
+<div class="text-title-md font-ledger-amount-md font-bold text-on-surface">₹ 28,000</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-medium">8.2% • 8 வவுச்சர்கள்</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-on-surface-variant h-full rounded-full" style="width: 8.2%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Itemized Expense Vouchers Ledger -->
+<section class="space-y-space-sm">
+<div class="flex justify-between items-center px-1">
+<div>
+<h2 class="text-title-md font-title-md font-bold text-on-surface">விரிவான வவுச்சர் பட்டியல்</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">தணிக்கை செய்யப்பட்ட ரசீதுகள் விவரம் (64)</p>
+</div>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high border border-outline-variant text-on-surface flex items-center gap-1 text-label-sm font-label-sm" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="filter_list">filter_list</span>
+<span>வடிகட்டு</span>
+</button>
+</div>
+<!-- Voucher List Items -->
+<div class="space-y-2.5">
+<!-- Voucher Item 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-3.5 shadow-sm space-y-2.5">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-mono text-label-sm font-label-sm text-primary font-bold">#VCH-2025-184</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">• 29 மார்ச் 2025</span>
+</div>
+<h4 class="text-body-md font-body-md font-semibold text-on-surface">சிவலிங்கம் தலைமை ஸ்தபதி &amp; பிரதர்ஸ்</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">கல் திருப்பணி கூலி &amp; சிற்ப அலங்காரம்</p>
+</div>
+<div class="text-right">
+<span class="inline-block bg-error-container text-on-error-container border border-outline-variant font-ledger-amount-md font-bold px-2.5 py-0.5 rounded text-title-md">
+                - ₹ 25,000
+              </span>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-outline-variant/50 text-label-sm font-label-sm">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">திருப்பணி</span>
+<span class="text-on-surface-variant">செலுத்திய முறை: UPI / GPay</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-tertiary-container font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span> ஒப்புதல் ✓
+              </span>
+<button class="text-primary font-bold flex items-center gap-0.5 hover:underline" type="button">
+<span class="material-symbols-outlined text-[15px]" data-icon="description">description</span> பில் பார்க்க
+              </button>
+</div>
+</div>
+</article>
+<!-- Voucher Item 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-3.5 shadow-sm space-y-2.5">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-mono text-label-sm font-label-sm text-primary font-bold">#VCH-2025-183</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">• 28 மார்ச் 2025</span>
+</div>
+<h4 class="text-body-md font-body-md font-semibold text-on-surface">ஸ்ரீ மீனாட்சி வானவேடிக்கை பட்டாசு கிடங்கு</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">திருவிழா வாணவேடிக்கை வெடி மருந்து பொருட்கள்</p>
+</div>
+<div class="text-right">
+<span class="inline-block bg-error-container text-on-error-container border border-outline-variant font-ledger-amount-md font-bold px-2.5 py-0.5 rounded text-title-md">
+                - ₹ 35,000
+              </span>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-outline-variant/50 text-label-sm font-label-sm">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">விழா செலவு</span>
+<span class="text-on-surface-variant">செலுத்திய முறை: ரொக்கம்</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-tertiary-container font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span> ஒப்புதல் ✓
+              </span>
+<button class="text-primary font-bold flex items-center gap-0.5 hover:underline" type="button">
+<span class="material-symbols-outlined text-[15px]" data-icon="description">description</span> பில் பார்க்க
+              </button>
+</div>
+</div>
+</article>
+<!-- Voucher Item 3 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-3.5 shadow-sm space-y-2.5">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-mono text-label-sm font-label-sm text-primary font-bold">#VCH-2025-182</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">• 27 மார்ச் 2025</span>
+</div>
+<h4 class="text-body-md font-body-md font-semibold text-on-surface">மணிகண்டன் லைட்ஸ் &amp; சவுண்ட்ஸ்</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">கோயில் மின்விளக்கு அலங்காரம் &amp; ஜெனரேட்டர் வாடகை</p>
+</div>
+<div class="text-right">
+<span class="inline-block bg-error-container text-on-error-container border border-outline-variant font-ledger-amount-md font-bold px-2.5 py-0.5 rounded text-title-md">
+                - ₹ 12,500
+              </span>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-outline-variant/50 text-label-sm font-label-sm">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">விழா செலவு</span>
+<span class="text-on-surface-variant">செலுத்திய முறை: வங்கி NEFT</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-tertiary-container font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span> ஒப்புதல் ✓
+              </span>
+<button class="text-primary font-bold flex items-center gap-0.5 hover:underline" type="button">
+<span class="material-symbols-outlined text-[15px]" data-icon="description">description</span> பில் பார்க்க
+              </button>
+</div>
+</div>
+</article>
+<!-- Voucher Item 4 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-3.5 shadow-sm space-y-2.5">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-mono text-label-sm font-label-sm text-primary font-bold">#VCH-2025-181</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">• 25 மார்ச் 2025</span>
+</div>
+<h4 class="text-body-md font-body-md font-semibold text-on-surface">பெரியசாமி மளிகை ஸ்டோர்ஸ்</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">அன்னதான அரிசி, பருப்பு, எண்ணெய் மற்றும் மளிகை</p>
+</div>
+<div class="text-right">
+<span class="inline-block bg-error-container text-on-error-container border border-outline-variant font-ledger-amount-md font-bold px-2.5 py-0.5 rounded text-title-md">
+                - ₹ 18,750
+              </span>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-outline-variant/50 text-label-sm font-label-sm">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">அன்னதானம்</span>
+<span class="text-on-surface-variant">செலுத்திய முறை: UPI</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-tertiary-container font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span> ஒப்புதல் ✓
+              </span>
+<button class="text-primary font-bold flex items-center gap-0.5 hover:underline" type="button">
+<span class="material-symbols-outlined text-[15px]" data-icon="description">description</span> பில் பார்க்க
+              </button>
+</div>
+</div>
+</article>
+</div>
+<!-- Expand Button -->
+<button class="w-full py-3 bg-surface-container hover:bg-surface-container-high border border-outline-variant rounded-xl text-primary font-bold text-label-md font-label-md flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span>மேலும் 60 வவுச்சர்களைக் காண்க (View All Vouchers)</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="expand_more">expand_more</span>
+</button>
+</section>
+<!-- Section 6: Official Audit Certification & Signatures -->
+<section class="bg-secondary-fixed/20 border-2 border-secondary-fixed-dim rounded-xl p-space-md space-y-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-ledger-amount-lg font-ledger-amount-lg" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<div>
+<h3 class="text-title-md font-title-md font-bold text-on-surface">தணிக்கை ஒப்புதல் சான்று (Audit Seal)</h3>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">கிராமக் குழு &amp; தணிக்கையாளர் அங்கீகரிப்பு</span>
+</div>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface leading-relaxed italic bg-surface-container-lowest/80 p-3 rounded-lg border border-secondary-fixed-dim/40">
+        "மேற்கண்ட செலவுகள் அனைத்தும் திருக்கோயில் திருப்பணி &amp; திருவிழா கணக்கு குழுவின் முன் அனுமதியுடனும், அசல் ரசீதுகள் மற்றும் தணிக்கை சரிபார்ப்புடனும் முறையாக அங்கீகரிக்கப்பட்டுள்ளது."
+      </p>
+<!-- 3 Signatures Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+<!-- Signatory 1 -->
+<div class="bg-surface-container-lowest p-2.5 rounded-lg border border-outline-variant space-y-1 text-center">
+<div class="h-6 flex items-center justify-center text-primary">
+<span class="font-serif italic font-bold text-body-md text-primary">M. Periasamy</span>
+</div>
+<div class="h-[1px] bg-outline-variant/60 w-3/4 mx-auto"></div>
+<div class="text-label-sm font-label-sm font-bold text-on-surface">மு. பெரியசாமி அம்பலம்</div>
+<div class="text-[10px] text-on-surface-variant">நாட்டாமை / கிராமப் பெரியதனம்</div>
+<div class="inline-flex items-center gap-0.5 text-[10px] text-tertiary-container font-bold">
+<span class="material-symbols-outlined text-[12px]" data-icon="done_all">done_all</span> கையொப்பமிட்டது ✓
+          </div>
+</div>
+<!-- Signatory 2 -->
+<div class="bg-surface-container-lowest p-2.5 rounded-lg border border-outline-variant space-y-1 text-center">
+<div class="h-6 flex items-center justify-center text-primary">
+<span class="font-serif italic font-bold text-body-md text-primary">S. Alagappan</span>
+</div>
+<div class="h-[1px] bg-outline-variant/60 w-3/4 mx-auto"></div>
+<div class="text-label-sm font-label-sm font-bold text-on-surface">சோ. அழகப்பன் செட்டியார்</div>
+<div class="text-[10px] text-on-surface-variant">தலைமைப் பொருளாளர்</div>
+<div class="inline-flex items-center gap-0.5 text-[10px] text-tertiary-container font-bold">
+<span class="material-symbols-outlined text-[12px]" data-icon="done_all">done_all</span> கையொப்பமிட்டது ✓
+          </div>
+</div>
+<!-- Signatory 3 -->
+<div class="bg-surface-container-lowest p-2.5 rounded-lg border border-outline-variant space-y-1 text-center">
+<div class="h-6 flex items-center justify-center text-primary">
+<span class="font-serif italic font-bold text-body-md text-primary">K. Ramanathan</span>
+</div>
+<div class="h-[1px] bg-outline-variant/60 w-3/4 mx-auto"></div>
+<div class="text-label-sm font-label-sm font-bold text-on-surface">கே. ராமநாதன், B.Com., FCA</div>
+<div class="text-[10px] text-on-surface-variant">பட்டயக் கணக்காளர் (Auditor)</div>
+<div class="inline-flex items-center gap-0.5 text-[10px] text-tertiary-container font-bold">
+<span class="material-symbols-outlined text-[12px]" data-icon="verified">verified</span> தணிக்கை நிறைவு ✓
+          </div>
+</div>
+</div>
+</section>
+<!-- Section 7: Export & Share Actions (Full 48px minimum touch targets) -->
+<section class="space-y-2.5 pt-2">
+<button class="w-full min-h-[48px] bg-primary-container hover:bg-primary text-on-primary font-bold text-label-lg font-label-lg rounded-xl flex items-center justify-center gap-2 shadow-md active:opacity-90 transition-all" type="button">
+<span class="material-symbols-outlined text-title-md font-title-md" data-icon="picture_as_pdf">picture_as_pdf</span>
+<span>செலவு அறிக்கை PDF பதிவிறக்குக (Download PDF)</span>
+</button>
+<div class="grid grid-cols-2 gap-2.5">
+<button class="w-full min-h-[48px] bg-surface-container hover:bg-surface-container-high border border-outline-variant text-on-surface font-bold text-body-sm font-body-sm rounded-xl flex items-center justify-center gap-1.5 active:opacity-85 transition-all" type="button">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="table_view">table_view</span>
+<span>Excel (.xlsx) தாள்</span>
+</button>
+<button class="w-full min-h-[48px] bg-tertiary hover:bg-tertiary-container text-on-tertiary font-bold text-body-sm font-body-sm rounded-xl flex items-center justify-center gap-1.5 active:opacity-85 transition-all" type="button">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]" data-icon="chat">chat</span>
+<span>வாட்ஸ்அப் குழுவில் பகிர்</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mandatory Shared Component Anchor) -->
+<!-- Contextual Active Lock: The page intent is "செலவு" (Expenses), so destination index 2 is active. -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-space-xs bg-surface shadow-[0_-2px_8px_rgba(31,26,23,0.06)] border-t border-outline-variant/40">
+<!-- Item 1: முகப்பு -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low transition-colors active:scale-95 duration-100" type="button">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span class="text-label-sm font-label-sm">முகப்பு</span>
+</button>
+<!-- Item 2: வரவு -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low transition-colors active:scale-95 duration-100" type="button">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="text-label-sm font-label-sm">வரவு</span>
+</button>
+<!-- Item 3: செலவு (ACTIVE TARGET - style_active_navigation executed verbatim) -->
+<button class="flex flex-col items-center justify-center text-primary font-bold bg-primary-fixed rounded-xl px-space-md py-space-xs active:scale-95 duration-100" type="button">
+<span class="material-symbols-outlined" data-icon="receipt_long" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="text-label-sm font-label-sm">செலவு</span>
+</button>
+<!-- Item 4: அறிக்கை -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low transition-colors active:scale-95 duration-100" type="button">
+<span class="material-symbols-outlined" data-icon="assessment">assessment</span>
+<span class="text-label-sm font-label-sm">அறிக்கை</span>
+</button>
+</nav>
+</body></html>

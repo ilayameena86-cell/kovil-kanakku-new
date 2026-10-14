@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ta"><head>
+<meta name="theme-color" content="#5b0309"/>
+<link rel="stylesheet" href="../css/app.css"/>
+<script src="../js/app.js" defer></script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>வாட்ஸ்அப்பில் பகிர்தல் - கோவில் கணக்கு தணிக்கை அறிக்கை</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Noto Sans Tamil & Noto Serif Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#7a1c1c",
+            "on-tertiary-fixed": "#00210f",
+            "on-primary-container": "#ff8981",
+            "secondary": "#815600",
+            "outline-variant": "#ddc0bd",
+            "outline": "#8a716f",
+            "on-tertiary": "#ffffff",
+            "surface": "#fcf9f3",
+            "primary-fixed-dim": "#ffb3ad",
+            "inverse-surface": "#31312d",
+            "tertiary-container": "#014a28",
+            "on-primary": "#ffffff",
+            "surface-container": "#f0eee8",
+            "on-secondary-fixed": "#291800",
+            "error-container": "#ffdad6",
+            "secondary-fixed": "#ffddb1",
+            "surface-tint": "#a43b37",
+            "error": "#ba1a1a",
+            "tertiary-fixed": "#aff2c2",
+            "surface-bright": "#fcf9f3",
+            "on-secondary-fixed-variant": "#624000",
+            "secondary-container": "#febd59",
+            "surface-container-high": "#ebe8e2",
+            "background": "#fcf9f3",
+            "surface-container-low": "#f6f3ed",
+            "inverse-on-surface": "#f3f0ea",
+            "on-tertiary-fixed-variant": "#0d512f",
+            "secondary-fixed-dim": "#fbbb56",
+            "primary-fixed": "#ffdad7",
+            "inverse-primary": "#ffb3ad",
+            "on-error-container": "#93000a",
+            "tertiary": "#003119",
+            "on-primary-fixed-variant": "#842322",
+            "on-tertiary-container": "#79b98e",
+            "primary": "#5b0309",
+            "surface-container-highest": "#e5e2dc",
+            "on-surface": "#1c1c18",
+            "tertiary-fixed-dim": "#94d5a7",
+            "surface-dim": "#dcdad4",
+            "on-primary-fixed": "#410004",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#734c00",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#1c1c18",
+            "on-surface-variant": "#574240",
+            "on-error": "#ffffff",
+            "surface-variant": "#e5e2dc"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter": "1rem",
+            "margin": "1rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "space-xl": "2rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Noto Sans"],
+            "ledger-amount-md": ["Noto Serif"],
+            "body-lg": ["Noto Sans"],
+            "label-lg": ["Noto Sans"],
+            "ledger-amount-lg": ["Noto Serif"],
+            "body-sm": ["Noto Sans"],
+            "headline-xl": ["Noto Serif"],
+            "title-md": ["Noto Serif"],
+            "headline-lg": ["Noto Serif"],
+            "headline-xl-mobile": ["Noto Serif"],
+            "body-md": ["Noto Sans"],
+            "label-md": ["Noto Sans"],
+            "headline-lg-mobile": ["Noto Serif"]
+          },
+          "fontSize": {
+            "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "700"}],
+            "ledger-amount-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+            "ledger-amount-lg": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+            "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+            "headline-xl": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+            "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+            "headline-xl-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}],
+            "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+            "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Authentic WhatsApp Chat Background Pattern */
+    .whatsapp-bg {
+      background-color: #EFEAE2;
+      background-image: radial-gradient(#dcd5c9 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+    /* Serrated stamp boundary effect */
+    .temple-border-gold {
+      border: 1px solid #D4AF37;
+      box-shadow: 0 0 0 1px #FAF3E0;
+    }
+  </style>
+</head>
+<body data-screen="whatsapp-share" class="bg-surface text-on-surface min-h-screen flex flex-col font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TOP APP BAR (Focused Action Context - with back navigation) -->
+<header class="sticky top-0 z-40 bg-surface border-b border-outline-variant/60 px-margin py-space-sm shadow-sm">
+<div class="max-w-md mx-auto flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<button aria-label="பின்செல்ல" class="w-10 h-10 flex items-center justify-center rounded-full text-primary hover:bg-surface-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight font-bold leading-tight">வாட்ஸ்அப்பில் பகிர்தல்</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            வருடாந்திர தணிக்கை அறிக்கை 2024 - 2025
+          </p>
+</div>
+</div>
+<div class="flex items-center space-x-1">
+<button class="w-9 h-9 flex items-center justify-center rounded-lg text-secondary hover:bg-surface-container-high transition-colors" title="உதவி">
+<span class="material-symbols-outlined text-[20px]">help_outline</span>
+</button>
+</div>
+</div>
+</header>
+<!-- MAIN SCROLLABLE CONTAINER -->
+<main class="flex-1 w-full max-w-md mx-auto px-margin pt-space-md pb-36 space-y-space-lg">
+<!-- DEVOTIONAL HEADER BANNER (Source Image) -->
+<div class="relative overflow-hidden rounded-xl border border-secondary/40 shadow-sm bg-primary">
+<img alt="ஶ்ரீ ஏழைக்காத்த அம்மன் வல்லடிகார சுவாமி திருக்கோயில்" class="w-full h-auto object-cover block" src="https://lh3.googleusercontent.com/aida/AEtjO1VmS0eG57q07U3_v9DqMiqBsUvUcccHhUDd6RffbYb4VrWneIivmeB2j4LWEUpd6Z_33zcUOjef0G43GqTbqNMnYCLvR0y6MyOSsDktPLxa5C7R7MpMM7LQmQwfyaxsnYv47SyGoNsfwdCSn7GJ-jmndE-dDaOOSRs15k7RG5dnuDjygCj4MSNZFUvUL-FtnOgZ3-qE2kP9AflIvRNVsruBbDqy5Pu7EyCNTPPTU8CRifZNWjCyE99kAl0"/>
+<div class="px-3 py-1.5 bg-gradient-to-r from-primary via-primary-container to-primary flex items-center justify-between text-secondary-fixed">
+<span class="font-label-sm text-[10px] tracking-wider uppercase font-semibold">பல்லவராயன்பட்டி தேவஸ்தானம்</span>
+<span class="font-label-sm text-[10px] flex items-center gap-1 font-semibold text-white">
+<span class="material-symbols-outlined text-[12px] text-secondary-fixed">verified</span>
+          அங்கீகரிக்கப்பட்ட கணக்கு
+        </span>
+</div>
+</div>
+<!-- WHATSAPP CHAT PREVIEW SECTION -->
+<section class="space-y-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-md text-label-md text-on-surface-variant font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-[#25D366]">visibility</span>
+          வாட்ஸ்அப் அரட்டை முன்னோட்டம் (Preview)
+        </span>
+<span class="font-label-sm text-label-sm text-secondary font-medium bg-secondary-fixed/40 px-2 py-0.5 rounded">
+          நேரடி காட்சி
+        </span>
+</div>
+<!-- Simulated WhatsApp Chat Window -->
+<div class="whatsapp-bg rounded-2xl p-3 sm:p-4 border border-[#D5CEBF] shadow-inner">
+<!-- Date divider -->
+<div class="flex justify-center mb-3">
+<span class="bg-white/80 text-on-surface-variant font-label-sm text-[10px] uppercase font-bold tracking-wider px-3 py-0.5 rounded-full shadow-xs">
+            இன்று • ஆடி 18
+          </span>
+</div>
+<!-- WhatsApp Outgoing Bubble -->
+<div class="bg-[#E7FFDB] rounded-xl rounded-tr-none p-3 shadow-[0_1px_2px_rgba(0,0,0,0.15)] border border-[#C5E9B4] text-on-surface relative">
+<!-- Rich Link Preview Card inside Bubble -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden border border-[#D1E7C4] shadow-xs mb-2.5">
+<!-- Thumbnail Image inside preview -->
+<div class="relative h-28 w-full bg-primary overflow-hidden">
+<img alt="திருக்கோயில் பதாகை முன்னோட்டம்" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VmS0eG57q07U3_v9DqMiqBsUvUcccHhUDd6RffbYb4VrWneIivmeB2j4LWEUpd6Z_33zcUOjef0G43GqTbqNMnYCLvR0y6MyOSsDktPLxa5C7R7MpMM7LQmQwfyaxsnYv47SyGoNsfwdCSn7GJ-jmndE-dDaOOSRs15k7RG5dnuDjygCj4MSNZFUvUL-FtnOgZ3-qE2kP9AflIvRNVsruBbDqy5Pu7EyCNTPPTU8CRifZNWjCyE99kAl0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-1.5 left-2 right-2 flex items-center justify-between text-white">
+<span class="font-label-sm text-[11px] font-bold drop-shadow">ஆண்டு தணிக்கை அறிக்கை 2024-25</span>
+<span class="bg-[#7A1C1C] text-white text-[9px] font-bold px-1.5 py-0.5 rounded">PDF லெட்ஜர்</span>
+</div>
+</div>
+<!-- Card Body -->
+<div class="p-3 bg-surface space-y-2">
+<div class="text-center pb-1 border-b border-outline-variant/40">
+<p class="font-label-sm text-[10px] text-secondary font-bold tracking-wide">✦ ஓம் சக்தி • வெற்றிவேல் முருகன் துணை ✦</p>
+<h2 class="font-title-md text-title-md text-primary font-bold leading-tight mt-0.5">
+                  ஶ்ரீ ஏழைக்காத்த அம்மன் வல்லடிகார சுவாமி திருக்கோயில்
+                </h2>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">
+                  📊 வருடாந்திர வரவு - செலவு தணிக்கை அறிக்கை (2024 - 2025)
+                </p>
+</div>
+<!-- Financial Metrics Table / Summary Grid -->
+<div class="bg-surface-container-low rounded-lg p-2.5 space-y-2 border border-outline-variant/50">
+<!-- Total Income -->
+<div class="flex items-center justify-between bg-[#EAF5EE] border border-[#B2DEC3] rounded px-2.5 py-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#1E5E3A]">arrow_downward_alt</span>
+<div>
+<div class="font-label-sm text-label-sm text-[#1E5E3A]">மொத்த வரவு (Total Income)</div>
+<div class="font-label-sm text-[10px] text-[#2D6A4F]/80">வரி, சிறப்பு நன்கொடை, உண்டியல்</div>
+</div>
+</div>
+<span class="font-ledger-amount-md text-ledger-amount-md text-[#1E5E3A] font-bold">+ ₹14,85,620</span>
+</div>
+<!-- Total Expense -->
+<div class="flex items-center justify-between bg-[#FDF0F0] border border-[#F2BEBE] rounded px-2.5 py-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_upward_alt</span>
+<div>
+<div class="font-label-sm text-label-sm text-primary">மொத்த செலவு (Expenses)</div>
+<div class="font-label-sm text-[10px] text-primary/80">திருப்பணி, திருவிழா, அன்னதானம்</div>
+</div>
+</div>
+<span class="font-ledger-amount-md text-ledger-amount-md text-primary font-bold">- ₹13,45,970</span>
+</div>
+<!-- Surplus Cash Balance -->
+<div class="flex items-center justify-between bg-[#FAF3E0] border border-secondary/40 rounded px-2.5 py-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">account_balance_wallet</span>
+<div>
+<div class="font-label-sm text-label-sm text-secondary">கையிருப்பு உபரி (Net Balance)</div>
+<div class="font-label-sm text-[10px] text-secondary/90">வங்கி சேமிப்பு + ரொக்க இருப்பு</div>
+</div>
+</div>
+<span class="font-ledger-amount-md text-ledger-amount-md text-secondary font-bold">₹1,39,650</span>
+</div>
+</div>
+<!-- Audit Stamp Seal -->
+<div class="flex items-center gap-2 px-2 py-1 bg-surface-container rounded border border-outline-variant/30">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span class="font-label-sm text-[11px] text-on-surface leading-snug">
+                  அரசு பதிவுபெற்ற பட்டய கணக்காளர் (Chartered Accountant) முறைப்படி தணிக்கை செய்யப்பட்டது.
+                </span>
+</div>
+</div>
+</div>
+<!-- Attached Document Card -->
+<div class="flex items-center justify-between bg-white rounded-lg p-2 border border-[#C5E9B4] mb-2 shadow-xs">
+<div class="flex items-center space-x-2.5 overflow-hidden">
+<div class="w-9 h-10 bg-error-container text-error rounded flex flex-col items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span class="font-label-sm text-[8px] font-bold">PDF</span>
+</div>
+<div class="truncate">
+<p class="font-label-md text-[12px] text-on-surface font-semibold truncate">Kovil_Audit_Report_2024_25.pdf</p>
+<p class="font-label-sm text-[10px] text-on-surface-variant">1.8 MB • 12 பக்கங்கள் முழு அறிக்கை</p>
+</div>
+</div>
+<button aria-label="பதிவிறக்கம்" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0 hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+<!-- Accompanying WhatsApp Caption Message -->
+<div class="space-y-1 text-on-surface font-body-sm text-[13px] leading-relaxed pt-0.5">
+<p>🙏 <strong>அனைத்து கிராம பெரியோர்கள், நாட்டாமை, காரியஸ்தர்கள் மற்றும் கிராம பக்தர்களுக்கு வணக்கம்.</strong></p>
+<p class="text-on-surface-variant">
+              நமது ஶ்ரீ ஏழைக்காத்த அம்மன் வல்லடிகார சுவாமி திருக்கோவிலின் 2024 - 2025-ஆம் ஆண்டிற்கான முழுமையான வரவு - செலவு கணக்கு தணிக்கை நிறைவுபெற்றுள்ளது. கிராம மக்கள் அனைவரும் பார்வையிடும் பொருட்டு அறிக்கை இத்துடன் பகிரப்பட்டுள்ளது.
+            </p>
+</div>
+<!-- Public Verification Link Pill -->
+<div class="mt-2.5 pt-2 border-t border-[#D5ECC8] flex items-center justify-between">
+<a class="inline-flex items-center gap-1.5 text-xs text-[#075E54] font-semibold hover:underline" href="#">
+<span class="material-symbols-outlined text-[14px]">language</span>
+              பொது மக்கள் பார்வை: kovilkanakku.org/audit
+            </a>
+<div class="flex items-center text-[10px] text-[#557B4D] font-medium space-x-1">
+<span>10:45 AM</span>
+<span class="material-symbols-outlined text-[14px] text-[#34B7F1]">done_all</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SHARING TARGET SELECTION -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between px-1">
+<h2 class="font-title-md text-title-md text-primary font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-secondary">groups</span>
+          பகிர்வு இலக்கு தேர்வுகள் (Sharing Target)
+        </h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">அனைத்தும் தேர்வுசெய்</span>
+</div>
+<div class="space-y-2">
+<!-- Target 1: Village WhatsApp Groups -->
+<label class="flex items-center justify-between p-3 rounded-xl border border-secondary/40 bg-surface-container-lowest hover:border-secondary shadow-xs cursor-pointer transition-colors">
+<div class="flex items-center space-x-3">
+<input checked="" class="w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold flex items-center gap-2">
+                கிராம வாட்ஸ்அப் குழுக்கள்
+                <span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] px-2 py-0.5 rounded-full font-bold">முக்கியம்</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">3 உத்தியோகபூர்வ குழுக்கள் (850 பக்தர்கள்)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">forum</span>
+</label>
+<!-- Target 2: Karai Leaders & Nattamai -->
+<label class="flex items-center justify-between p-3 rounded-xl border border-outline-variant/60 bg-surface-container-lowest hover:border-secondary shadow-xs cursor-pointer transition-colors">
+<div class="flex items-center space-x-3">
+<input checked="" class="w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">நாட்டாமை &amp; கரை தலைவர்கள்</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">12 கரை பிரதிநிதிகள் மற்றும் மூத்தோர்</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[22px]">shield_person</span>
+</label>
+<!-- Target 3: Treasurer & Trust Committee -->
+<label class="flex items-center justify-between p-3 rounded-xl border border-outline-variant/60 bg-surface-container-lowest hover:border-secondary shadow-xs cursor-pointer transition-colors">
+<div class="flex items-center space-x-3">
+<input checked="" class="w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">பொருளாளர் &amp; திருப்பணி கமிட்டி</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">நிர்வாக அறங்காவலர்கள் குழு (8 உறுப்பினர்கள்)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">account_balance</span>
+</label>
+<!-- Target 4: Individual Donors / Contacts -->
+<label class="flex items-center justify-between p-3 rounded-xl border border-outline-variant/60 bg-surface-container-lowest hover:border-secondary shadow-xs cursor-pointer transition-colors">
+<div class="flex items-center space-x-3">
+<input class="w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary focus:ring-offset-0" type="checkbox"/>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">தனிநபர் பக்தர்கள் &amp; வெளிநாட்டு புரவலர்கள்</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">நன்கொடையாளர்கள் பட்டியல் தேர்வு செய்ய</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">person_add</span>
+</label>
+</div>
+</section>
+<!-- TRUST & AUDIT NOTIFICATION BANNER -->
+<div class="p-3.5 rounded-xl bg-[#FAF3E0] border border-secondary/30 flex items-start space-x-3">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">verified</span>
+<div class="space-y-0.5">
+<h3 class="font-label-lg text-[13px] text-secondary font-bold">நம்பகத்தன்மை &amp; வெளிப்படைத்தன்மை</h3>
+<p class="font-body-sm text-[12px] text-on-surface leading-snug">
+          அனைத்து வரவு-செலவு இனங்களும் ரசீது எண் மற்றும் வவுச்சருடன் இணைக்கப்பட்டு ஊர் மக்களுக்கு ஒளிவுமறைவின்றி உடனுக்குடன் பகிர்வு செய்யப்படுகிறது.
+        </p>
+</div>
+</div>
+</main>
+<!-- FIXED BOTTOM ACTION BAR -->
+<footer class="fixed bottom-0 left-0 right-0 z-50 bg-surface border-t border-outline-variant/60 p-margin shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
+<div class="max-w-md mx-auto space-y-2.5">
+<!-- Primary Action: Direct WhatsApp Share -->
+<button class="w-full h-12 bg-[#25D366] hover:bg-[#1EBE5D] active:scale-[0.98] text-white rounded-lg flex items-center justify-center space-x-2 font-label-lg text-[15px] font-bold shadow-md transition-all" onclick="triggerWhatsAppShare()">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+</svg>
+<span>வாட்ஸ்அப்பில் உடனடியாகப் பகிர்க</span>
+</button>
+<!-- Secondary Row: Copy Text & Share Document -->
+<div class="grid grid-cols-2 gap-2">
+<button class="h-10 px-2 bg-surface-container hover:bg-surface-container-high active:scale-95 text-primary border border-outline-variant/70 rounded-md font-label-md flex items-center justify-center space-x-1.5 transition-all" id="copyBtn" onclick="copyReportText()">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span id="copyBtnText">அறிக்கை நகல் எடு</span>
+</button>
+<button class="h-10 px-2 bg-surface-container hover:bg-surface-container-high active:scale-95 text-secondary border border-secondary/40 rounded-md font-label-md flex items-center justify-center space-x-1.5 transition-all" onclick="sharePdfFile()">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span>PDF ஆவணம் பகிர்</span>
+</button>
+</div>
+</div>
+</footer>
+<!-- Toast Notification Modal for Copy Interaction -->
+<div class="fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-full font-label-md shadow-lg flex items-center space-x-2 transition-opacity duration-300 opacity-0 pointer-events-none" id="toast">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">check_circle</span>
+<span>அறிக்கை தகவல் பிரதி எடுக்கப்பட்டது!</span>
+</div>
+<script>
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      if (message) {
+        toast.querySelector('span:last-child').textContent = message;
+      }
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 2500);
+    }
+
+    function triggerWhatsAppShare() {
+      const text = encodeURIComponent(
+        `*ஶ்ரீ ஏழைக்காத்த அம்மன் வல்லடிகார சுவாமி திருக்கோயில்*\n` +
+        `📊 வருடாந்திர வரவு - செலவு தணிக்கை அறிக்கை (2024-2025)\n` +
+        `-----------------------------------------\n` +
+        `• மொத்த வரவு: ₹14,85,620\n` +
+        `• மொத்த செலவு: ₹13,45,970\n` +
+        `• நிகர கையிருப்பு உபரி: ₹1,39,650\n` +
+        `-----------------------------------------\n` +
+        `அரசு பட்டய கணக்காளர் (CA) சரிபார்க்கப்பட்டது.\n` +
+        `முழு விவரம் காண்க: https://kovilkanakku.org/audit`
+      );
+      window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+    }
+
+    function copyReportText() {
+      const text = `ஶ்ரீ ஏழைக்காத்த அம்மன் வல்லடிகார சுவாமி திருக்கோயில் - வருடாந்திர தணிக்கை அறிக்கை 2024-2025\nமொத்த வரவு: ₹14,85,620 | மொத்த செலவு: ₹13,45,970 | இருப்பு: ₹1,39,650\nசரிபார்க்க: https://kovilkanakku.org/audit`;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('வாட்ஸ்அப் செய்தி நகல் எடுக்கப்பட்டது!');
+        const btnText = document.getElementById('copyBtnText');
+        btnText.textContent = 'நகலெடுக்கப்பட்டது ✓';
+        setTimeout(() => {
+          btnText.textContent = 'அறிக்கை நகல் எடு';
+        }, 2000);
+      });
+    }
+
+    function sharePdfFile() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'திருக்கோயில் வருடாந்திர தணிக்கை அறிக்கை 2024-2025',
+          text: 'ஶ்ரீ ஏழைக்காத்த அம்மன் வல்லடிகார சுவாமி திருக்கோயில் தணிக்கை கணக்கு',
+          url: 'https://kovilkanakku.org/audit',
+        }).catch(() => {});
+      } else {
+        showToast('PDF பதிவிறக்க இணைப்பு திறக்கப்படுகிறது...');
+      }
+    }
+  </script>
+</body></html>

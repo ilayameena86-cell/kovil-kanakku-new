@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="ta"><head>
+<meta name="theme-color" content="#5b0309"/>
+<link rel="stylesheet" href="../css/app.css"/>
+<script src="../js/app.js" defer></script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>நிர்வாகி முடக்குதல் &amp; நீக்குதல் - ஶ்ரீ ஏழைகாத்த அம்மன் , வல்லடிகார சுவாமி திருக்கோவில்</title>
+<!-- Google Fonts: Noto Serif Tamil, Noto Sans Tamil & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&amp;family=Noto+Serif+Tamil:wght@600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed-variant": "#0d512f",
+            "secondary-container": "#febd59",
+            "secondary-fixed-dim": "#fbbb56",
+            "secondary": "#815600",
+            "tertiary-fixed": "#aff2c2",
+            "on-tertiary-container": "#79b98e",
+            "on-secondary-fixed": "#291800",
+            "on-surface": "#1c1c18",
+            "outline": "#8a716f",
+            "on-secondary-fixed-variant": "#624000",
+            "surface-container-high": "#ebe8e2",
+            "on-primary-fixed": "#410004",
+            "on-error": "#ffffff",
+            "surface": "#fcf9f3",
+            "on-error-container": "#93000a",
+            "outline-variant": "#ddc0bd",
+            "surface-container-highest": "#e5e2dc",
+            "primary-container": "#7a1c1c",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ba1a1a",
+            "inverse-primary": "#ffb3ad",
+            "on-primary": "#ffffff",
+            "surface-container": "#f0eee8",
+            "on-primary-container": "#ff8981",
+            "primary-fixed-dim": "#ffb3ad",
+            "on-background": "#1c1c18",
+            "tertiary-fixed-dim": "#94d5a7",
+            "on-tertiary": "#ffffff",
+            "surface-dim": "#dcdad4",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fcf9f3",
+            "surface-tint": "#a43b37",
+            "primary-fixed": "#ffdad7",
+            "tertiary-container": "#014a28",
+            "on-primary-fixed-variant": "#842322",
+            "inverse-on-surface": "#f3f0ea",
+            "on-tertiary-fixed": "#00210f",
+            "primary": "#5b0309",
+            "inverse-surface": "#31312d",
+            "on-secondary-container": "#734c00",
+            "background": "#fcf9f3",
+            "surface-container-low": "#f6f3ed",
+            "tertiary": "#003119",
+            "on-surface-variant": "#574240",
+            "secondary-fixed": "#ffddb1",
+            "surface-variant": "#e5e2dc"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "margin": "1rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-xl": "2rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Noto Serif Tamil", "Noto Serif", "serif"],
+            "body-lg": ["Noto Sans Tamil", "Noto Sans", "sans-serif"],
+            "label-md": ["Noto Sans Tamil", "Noto Sans", "sans-serif"],
+            "ledger-amount-lg": ["Noto Serif", "serif"],
+            "ledger-amount-md": ["Noto Serif", "serif"],
+            "headline-lg-mobile": ["Noto Serif Tamil", "Noto Serif", "serif"],
+            "title-md": ["Noto Serif Tamil", "Noto Serif", "serif"],
+            "label-lg": ["Noto Sans Tamil", "Noto Sans", "sans-serif"],
+            "body-md": ["Noto Sans Tamil", "Noto Sans", "sans-serif"],
+            "body-sm": ["Noto Sans Tamil", "Noto Sans", "sans-serif"],
+            "headline-xl": ["Noto Serif Tamil", "Noto Serif", "serif"],
+            "headline-xl-mobile": ["Noto Serif Tamil", "Noto Serif", "serif"],
+            "label-sm": ["Noto Sans Tamil", "Noto Sans", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "ledger-amount-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "ledger-amount-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "headline-xl-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .modal-scroll-area::-webkit-scrollbar {
+      width: 4px;
+    }
+    .modal-scroll-area::-webkit-scrollbar-thumb {
+      background: #ddc0bd;
+      border-radius: 4px;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body data-screen="admin-deactivate" class="bg-surface text-on-surface antialiased font-body-md selection:bg-primary-fixed selection:text-primary min-h-screen relative overflow-hidden flex justify-center items-end sm:items-center">
+<!-- BACKGROUND DECOR / UNDERLYING BLURRED APP SCREEN -->
+<div aria-hidden="true" class="fixed inset-0 z-0 bg-background overflow-hidden filter blur-sm opacity-60 pointer-events-none select-none max-w-lg mx-auto">
+<!-- Mock TopAppBar from Shared JSON -->
+<header class="bg-surface text-primary border-b border-outline-variant flex justify-between items-center w-full px-margin py-space-sm max-w-full">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="temple_hindu">temple_hindu</span>
+<span class="text-headline-lg-mobile font-headline-lg-mobile text-primary font-bold">ஶ்ரீ ஏழைகாத்த அம்மன் திருக்கோவில்</span>
+</div>
+<div class="p-space-xs rounded-full">
+<span class="material-symbols-outlined text-primary" data-icon="notifications">notifications</span>
+</div>
+</header>
+<!-- Simulated Ledger Background UI Cards -->
+<div class="p-margin space-y-space-md mt-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-xl border border-outline-variant">
+<div class="flex justify-between items-center mb-space-sm">
+<span class="text-label-md font-label-md text-on-surface-variant">மொத்த இருப்பு (Total Balance)</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-space-xs py-0.5 rounded text-label-sm font-label-sm">சரிபார்க்கப்பட்டது</span>
+</div>
+<div class="text-ledger-amount-lg font-ledger-amount-lg text-primary">₹ 4,82,450</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl border border-outline-variant space-y-space-sm">
+<div class="text-title-md font-title-md text-primary">நிர்வாகிகள் பட்டியல் (Admin Roster)</div>
+<div class="flex items-center justify-between py-space-xs border-b border-surface-container">
+<div class="font-body-md">ரா. சுப்பிரமணியன் (கணக்காளர்)</div>
+<span class="text-label-sm text-secondary font-label-sm">செயலில்</span>
+</div>
+<div class="flex items-center justify-between py-space-xs">
+<div class="font-body-md">சோ. அழகப்பன் செட்டியார் (பொருளாளர்)</div>
+<span class="text-label-sm text-secondary font-label-sm">செயலில்</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL BACKDROP OVERLAY -->
+<div class="fixed inset-0 z-40 bg-inverse-surface/60 backdrop-blur-md transition-opacity duration-300"></div>
+<!-- MODAL DIALOG SHEET CONTAINER -->
+<div class="fixed inset-x-0 bottom-0 sm:inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-gutter pointer-events-auto">
+<div aria-labelledby="modal-headline" aria-modal="true" class="w-full max-w-lg bg-surface text-on-surface rounded-t-full sm:rounded-xl shadow-2xl border border-outline-variant flex flex-col max-h-[813px] sm:max-h-[777px] overflow-hidden transition-all transform duration-300 ease-out" role="dialog">
+<!-- Top Drag Handle & Sacred Filigree Border -->
+<div class="w-full pt-space-sm pb-space-xs flex flex-col items-center bg-surface border-b border-surface-container-highest">
+<div class="w-12 h-1.5 bg-outline-variant rounded-full mb-space-xs"></div>
+<div class="w-full h-0.5 bg-gradient-to-r from-transparent via-secondary-container to-transparent"></div>
+</div>
+<!-- 1. MODAL HEADER -->
+<div class="px-margin pt-space-sm pb-space-md border-b border-surface-container-highest relative bg-surface-container-low">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-space-xs flex-1">
+<!-- Temple identity pill -->
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 bg-surface-container-lowest border border-outline-variant rounded-full text-secondary">
+<span class="material-symbols-outlined text-[16px]" data-icon="temple_hindu">temple_hindu</span>
+<span class="text-label-sm font-label-sm tracking-wide text-secondary">ஶ்ரீ ஏழைகாத்த அம்மன் , வல்லடிகார சுவாமி திருக்கோவில்</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<span class="inline-flex items-center gap-1 bg-error-container text-on-error-container px-space-xs py-0.5 rounded text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="shield">shield</span>
+<span>நிர்வாகி கணக்கு நடவடிக்கை (Admin Action)</span>
+</span>
+</div>
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile text-primary font-bold pt-space-xs" id="modal-headline">
+              நிர்வாகி கணக்கை முடக்குதல் / நீக்குதல்
+            </h1>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              நிர்வாகியின் அணுகல் உரிமையை தற்காலிகமாக இடைநிறுத்தலாம் அல்லது நிரந்தரமாக நீக்கலாம்.
+            </p>
+</div>
+<!-- Close Action -->
+<button aria-label="மூடுக (Close)" class="p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all focus:outline-none focus:ring-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined text-2xl" data-icon="close">close</span>
+</button>
+</div>
+</div>
+<!-- MODAL SCROLLABLE CONTENT BODY -->
+<div class="modal-scroll-area overflow-y-auto px-margin py-space-md space-y-space-md bg-surface">
+<!-- 2. TARGET ADMIN PROFILE CARD -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl border border-outline-variant shadow-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 opacity-5 pointer-events-none text-primary">
+<span class="material-symbols-outlined text-8xl" data-icon="person">person</span>
+</div>
+<div class="flex items-center gap-space-md">
+<!-- Avatar circle with initials -->
+<div class="w-14 h-14 rounded-full bg-primary-container text-on-primary font-headline-lg flex items-center justify-center border-2 border-surface-container-highest shadow-inner flex-shrink-0">
+<span class="font-headline-lg text-xl font-bold">சு</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<h2 class="text-title-md font-title-md text-primary font-bold truncate">ரா. சுப்பிரமணியன்</h2>
+<span class="material-symbols-outlined text-secondary text-base" data-icon="verified_user">verified_user</span>
+</div>
+<div class="text-label-md font-label-md text-on-surface-variant flex flex-wrap items-center gap-x-space-sm gap-y-0.5 mt-0.5">
+<span class="font-medium text-primary">ரசீது எழுத்தாளர் (Clerk - Entry Only)</span>
+<span class="text-outline">•</span>
+<span>@clerk_subbu</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]" data-icon="call">call</span>
+<span class="tracking-wide">+91 97860 43210</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-sm border-t border-surface-container-high flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="history">history</span>
+              கடைசி உள்நுழைவு: நேற்று மாலை 06:40
+            </span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-label-sm font-label-sm text-on-surface">திருக்கோவில் பணி</span>
+</div>
+</section>
+<!-- 3. ACTION SELECTION (Option A & Option B) -->
+<fieldset class="space-y-space-sm">
+<legend class="text-label-lg font-label-lg text-primary mb-space-xs flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="gavel">gavel</span>
+            நடவடிக்கை வகை தேர்வு (Select Action):
+          </legend>
+<!-- OPTION A: Temporarily Deactivate (Recommended) -->
+<label class="relative block rounded-xl border-2 border-primary-container bg-surface-container-lowest p-space-md cursor-pointer transition-all shadow-sm hover:bg-surface-container-low">
+<input checked="" class="peer sr-only" name="account_action" type="radio" value="deactivate"/>
+<div class="flex items-start gap-space-sm">
+<div class="mt-1 w-5 h-5 rounded-full border-2 border-primary-container flex items-center justify-center peer-checked:bg-primary-container">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container"></div>
+</div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+<span class="text-title-md font-title-md text-primary font-bold">1. தற்காலிகமாக முடக்குதல் (Temporarily Deactivate)</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-space-xs py-0.5 rounded text-label-sm font-label-sm">
+                    மீண்டும் செயல்படுத்தலாம் (Reversible)
+                  </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                  இந்த நிர்வாகி செயலியில் நுழைய முடியாது. ஆனால் இவர் இதுவரை பதிவிட்ட வரவு/செலவு ரசீது பதிவுகள் மற்றும் கணக்கு வரலாறு அனைத்தும் அப்படியே பாதுகாப்பாக இருக்கும். எப்போது வேண்டுமானாலும் மீண்டும் இயக்கலாம்.
+                </p>
+<div class="mt-space-xs inline-flex items-center gap-1 text-label-sm font-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+<span>பரிந்துரைக்கப்பட்ட பாதுகாப்பான முறை (Recommended Safe Option)</span>
+</div>
+</div>
+</div>
+</label>
+<!-- OPTION B: Permanently Delete (Danger) -->
+<label class="relative block rounded-xl border border-outline-variant bg-surface-container-lowest p-space-md cursor-pointer transition-all hover:border-error hover:bg-error-container/10">
+<input class="peer sr-only" name="account_action" type="radio" value="delete"/>
+<div class="flex items-start gap-space-sm">
+<div class="mt-1 w-5 h-5 rounded-full border-2 border-outline flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-transparent"></div>
+</div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+<span class="text-title-md font-title-md text-error font-bold flex items-center gap-1">
+                    2. நிரந்தரமாக நீக்குதல் (Permanently Delete Admin)
+                  </span>
+<span class="bg-error-container text-on-error-container px-space-xs py-0.5 rounded text-label-sm font-label-sm">
+                    மீளப்பெற முடியாது (Irreversible Danger)
+                  </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                  நிர்வாகி கணக்கு முற்றிலும் நீக்கப்படும். இவர் வழங்கிய கணக்கு சான்றுகள், அனுமதி பதிவுகள் புதிய பொறுப்பாளருக்கு கட்டாயம் மாற்றப்பட வேண்டும்.
+                </p>
+<div class="mt-space-xs inline-flex items-center gap-1 text-label-sm font-label-sm text-error font-semibold">
+<span class="material-symbols-outlined text-[14px]" data-icon="warning">warning</span>
+<span>கவனம்: கணக்கு தணிக்கைக்காக பொறுப்பு ஒப்படைப்பு கட்டாயம்</span>
+</div>
+</div>
+</div>
+</label>
+</fieldset>
+<!-- 4. HANDOVER & SECURITY CONFIRMATION SECTION -->
+<section class="space-y-space-md bg-surface-container-low p-space-md rounded-xl border border-outline-variant">
+<!-- Pending Queue Handover Select -->
+<div class="space-y-space-xs">
+<label class="block text-label-md font-label-md text-primary" for="handover_target">
+              நிலுவையில் உள்ள ரசீது பொறுப்பை ஒப்படைக்க (Transfer Pending Queue to) *
+            </label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-space-sm text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container pr-10 appearance-none" id="handover_target">
+<option value="treasurer">சோ. அழகப்பன் செட்டியார் (பொருளாளர் / Trustee Treasurer)</option>
+<option value="president">மு. பெரியசாமி அம்பலம் (நாட்டாமை / Head of Trust)</option>
+<option value="senior_clerk">க. வைத்திலிங்கம் பிள்ளை (தலைமை எழுத்தர்)</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Reason for Action -->
+<div class="space-y-space-xs">
+<label class="block text-label-md font-label-md text-primary">
+              நடவடிக்கைக்கான காரணம் (Reason for action) *
+            </label>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="px-space-sm py-space-xs rounded-lg text-label-sm font-label-sm bg-surface-container-lowest border border-primary-container text-primary font-bold shadow-xs text-left truncate flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]" data-icon="task_alt">task_alt</span>
+                பதவிக்காலம் நிறைவு (Tenure Done)
+              </button>
+<button class="px-space-sm py-space-xs rounded-lg text-label-sm font-label-sm bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:border-primary-container text-left truncate" type="button">
+                தற்காலிக விடுப்பு (On Leave)
+              </button>
+<button class="px-space-sm py-space-xs rounded-lg text-label-sm font-label-sm bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:border-primary-container text-left truncate" type="button">
+                பொறுப்பு மாற்றம் (Role Changed)
+              </button>
+<button class="px-space-sm py-space-xs rounded-lg text-label-sm font-label-sm bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:border-primary-container text-left truncate" type="button">
+                பிற காரணங்கள் (Other)
+              </button>
+</div>
+</div>
+<!-- Two-step Security Confirmation Checkbox -->
+<div class="pt-space-xs">
+<label class="flex items-start gap-space-sm bg-surface-container-lowest p-space-sm rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-bright">
+<input checked="" class="mt-1 h-5 w-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface leading-snug">
+<strong class="font-bold text-primary">உறுதிமொழி:</strong> ஆம், இந்த நிர்வாகியின் அணுகலை மாற்றுவதை நாட்டாமை / தலைமை நிர்வாகியாக முழு பொறுப்புடன் உறுதிசெய்கிறேன்.
+              </span>
+</label>
+</div>
+</section>
+</div>
+<!-- 5. ACTION BUTTONS (STICKY FOOTER) -->
+<footer class="px-margin py-space-md bg-surface border-t border-surface-container-highest space-y-space-xs">
+<!-- Primary Warning/Action Button -->
+<button class="w-full min-h-[48px] bg-primary-container hover:bg-primary text-on-primary font-bold text-body-md rounded-lg flex items-center justify-center gap-space-sm shadow-md active:scale-98 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="lock">lock</span>
+<span>தற்காலிகமாக முடக்குக (Deactivate Admin)</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<!-- Permanent Delete Alternative -->
+<button class="min-h-[48px] bg-surface-container-lowest border border-error text-error hover:bg-error-container/20 font-bold text-body-sm rounded-lg flex items-center justify-center gap-1 active:scale-98 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="delete">delete</span>
+<span>நிரந்தரமாக நீக்கு (Delete)</span>
+</button>
+<!-- Cancel & Dismiss -->
+<button class="min-h-[48px] bg-surface-container hover:bg-surface-container-high text-on-surface font-semibold text-body-sm rounded-lg flex items-center justify-center gap-1 active:scale-98 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="cancel">cancel</span>
+<span>ரத்து செய்க (Cancel)</span>
+</button>
+</div>
+<div class="text-center pt-space-xs">
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-secondary" data-icon="lock_clock">lock_clock</span>
+            தணிக்கை பதிவு தானாக சேமிக்கப்படும் (Audit logged with timestamp)
+          </span>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

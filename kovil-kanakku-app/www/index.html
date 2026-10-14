@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="ta"><head>
+<link rel="stylesheet" href="css/app.css"/><script src="js/app.js" defer></script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>ஶ்ரீ ஏழைகாத்த அம்மன் வல்லடிகார சுவாமி திருக்கோவில் - கோவில் கணக்கு செயலி</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Custom Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            maroon: {
+              800: '#521010',
+              900: '#7a1c1c',
+              950: '#3d0808',
+            },
+            templegold: {
+              100: '#FFF7D6',
+              200: '#FFECA1',
+              300: '#FDE06C',
+              400: '#ECC33A',
+              500: '#D4AF37',
+              600: '#AA820A',
+            }
+          },
+          fontFamily: {
+            tamil: ['"Noto Serif Tamil"', 'serif', 'system-ui'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts: Noto Serif Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700;800&amp;family=Cinzel:wght@600;800&amp;display=swap" rel="stylesheet"/>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Custom CSS Styles -->
+<style data-purpose="custom-animations">
+    @keyframes pulseAura {
+      0%, 100% {
+        box-shadow: 0 0 25px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.2);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 45px rgba(212, 175, 55, 0.7), 0 0 90px rgba(212, 175, 55, 0.35);
+        transform: scale(1.015);
+      }
+    }
+
+    @keyframes shimmerBar {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    .divine-glow {
+      animation: pulseAura 4s ease-in-out infinite;
+    }
+
+    .shimmer-progress {
+      background: linear-gradient(90deg, #aa820a 0%, #ffeaa7 50%, #aa820a 100%);
+      background-size: 200% 100%;
+      animation: shimmerBar 2.2s infinite linear;
+    }
+
+    .gold-foil-text {
+      background: linear-gradient(180deg, #FFF9D2 0%, #F5D365 40%, #B8860B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+  </style>
+<style data-purpose="mobile-viewport">
+    /* Lock layout strictly to iOS mobile preview standard */
+    body {
+      touch-action: manipulation;
+      -webkit-font-smoothing: antialiased;
+      background-color: #1e0505;
+      font-family: 'Noto Serif Tamil', serif;
+    }
+  </style>
+</head>
+<body data-screen="splash" class="flex items-center justify-center min-h-screen p-0 sm:p-4 text-amber-50">
+<!-- BEGIN: MobileContainer -->
+<!-- Main simulated iOS frame wrapping the splash screen -->
+<main class="relative w-full max-w-[430px] h-[100dvh] sm:h-[880px] overflow-hidden sm:rounded-[44px] shadow-2xl border-0 sm:border-8 border-stone-800 flex flex-col justify-between select-none" data-purpose="mobile-device-canvas">
+<!-- Background Artwork Layer with Atmospheric Blends -->
+<div class="absolute inset-0 z-0">
+<img alt="Divine South Indian Hindu Temple Mobile App Splash Screen background" class="w-full h-full object-cover object-center filter brightness-[0.92] contrast-[1.05]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQFFacsU-YxVwJDegSyzIlx3PrwBubY6sxUgmrYV5axTZJPyQZyGWv5fOBk5YIUAcqCGi38aLLWGnf39tlcuBzwC6rbqEkuwAjDlR0fV6qPngr3XP1YWawe6kCi4tiH1fNwS-s6lUulV7_YFdcedZEpSK9saLPGYOA5Nqm67O51WuJB7B2fzeokXb4ifJxCreBvT0XpxvbvDe0lRLG0U-TID3DYGoIrTTP2xiVciHMvk0T3n74h4Ac"/>
+<!-- Sacred Gradient Vignette Overlay for Readability -->
+<div class="absolute inset-0 bg-gradient-to-b from-[#3a0606]/80 via-[#521010]/50 to-[#270303]/95"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,rgba(20,2,2,0.85)_100%)]"></div>
+</div>
+<!-- BEGIN: TopBar -->
+<!-- iOS Dynamic Island & Status Area Indicator -->
+<header class="relative z-10 w-full pt-3 px-7 flex justify-between items-center text-xs tracking-wider text-amber-200/80 font-medium">
+<!-- Time Display -->
+<div class="flex items-center space-x-1">
+<span class="font-semibold tracking-normal text-sm text-amber-100">06:30</span>
+<span class="text-[10px] text-amber-300">காலை</span>
+</div>
+<!-- Sacred Symbol / Auspicious Mark -->
+<div class="flex items-center space-x-1.5 px-2.5 py-0.5 rounded-full bg-amber-950/60 border border-amber-500/30 backdrop-blur-sm">
+<span class="text-amber-400 text-xs">ॐ</span>
+<span class="text-[10px] text-amber-200/90 font-semibold tracking-wide">நற்கணக்கு</span>
+</div>
+<!-- Device Indicators -->
+<div class="flex items-center space-x-2 text-amber-200">
+<i class="w-3.5 h-3.5" data-lucide="signal"></i>
+<i class="w-3.5 h-3.5" data-lucide="wifi"></i>
+<i class="w-4 h-4 text-templegold-400" data-lucide="battery-full"></i>
+</div>
+</header>
+<!-- END: TopBar -->
+<!-- BEGIN: CenterBrandingSection -->
+<!-- Elevated Divine Icon & Temple Identity -->
+<section class="relative z-10 flex-1 flex flex-col items-center justify-center px-6 text-center mt-[-10px]" data-purpose="splash-branding">
+<!-- Icon Glow Frame -->
+<div class="relative group my-2">
+<!-- Golden Decorative Radiance Aura -->
+<div class="absolute -inset-2 rounded-[34px] bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-600 opacity-60 blur-lg divine-glow"></div>
+<!-- App Icon Artwork -->
+<div class="relative w-32 h-32 sm:w-36 sm:h-36 rounded-[28px] overflow-hidden border-2 border-yellow-300/60 shadow-2xl bg-maroon-900 flex items-center justify-center">
+<img alt="Kovil Kanakku Mobile App Icon" class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZWJNBIwYBUIh7DJSzJR0rUDD07gnciLyZlkVgoispc0kljZADAd0x2FitXTWlvcblTtoUP-wn-EZ9XrLlQPgLPhXjCNMj1EbaKMBt554PHLpN06jKpH1u5SYpXeZVjPS9Rq59M11r6LT6-zRSV_CF_zZtK7Nn1LSET1fqVl0tmY0fl9SBkX7-RPfSnIYfahuPOBTFdKifITNT6Gx51U8h4OIXxwEtHWJub8Ol1ID2D_O26NrfDPYb"/>
+</div>
+<!-- Sacred Kumkum & Chandan Dot Badging -->
+<div class="absolute -bottom-2 -right-1 bg-gradient-to-tr from-amber-700 to-amber-400 text-maroon-950 text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-yellow-100 shadow-md">
+          அருள்மிகு
+        </div>
+</div>
+<!-- Sacred Maha Mandhiram Title Header -->
+<div class="mt-4 max-w-[340px]">
+<div class="inline-flex items-center justify-center gap-2 mb-1.5 opacity-90">
+<span class="h-[1px] w-6 bg-gradient-to-r from-transparent to-amber-400"></span>
+<span class="text-[11px] font-bold text-templegold-300 tracking-widest uppercase">திருத்தல தேவஸ்தானம்</span>
+<span class="h-[1px] w-6 bg-gradient-to-l from-transparent to-amber-400"></span>
+</div>
+<h1 class="text-2xl sm:text-[26px] font-bold leading-tight gold-foil-text drop-shadow-lg tracking-wide font-tamil">
+          ஶ்ரீ ஏழைகாத்த அம்மன்<br/>
+<span class="text-xl sm:text-[22px] font-semibold text-amber-100">வல்லடிகார சுவாமி திருக்கோவில்</span>
+</h1>
+<!-- Temple Village & App Purpose Subtitle -->
+<div class="mt-2.5 px-3 py-1 rounded-md bg-stone-950/50 backdrop-blur-md border border-amber-500/25 inline-block shadow-inner">
+<p class="text-xs sm:text-[13px] text-amber-200 font-medium tracking-wide">
+            பல்லவராயன்பட்டி தேவஸ்தானம் • கணக்கு &amp; நிர்வாகச் செயலி
+          </p>
+</div>
+</div>
+<!-- BEGIN: SyncStatusSection -->
+<!-- Data Synchronization Live Progress -->
+<div class="w-full max-w-[280px] mt-8 flex flex-col items-center" data-purpose="sync-status-indicator">
+<div class="flex items-center justify-between w-full text-[11px] text-amber-200/90 mb-2 font-medium">
+<span class="flex items-center gap-1.5">
+<i class="w-3 h-3 text-amber-400 animate-spin" data-lucide="refresh-cw"></i>
+            கோவில் தரவுகள் ஒத்திசைக்கப்படுகிறது...
+          </span>
+<span class="text-amber-300 font-mono text-[10px] font-bold">78%</span>
+</div>
+<!-- Custom Shimmering Golden Progress Bar -->
+<div class="w-full h-2 rounded-full bg-black/50 p-0.5 border border-amber-600/30 shadow-inner overflow-hidden">
+<div class="w-[78%] h-full rounded-full shimmer-progress shadow-[0_0_8px_rgba(236,195,58,0.7)] transition-all duration-700 ease-out"></div>
+</div>
+<p class="mt-1.5 text-[10px] text-amber-300/70 italic">
+          வரவு, செலவு, திருப்பணி &amp; அன்னதான பேரேடு
+        </p>
+</div>
+<!-- END: SyncStatusSection -->
+</section>
+<!-- END: CenterBrandingSection -->
+<!-- BEGIN: QuickActionsAndFooter -->
+<!-- Action Gateways & Compliance Identity Footer -->
+<footer class="relative z-10 px-6 pb-6 pt-2 flex flex-col items-center space-y-3" data-purpose="app-launch-actions">
+<!-- Action Buttons Container -->
+<div class="w-full flex flex-col gap-2.5">
+<!-- Admin Access Button -->
+<button data-go="screens/admin-home.html" aria-label="நிர்வாகி உள்நுழைவு" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-600 text-maroon-950 font-bold text-sm tracking-wide shadow-lg shadow-amber-950/40 hover:brightness-110 active:scale-[0.99] transition duration-200 flex items-center justify-center gap-2 border border-yellow-200" type="button">
+<i class="w-4 h-4 text-maroon-900" data-lucide="shield-check"></i>
+<span>நிர்வாகி உள்நுழைவு (Admin Login)</span>
+</button>
+<!-- Public / Devotee Access Button -->
+<button data-go="screens/public-home.html" aria-label="பக்தர்கள் / பொதுமக்கள் பார்வை" class="w-full py-3 px-4 rounded-xl bg-[#420d0d]/80 hover:bg-[#521010] active:scale-[0.99] transition duration-200 text-amber-200 text-xs sm:text-[13px] font-semibold border border-amber-500/40 backdrop-blur-md flex items-center justify-center gap-2 shadow-sm" type="button">
+<i class="w-4 h-4 text-amber-300" data-lucide="eye"></i>
+<span>பக்தர்கள் / பொதுமக்கள் பார்வை (Public View)</span>
+</button>
+</div>
+<!-- Legal / HRCE Regulatory Authentication Tag -->
+<div class="text-center pt-2 border-t border-amber-500/20 w-full">
+<p class="text-[10px] sm:text-[10.5px] leading-relaxed text-amber-300/80 font-normal">
+          பதிப்பு 2.4 • HRCE அங்கீகரிக்கப்பட்ட கணக்கு முறை • பல்லவராயன்பட்டி
+        </p>
+<p class="text-[9px] text-amber-400/50 mt-0.5">
+          அனைத்து உரிமைகளும் திருக்கோவில் அறக்கட்டளைக்கு உரித்தானது
+        </p>
+</div>
+<!-- iOS Home Screen Bar Indicator -->
+<div class="w-32 h-1 bg-amber-200/40 rounded-full mt-1"></div>
+</footer>
+<!-- END: QuickActionsAndFooter -->
+</main>
+<!-- END: MobileContainer -->
+<!-- Icon Rendering Script -->
+<script data-purpose="icon-initialization">
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    });
+  </script>
+</body></html>

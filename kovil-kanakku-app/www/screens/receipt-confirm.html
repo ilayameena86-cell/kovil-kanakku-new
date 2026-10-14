@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ta"><head>
+<meta name="theme-color" content="#5b0309"/>
+<link rel="stylesheet" href="../css/app.css"/>
+<script src="../js/app.js" defer></script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>ரசீது பதிவு உறுதிப்படுத்தல் - கோவில் கணக்கு</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Noto Serif Tamil & Noto Sans Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;family=Noto+Serif:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary": "#815600",
+            "on-primary-fixed": "#410004",
+            "background": "#fcf9f3",
+            "on-surface": "#1c1c18",
+            "on-error-container": "#93000a",
+            "surface-bright": "#fcf9f3",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#0d512f",
+            "primary-fixed": "#ffdad7",
+            "surface-dim": "#dcdad4",
+            "error": "#ba1a1a",
+            "secondary-container": "#febd59",
+            "inverse-surface": "#31312d",
+            "secondary-fixed": "#ffddb1",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#f0eee8",
+            "surface-container-low": "#f6f3ed",
+            "on-primary": "#ffffff",
+            "tertiary-container": "#014a28",
+            "on-secondary": "#ffffff",
+            "outline": "#8a716f",
+            "surface-variant": "#e5e2dc",
+            "surface": "#fcf9f3",
+            "tertiary": "#003119",
+            "on-tertiary-fixed": "#00210f",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#ddc0bd",
+            "surface-container-high": "#ebe8e2",
+            "surface-tint": "#a43b37",
+            "inverse-on-surface": "#f3f0ea",
+            "on-tertiary-container": "#79b98e",
+            "primary": "#5b0309",
+            "primary-container": "#7a1c1c",
+            "on-secondary-fixed-variant": "#624000",
+            "surface-container-highest": "#e5e2dc",
+            "tertiary-fixed": "#aff2c2",
+            "on-secondary-container": "#734c00",
+            "tertiary-fixed-dim": "#94d5a7",
+            "secondary-fixed-dim": "#fbbb56",
+            "on-secondary-fixed": "#291800",
+            "on-primary-container": "#ff8981",
+            "primary-fixed-dim": "#ffb3ad",
+            "on-surface-variant": "#574240",
+            "inverse-primary": "#ffb3ad",
+            "on-primary-fixed-variant": "#842322",
+            "on-background": "#1c1c18"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "headline-lg": [
+              "Noto Serif"
+            ],
+            "label-md": [
+              "Noto Sans"
+            ],
+            "body-md": [
+              "Noto Sans"
+            ],
+            "label-sm": [
+              "Noto Sans"
+            ],
+            "label-lg": [
+              "Noto Sans"
+            ],
+            "ledger-amount-md": [
+              "Noto Serif"
+            ],
+            "title-md": [
+              "Noto Serif"
+            ],
+            "body-sm": [
+              "Noto Sans"
+            ],
+            "ledger-amount-lg": [
+              "Noto Serif"
+            ],
+            "headline-xl-mobile": [
+              "Noto Serif"
+            ],
+            "body-lg": [
+              "Noto Sans"
+            ],
+            "headline-xl": [
+              "Noto Serif"
+            ],
+            "headline-lg-mobile": [
+              "Noto Serif"
+            ]
+          },
+          "fontSize": {
+            "headline-lg": [
+              "24px",
+              {
+                "lineHeight": "32px",
+                "fontWeight": "600"
+              }
+            ],
+            "label-md": [
+              "12px",
+              {
+                "lineHeight": "16px",
+                "fontWeight": "600"
+              }
+            ],
+            "body-md": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "400"
+              }
+            ],
+            "label-sm": [
+              "11px",
+              {
+                "lineHeight": "14px",
+                "fontWeight": "700"
+              }
+            ],
+            "label-lg": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "600"
+              }
+            ],
+            "ledger-amount-md": [
+              "18px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "600"
+              }
+            ],
+            "title-md": [
+              "18px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "600"
+              }
+            ],
+            "body-sm": [
+              "12px",
+              {
+                "lineHeight": "16px",
+                "fontWeight": "400"
+              }
+            ],
+            "ledger-amount-lg": [
+              "28px",
+              {
+                "lineHeight": "36px",
+                "fontWeight": "700"
+              }
+            ],
+            "headline-xl-mobile": [
+              "26px",
+              {
+                "lineHeight": "34px",
+                "fontWeight": "700"
+              }
+            ],
+            "body-lg": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-xl": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "fontWeight": "700"
+              }
+            ],
+            "headline-lg-mobile": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "600"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    
+    /* Subtle decorative parchment background grain */
+    .temple-paper-pattern {
+      background-color: #fcf9f3;
+      background-image: radial-gradient(#dcdad4 0.65px, transparent 0.65px), radial-gradient(#dcdad4 0.65px, #fcf9f3 0.65px);
+      background-size: 26px 26px;
+      background-position: 0 0, 13px 13px;
+    }
+
+    /* Traditional Serrated/Perforated edge for temple receipt styling */
+    .receipt-perforated-edge {
+      background-image: radial-gradient(circle at 10px -5px, transparent 12px, #ffffff 13px);
+      background-size: 20px 20px;
+      background-repeat: repeat-x;
+    }
+
+    /* Soft pulse aura for success icon */
+    @keyframes templeAura {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 0.35; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+    .aura-anim {
+      animation: templeAura 3s ease-in-out infinite;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body data-screen="receipt-confirm" class="bg-background text-on-surface antialiased select-none font-body-md text-body-md overflow-x-hidden min-h-screen">
+<!-- ================================================================= -->
+<!-- BACKGROUND SCREEN: Income Entry Form (Dimmed / Frosted Context)   -->
+<!-- ================================================================= -->
+<div class="relative w-full max-w-md mx-auto min-h-screen temple-paper-pattern filter blur-[2px] opacity-40 pointer-events-none select-none">
+<!-- TopAppBar Mock (dimmed) -->
+<header class="bg-surface text-primary border-b border-outline-variant flex justify-between items-center w-full px-margin py-space-sm max-w-full">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]">temple_hindu</span>
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">கோவில் கணக்கு</h1>
+<p class="font-label-sm text-label-sm text-secondary">ஏழைக்காத்த அம்மன் திருக்கோயில்</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary">notifications</span>
+</div>
+</header>
+<!-- Content mock behind modal -->
+<div class="p-margin space-y-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded border border-outline-variant">
+<div class="font-label-md text-label-md text-secondary mb-space-xs">புதிய வரவு பதிவு படிவம்</div>
+<div class="h-10 bg-surface-container rounded mb-space-sm"></div>
+<div class="h-10 bg-surface-container rounded mb-space-sm"></div>
+<div class="h-10 bg-surface-container rounded mb-space-sm"></div>
+<div class="h-12 bg-primary-container rounded mt-space-md opacity-70"></div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded border border-outline-variant space-y-2">
+<div class="h-4 bg-surface-variant w-1/3 rounded"></div>
+<div class="h-8 bg-surface-container rounded"></div>
+<div class="h-8 bg-surface-container rounded"></div>
+</div>
+</div>
+</div>
+<!-- ================================================================= -->
+<!-- MODAL BACKDROP OVERLAY                                             -->
+<!-- ================================================================= -->
+<div class="fixed inset-0 bg-inverse-surface/60 backdrop-blur-sm z-40 transition-opacity duration-300 flex items-end sm:items-center justify-center p-0 sm:p-margin">
+<!-- =============================================================== -->
+<!-- TEMPLE SUCCESS MODAL CARD / SHEET                                -->
+<!-- =============================================================== -->
+<div class="relative w-full max-w-md bg-surface-container-lowest rounded-t-xl sm:rounded-xl shadow-2xl border border-secondary-container overflow-hidden z-50 animate-in slide-in-from-bottom duration-300 max-h-[848px] flex flex-col">
+<!-- Sacred Gold & Maroon Header Accent Trim -->
+<div class="w-full h-1.5 bg-gradient-to-r from-primary-container via-secondary to-primary-container"></div>
+<!-- Scrollable Container -->
+<div class="overflow-y-auto px-margin pt-space-md pb-space-lg">
+<!-- Close button / dismiss icon top right -->
+<div class="flex justify-between items-start">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container-high text-on-surface-variant border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm text-secondary tracking-wide">அதிகாரப்பூர்வ ரசீது</span>
+</div>
+<button aria-label="மூடுக" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- 1. HEADER / CELEBRATION ICON SECTION -->
+<div class="text-center mt-space-xs mb-space-md">
+<!-- Animated Aura Circle -->
+<div class="relative w-20 h-20 mx-auto flex items-center justify-center mb-space-sm">
+<div class="absolute inset-0 rounded-full bg-tertiary-fixed aura-anim"></div>
+<div class="relative w-16 h-16 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-md border-2 border-secondary-fixed">
+<span class="material-symbols-outlined text-[34px] font-bold" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Temple Dedication Heading -->
+<div class="font-label-sm text-label-sm text-secondary tracking-wide uppercase mb-0.5">
+            அருள்மிகு ஶ்ரீ ஏழைக்காத்த அம்மன் வல்லடிகார சுவாமி திருக்கோயில்
+          </div>
+<!-- Success Message in Noto Serif -->
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold leading-tight">
+            வெற்றி! வரவு ரசீது பதியப்பட்டது
+          </h2>
+<!-- Voucher & Timestamp Badges -->
+<div class="mt-space-xs flex flex-wrap items-center justify-center gap-2">
+<span class="font-label-md text-label-md px-space-sm py-0.5 rounded bg-surface-container text-primary font-bold border border-outline-variant">
+              ரசீது எண்: #KK-2025-0842
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+              29 மார்ச் 2025, பிற்பகல் 03:45
+            </span>
+</div>
+</div>
+<!-- Hairline Temple Filigree Divider -->
+<div class="relative flex items-center justify-center my-space-sm">
+<div class="w-full border-t border-outline-variant"></div>
+<div class="absolute px-2 bg-surface-container-lowest text-secondary text-[12px] flex items-center gap-1">
+<span>❖</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wider">வரவு விபரம்</span>
+<span>❖</span>
+</div>
+</div>
+<!-- 2. KEY TRANSACTION SUMMARY BOX (LEDGER CARD) -->
+<div class="bg-surface-container-low rounded-lg p-space-md border border-outline-variant relative overflow-hidden mt-space-md">
+<!-- Top Left Decorative Seal Tint -->
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary-fixed opacity-15 pointer-events-none"></div>
+<!-- Prominent Amount Box -->
+<div class="bg-surface-container-lowest p-space-sm rounded border border-outline-variant text-center mb-space-sm shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">செலுத்தப்பட்ட நன்கொடை தொகை</span>
+<div class="font-ledger-amount-lg text-ledger-amount-lg text-primary font-bold tracking-tight mt-0.5 flex items-center justify-center gap-1">
+<span>₹</span>
+<span>1,000</span>
+</div>
+<div class="font-label-sm text-label-sm text-tertiary font-semibold">
+              (ஆயிரம் ரூபாய் மட்டும்)
+            </div>
+</div>
+<!-- Detailed Ledger Key-Values -->
+<div class="space-y-space-xs font-body-sm text-body-sm">
+<!-- Row 1: விழா / நிகழ்வு -->
+<div class="flex justify-between items-baseline py-1 border-b border-surface-variant">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">festival</span>
+                விழா / நிகழ்வு:
+              </span>
+<span class="font-semibold text-on-surface text-right">சித்திரைத் திருவிழா - 2025</span>
+</div>
+<!-- Row 2: வரவு வகை -->
+<div class="flex justify-between items-baseline py-1 border-b border-surface-variant">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">receipt</span>
+                வரவு வகை:
+              </span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container font-semibold text-primary">
+                தலைக்கட்டு வரி (குடும்ப வரி)
+              </span>
+</div>
+<!-- Row 3: பக்தர் / குடும்பத் தலைவர் -->
+<div class="flex justify-between items-baseline py-1 border-b border-surface-variant">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">person</span>
+                பக்தர் / தலைவர்:
+              </span>
+<span class="font-semibold text-on-surface text-right">திரு. மு. சுந்தரராஜன் <span class="text-secondary font-label-sm">(#TK-402)</span></span>
+</div>
+<!-- Row 4: கரை -->
+<div class="flex justify-between items-baseline py-1 border-b border-surface-variant">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">groups</span>
+                கரை வகை:
+              </span>
+<span class="font-medium text-on-surface text-right">வல்லடிகாரன் கரை (முதன்மை கரை)</span>
+</div>
+<!-- Row 5: செலுத்திய முறை -->
+<div class="flex justify-between items-baseline py-1 border-b border-surface-variant">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">account_balance_wallet</span>
+                செலுத்திய முறை:
+              </span>
+<div class="text-right">
+<span class="inline-flex items-center gap-1 font-semibold text-tertiary">
+<span class="material-symbols-outlined text-[14px]">check</span> UPI / GPay
+                </span>
+<span class="block font-label-sm text-[10px] text-on-surface-variant">UPI-982410293</span>
+</div>
+</div>
+<!-- Row 6: பெற்றுக் கொண்டவர் -->
+<div class="flex justify-between items-baseline pt-1">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">assignment_ind</span>
+                பெற்றுக் கொண்டவர்:
+              </span>
+<span class="font-medium text-on-surface">கோவில் கணக்கர் (பொறுப்பாளர்)</span>
+</div>
+</div>
+</div>
+<!-- 3. WHATSAPP AUTOMATED DISPATCH STATUS CARD -->
+<div class="mt-space-sm bg-tertiary/5 border border-tertiary-fixed-dim rounded-lg p-space-sm flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary flex-shrink-0 flex items-center justify-center mt-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-tertiary font-bold flex items-center gap-1">
+                வாட்ஸ்அப் ரசீது அனுப்பப்பட்டது
+                <span class="material-symbols-outlined text-[15px] text-tertiary font-bold">done_all</span>
+</span>
+<span class="font-label-sm text-label-sm text-tertiary-container bg-tertiary-fixed px-1.5 py-0.2 rounded font-semibold">
+                தானியங்கி
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+              பக்தர் வாட்ஸ்அப்பில் (<span class="font-semibold text-on-surface">+91 98402 34567</span>) PDF மின்-ரசீது வெற்றிகரமாகப் பகிரப்பட்டது.
+            </p>
+</div>
+</div>
+<!-- 4. ACTION BUTTONS (STRICT HIERARCHY) -->
+<div class="mt-space-md space-y-space-xs">
+<!-- Primary Action: Resend WhatsApp -->
+<button class="w-full min-h-[48px] bg-tertiary hover:bg-tertiary-container text-on-tertiary font-label-lg text-label-lg rounded flex items-center justify-center gap-2 shadow transition-colors active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span>வாட்ஸ்அப்பில் மீண்டும் பகிர்க</span>
+</button>
+<!-- Secondary Action: Print Receipt -->
+<button class="w-full min-h-[48px] bg-surface-container-low hover:bg-surface-container text-primary-container border border-primary-container font-label-lg text-label-lg rounded flex items-center justify-center gap-2 transition-colors active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[20px]">print</span>
+<span>ரசீதை உடனே அச்சிடுக (Print Receipt)</span>
+</button>
+<!-- Tertiary Action: New Entry (கட்டணம் / அடுத்த வரவு) -->
+<button class="w-full min-h-[48px] bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg rounded flex items-center justify-center gap-2 shadow-sm transition-colors active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>அடுத்த வரவு பதிவு செய்க (New Entry)</span>
+</button>
+<!-- Bottom Dismiss / Return to Ledger -->
+<div class="text-center pt-space-xs">
+<button class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:text-primary py-2 px-space-sm underline underline-offset-4 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>முகப்புக்குச் செல்க / பதிவேட்டில் காண்க</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Sacred Bottom Motif Footer Banner -->
+<div class="bg-surface-container px-margin py-1.5 text-center border-t border-outline-variant flex items-center justify-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-secondary">✦</span>
+<span>தெளிவான கணக்கு • நம்பகமான திருப்பணி</span>
+<span class="text-secondary">✦</span>
+</div>
+</div>
+</div>
+</body></html>

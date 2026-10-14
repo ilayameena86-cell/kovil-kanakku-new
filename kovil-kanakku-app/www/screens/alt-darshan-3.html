@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ta"><head>
+<meta name="theme-color" content="#5b0309"/>
+<link rel="stylesheet" href="../css/app.css"/>
+<script src="../js/app.js" defer></script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>கோவில் கணக்கு - மூலவர் &amp; கோபுர தரிசனம்</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-fixed": "#291800",
+            "outline": "#8a716f",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed-dim": "#94d5a7",
+            "primary-fixed": "#ffdad7",
+            "tertiary-container": "#014a28",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "secondary": "#815600",
+            "inverse-on-surface": "#f3f0ea",
+            "surface-container": "#f0eee8",
+            "on-surface-variant": "#574240",
+            "on-tertiary-container": "#79b98e",
+            "secondary-fixed-dim": "#fbbb56",
+            "on-secondary-container": "#734c00",
+            "surface-container-lowest": "#ffffff",
+            "inverse-primary": "#ffb3ad",
+            "surface-container-high": "#ebe8e2",
+            "on-error-container": "#93000a",
+            "surface-variant": "#e5e2dc",
+            "on-surface": "#1c1c18",
+            "primary": "#5b0309",
+            "primary-fixed-dim": "#ffb3ad",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fcf9f3",
+            "tertiary": "#003119",
+            "secondary-fixed": "#ffddb1",
+            "background": "#fcf9f3",
+            "surface-container-low": "#f6f3ed",
+            "surface-dim": "#dcdad4",
+            "surface-tint": "#a43b37",
+            "on-secondary-fixed-variant": "#624000",
+            "on-tertiary-fixed": "#00210f",
+            "on-primary-container": "#ff8981",
+            "on-primary": "#ffffff",
+            "inverse-surface": "#31312d",
+            "surface-container-highest": "#e5e2dc",
+            "surface": "#fcf9f3",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed-variant": "#0d512f",
+            "on-background": "#1c1c18",
+            "tertiary-fixed": "#aff2c2",
+            "on-primary-fixed-variant": "#842322",
+            "on-primary-fixed": "#410004",
+            "secondary-container": "#febd59",
+            "outline-variant": "#ddc0bd",
+            "primary-container": "#7a1c1c"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "margin": "1rem",
+            "space-xl": "2rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-md": ["Noto Sans"],
+            "title-md": ["Noto Serif"],
+            "label-sm": ["Noto Sans"],
+            "label-md": ["Noto Sans"],
+            "headline-xl": ["Noto Serif"],
+            "body-sm": ["Noto Sans"],
+            "headline-lg": ["Noto Serif"],
+            "ledger-amount-lg": ["Noto Serif"],
+            "label-lg": ["Noto Sans"],
+            "body-lg": ["Noto Sans"],
+            "headline-xl-mobile": ["Noto Serif"],
+            "ledger-amount-md": ["Noto Serif"],
+            "headline-lg-mobile": ["Noto Serif"]
+          },
+          "fontSize": {
+            "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "700"}],
+            "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+            "headline-xl": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+            "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+            "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+            "ledger-amount-lg": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-xl-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}],
+            "ledger-amount-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body data-screen="alt-darshan-3" class="bg-background text-on-surface font-body-md text-body-md min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-primary pb-28">
+<!-- Top Sacred App Bar -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant flex justify-between items-center w-full px-margin py-2.5 sticky top-0 z-40 shadow-xs backdrop-blur-md bg-opacity-95">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center border border-secondary shadow-xs">
+<span class="material-symbols-outlined" data-icon="temple_hindu">temple_hindu</span>
+</div>
+<div>
+<h1 class="text-title-md font-title-md text-primary tracking-tight leading-snug">கோவில் கணக்கு</h1>
+<p class="text-label-sm font-label-sm text-on-surface-variant truncate font-semibold">ஶ்ரீ ஏழைகாத்த அம்மன் , வல்லடிகார சுவாமி திருக்கோவில், பல்லவராயன்பட்டி</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button aria-label="அறிவிப்புகள்" class="relative w-9 h-9 rounded-full flex items-center justify-center text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications" style="font-size: 22px;">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-primary rounded-full ring-2 ring-surface"></span>
+</button>
+<button aria-label="அமைப்புகள்" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert" style="font-size: 22px;">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Main Scrollable Canvas -->
+<main class="flex-1 w-full max-w-lg mx-auto px-margin pt-space-sm space-y-space-md">
+<!-- Auspicious Mandapam Banner & Dual Darshan Showcase -->
+<section class="bg-gradient-to-b from-primary via-primary-container to-[#450207] text-on-primary rounded-2xl p-3 border-2 border-secondary shadow-md relative overflow-hidden">
+<!-- Traditional Arch Trim & Marigold Garland Banner -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-secondary-fixed via-secondary-container to-secondary"></div>
+<div class="flex items-center justify-between pb-2 border-b border-primary-fixed/20 mb-2.5">
+<div class="flex items-center gap-1.5 text-secondary-fixed">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="notifications_active" style="font-size: 16px;">notifications_active</span>
+<span class="text-label-sm font-label-sm font-bold tracking-wide">தினசரி உச்சிகால &amp; சாயரட்சை பூஜை தரிசனம்</span>
+</div>
+<span class="bg-secondary text-on-secondary px-2 py-0.5 rounded text-[10px] font-bold tracking-wider">புனித பேரேடு</span>
+</div>
+<!-- Dual Darshan Images Grid -->
+<div class="grid grid-cols-2 gap-2.5 relative">
+<!-- Left: Moolavar Amman Deity Photo -->
+<div class="group relative rounded-xl overflow-hidden border-2 border-secondary/80 bg-black/40 shadow-sm flex flex-col">
+<div class="relative aspect-[3/4] w-full overflow-hidden bg-neutral-900">
+<img alt="கருவறை மூலவர் அம்மன்" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAltanN5aryX3aw-N6Vg3thEdk4s6m2zNoVHVcmV6NFDwedWZIEoxeChI2DRfAOSjuynzMyXUH87h0XEErLAtUkVmrHPaCiTvI7sJsjeFNxqyGzq9gPbpIxUjMvXqUqruZx6SiyB7dqydomlQ-pS5MrxNNv7qsYxskh_zSmfxEHR0vTCQCaUnaMiAE3zkGQXbKus5Wympd5ZDltCHG04H2GRzbZTwm_fePouLvAnoO8i2AdYGZaJCmsDemunOEVieJ0tA"/>
+<!-- Top Marigold Toran / Bell overlay tag -->
+<div class="absolute top-1.5 left-1.5 right-1.5 flex justify-between items-center z-10 pointer-events-none">
+<span class="bg-primary/85 text-secondary-fixed backdrop-blur-xs px-1.5 py-0.5 rounded text-[10px] font-bold border border-secondary/50 flex items-center gap-0.5">
+<span class="material-symbols-outlined" style="font-size: 11px;">brightness_7</span> மூலவர்
+</span>
+<span class="material-symbols-outlined text-secondary-fixed drop-shadow" style="font-size: 16px;">notifications</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/20"></div>
+<div class="absolute bottom-1.5 left-2 right-2 text-left">
+<p class="text-white font-title-md text-[13px] leading-tight font-bold drop-shadow">கருவறை மூலவர் அம்மன்</p>
+<p class="text-secondary-fixed text-[10px] font-medium leading-none mt-0.5">ஶ்ரீ ஏழைகாத்த அம்மன்</p>
+</div>
+</div>
+</div>
+<!-- Right: Gopuram Renovation Elevation Photo -->
+<div class="group relative rounded-xl overflow-hidden border-2 border-secondary/80 bg-black/40 shadow-sm flex flex-col">
+<div class="relative aspect-[3/4] w-full overflow-hidden bg-neutral-900">
+<img alt="திருக்கோயில் கோபுரத் திருப்பணி தோற்றம்" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMcdnMoz-cpuLXfk7sS9GldZilp8ffZ_67TmfXanbdw0wSBF-JlV9hXqPEviJantqPu8UpSabXX0xTgZRKZWzIvXgxHNk68uFNN1j-0eSXa_yTJ0_Q6ZUWkLo3EYm8QAfRvURcjM4ya9Y2FsiYO9axYheMqTa-WTiEMWjGhgirfs8U4aUOTAU67_BMU-P0K6vxh67n3x_IXq5J47pfubxhMeVItyyVPS7I3mN9ZycycNNFekjcisM1IkWAsS6L3USplg"/>
+<!-- Top Renovation Flag tag -->
+<div class="absolute top-1.5 left-1.5 right-1.5 flex justify-between items-center z-10 pointer-events-none">
+<span class="bg-secondary/90 text-on-secondary backdrop-blur-xs px-1.5 py-0.5 rounded text-[10px] font-bold border border-secondary-fixed/50 flex items-center gap-0.5">
+<span class="material-symbols-outlined" style="font-size: 11px;">temple_buddhist</span> கோபுரம்
+</span>
+<span class="material-symbols-outlined text-secondary-fixed drop-shadow" style="font-size: 16px;">handshake</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/20"></div>
+<div class="absolute bottom-1.5 left-2 right-2 text-left">
+<p class="text-white font-title-md text-[13px] leading-tight font-bold drop-shadow">கோபுரத் திருப்பணி தோற்றம்</p>
+<p class="text-secondary-fixed text-[10px] font-medium leading-none mt-0.5">ஶ்ரீ ஏழைகாத்த அம்மன்</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Temple Pooja Timing & Sanctum Pill -->
+<div class="mt-2.5 bg-black/35 rounded-xl px-2.5 py-1.5 border border-secondary/40 flex items-center justify-between text-secondary-fixed">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="schedule" style="font-size: 15px;">schedule</span>
+<span class="text-[11px] font-medium">பூஜை நேரம்: காலை 06:00 - இரவு 08:30 வரை</span>
+</div>
+<span class="text-[11px] font-bold text-secondary-fixed underline decoration-secondary">பல்லவராயன்பட்டி தேவஸ்தானம்</span>
+</div>
+</section>
+<!-- Sacred Date & Verification Pill Strip -->
+<div class="flex items-center justify-between bg-surface-container-low rounded-xl px-space-md py-2 border border-outline-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="calendar_month" style="font-size: 18px;">calendar_month</span>
+<span class="text-label-md font-label-md text-on-surface font-bold">சித்திரை மாதம் 14, 2025</span>
+</div>
+<div class="flex items-center gap-1 bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded text-label-sm font-label-sm border border-secondary-container">
+<span class="material-symbols-outlined" data-icon="verified" style="font-size: 14px; font-variation-settings: 'FILL' 1;">verified</span>
+<span>தணிக்கை பதிவு</span>
+</div>
+</div>
+<!-- Main Balance Card -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden relative">
+<!-- Sacred Gold Top Accent Bar -->
+<div class="h-1.5 w-full bg-secondary"></div>
+<div class="p-space-md sm:p-space-lg">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-label-md font-label-md text-on-surface-variant flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance_wallet" style="font-size: 16px;">account_balance_wallet</span>
+              மொத்த இருப்பு நிதி (Total Balance)
+            </span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="text-headline-xl-mobile font-headline-xl-mobile text-primary tracking-tight font-bold">₹ 14,85,620</span>
+</div>
+</div>
+<!-- Comparison Pill -->
+<div class="flex items-center gap-1 bg-tertiary-fixed text-tertiary px-2.5 py-1 rounded text-label-sm font-label-sm">
+<span class="material-symbols-outlined" data-icon="trending_up" style="font-size: 15px;">trending_up</span>
+<span>+12% வளர்ச்சி</span>
+</div>
+</div>
+<!-- Hairline Sacred Divider -->
+<div class="my-space-md border-t border-outline-variant relative flex items-center justify-center">
+<span class="bg-surface-container-lowest px-2 text-secondary text-label-sm">❖</span>
+</div>
+<!-- Income & Expense Split Ledger -->
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Total Income -->
+<div class="bg-surface-container-low rounded-xl p-space-sm border border-outline-variant flex flex-col">
+<div class="flex items-center gap-1 text-tertiary font-bold">
+<span class="material-symbols-outlined" data-icon="arrow_downward" style="font-size: 16px;">arrow_downward</span>
+<span class="text-label-sm font-label-sm">மொத்த வரவு</span>
+</div>
+<span class="text-ledger-amount-md font-ledger-amount-md text-tertiary mt-1 font-bold">₹ 18,50,400</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">நன்கொடை &amp; வரி</span>
+</div>
+<!-- Total Expense -->
+<div class="bg-error-container/30 rounded-xl p-space-sm border border-outline-variant flex flex-col">
+<div class="flex items-center gap-1 text-primary font-bold">
+<span class="material-symbols-outlined" data-icon="arrow_upward" style="font-size: 16px;">arrow_upward</span>
+<span class="text-label-sm font-label-sm">மொத்த செலவு</span>
+</div>
+<span class="text-ledger-amount-md font-ledger-amount-md text-primary mt-1 font-bold">₹ 3,64,780</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">பராமரிப்பு &amp; திருப்பணி</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Collection Shortcuts & Quick Services -->
+<section>
+<div class="flex items-center justify-between mb-space-xs">
+<h2 class="text-title-md font-title-md text-primary font-bold">விரைவு சேவைகள் &amp; வசூல்</h2>
+<span class="text-label-sm font-label-sm text-on-surface-variant">பேரேடு குறுக்குவழி</span>
+</div>
+<div class="grid grid-cols-4 gap-space-xs sm:gap-space-sm">
+<!-- Shortcut 1: தலைக்கட்டு வரி -->
+<button class="flex flex-col items-center justify-center p-space-sm bg-surface-container-lowest rounded-xl border border-outline-variant hover:bg-surface-container transition-all active:scale-95 text-center min-h-[82px] shadow-xs">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-1 shadow-xs border border-secondary-container">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface font-bold leading-tight">தலைக்கட்டு வரி</span>
+</button>
+<!-- Shortcut 2: நன்கொடை வரவு -->
+<button class="flex flex-col items-center justify-center p-space-sm bg-surface-container-lowest rounded-xl border border-outline-variant hover:bg-surface-container transition-all active:scale-95 text-center min-h-[82px] shadow-xs">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center mb-1 shadow-xs border border-primary">
+<span class="material-symbols-outlined" data-icon="volunteer_activism">volunteer_activism</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface font-bold leading-tight">நன்கொடை வரவு</span>
+</button>
+<!-- Shortcut 3: செலவு வவுச்சர் -->
+<button class="flex flex-col items-center justify-center p-space-sm bg-surface-container-lowest rounded-xl border border-outline-variant hover:bg-surface-container transition-all active:scale-95 text-center min-h-[82px] shadow-xs">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-primary flex items-center justify-center mb-1 shadow-xs border border-outline-variant">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface font-bold leading-tight">செலவு வவுச்சர்</span>
+</button>
+<!-- Shortcut 4: அர்ச்சனை ரசீது -->
+<button class="flex flex-col items-center justify-center p-space-sm bg-surface-container-lowest rounded-xl border border-outline-variant hover:bg-surface-container transition-all active:scale-95 text-center min-h-[82px] shadow-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center mb-1 shadow-xs border border-outline-variant">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface font-bold leading-tight">அர்ச்சனை சீட்டு</span>
+</button>
+</div>
+</section>
+<!-- Festival & Scheme Special Funds -->
+<section>
+<div class="flex items-center justify-between mb-space-xs">
+<h2 class="text-title-md font-title-md text-primary font-bold">சிறப்பு நிதி திட்டங்கள்</h2>
+<a class="text-label-md font-label-md text-secondary hover:underline font-bold" href="#">மேலும் பார்க்க</a>
+</div>
+<div class="flex overflow-x-auto gap-space-sm pb-2 snap-x no-scrollbar -mx-margin px-margin">
+<!-- Fund Card 1: Thiruppani (Temple Renovation) -->
+<div class="snap-center min-w-[260px] bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded font-bold border border-secondary">திருப்பணி நிதி</span>
+<span class="material-symbols-outlined text-secondary" data-icon="architecture" style="font-size: 18px;">architecture</span>
+</div>
+<h3 class="text-title-md font-title-md text-on-surface mt-2 font-bold">கும்பாபிஷேக திருப்பணி</h3>
+<div class="mt-2 flex items-baseline justify-between">
+<span class="text-ledger-amount-md font-ledger-amount-md text-secondary font-bold">₹ 8,45,000</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">இலக்கு: ₹ 25,00,000</span>
+</div>
+</div>
+<div class="mt-3">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 34%"></div>
+</div>
+<div class="flex justify-between items-center mt-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">ராஜகோபுரம் பணி</span>
+<span class="text-label-sm font-label-sm font-bold text-secondary">34%</span>
+</div>
+</div>
+</div>
+<!-- Fund Card 2: Chithirai Festival -->
+<div class="snap-center min-w-[250px] bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm bg-primary-fixed text-primary px-2 py-0.5 rounded font-bold">திருவிழா</span>
+<span class="material-symbols-outlined text-secondary" data-icon="celebration" style="font-size: 18px;">celebration</span>
+</div>
+<h3 class="text-title-md font-title-md text-on-surface mt-2 font-bold">சித்திரை திருவிழா நிதி</h3>
+<div class="mt-2 flex items-baseline justify-between">
+<span class="text-ledger-amount-md font-ledger-amount-md text-primary font-bold">₹ 6,40,000</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">இலக்கு: ₹ 10,00,000</span>
+</div>
+</div>
+<div class="mt-3">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full" style="width: 64%"></div>
+</div>
+<div class="flex justify-between items-center mt-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">திரட்டப்பட்டது</span>
+<span class="text-label-sm font-label-sm font-bold text-primary">64%</span>
+</div>
+</div>
+</div>
+<!-- Fund Card 3: Annadhanam Trust -->
+<div class="snap-center min-w-[240px] bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm bg-tertiary-fixed text-tertiary px-2 py-0.5 rounded font-bold">நிரந்தர வைப்பு</span>
+<span class="material-symbols-outlined text-tertiary" data-icon="restaurant" style="font-size: 18px;">restaurant</span>
+</div>
+<h3 class="text-title-md font-title-md text-on-surface mt-2 font-bold">அன்னதான நிரந்தர நிதி</h3>
+<div class="mt-2 flex items-baseline justify-between">
+<span class="text-ledger-amount-md font-ledger-amount-md text-tertiary font-bold">₹ 4,20,000</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">வட்டி நிதி</span>
+</div>
+</div>
+<div class="mt-3">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-tertiary h-2 rounded-full" style="width: 82%"></div>
+</div>
+<div class="flex justify-between items-center mt-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">நிறைவு நிலை</span>
+<span class="text-label-sm font-label-sm font-bold text-tertiary">82%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Transactions & Account Activity (சமீபத்திய வரவு செலவுகள்) -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-title-md font-title-md text-primary font-bold">சமீபத்திய வரவு செலவு பதிவுகள்</h2>
+<span class="text-label-sm font-label-sm text-on-surface-variant">தினசரி பேரேடு மற்றும் ரசீதுகள்</span>
+</div>
+<button class="text-label-md font-label-md text-primary font-bold hover:underline flex items-center">
+          முழு பட்டியல்
+          <span class="material-symbols-outlined" data-icon="chevron_right" style="font-size: 16px;">chevron_right</span>
+</button>
+</div>
+<!-- Filter Tabs -->
+<div class="flex items-center gap-2 bg-surface-container p-1 rounded-xl border border-outline-variant">
+<button class="flex-1 py-1.5 px-3 rounded-lg bg-surface-container-lowest text-primary font-bold text-label-md shadow-xs border border-outline-variant text-center transition-all">
+          அனைத்தும்
+        </button>
+<button class="flex-1 py-1.5 px-3 rounded-lg text-on-surface-variant font-label-md hover:text-on-surface text-center transition-all">
+          வரவு
+        </button>
+<button class="flex-1 py-1.5 px-3 rounded-lg text-on-surface-variant font-label-md hover:text-on-surface text-center transition-all">
+          செலவு
+        </button>
+</div>
+<!-- Transaction List -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant divide-y divide-outline-variant shadow-sm overflow-hidden">
+<!-- Transaction Item 1: Head Tax (தலைக்கட்டு வரி) -->
+<div class="p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0 border border-secondary-container">
+<span class="material-symbols-outlined" data-icon="badge">badge</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<p class="font-bold text-on-surface text-body-md">முத்துக்கருப்பன் &amp; வகையறா</p>
+<span class="text-label-sm font-label-sm px-1.5 py-0.2 bg-secondary-fixed/60 text-on-secondary-fixed rounded font-semibold">தலைக்கட்டு வரி</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">சித்திரை திருவிழா வரி • ரசீது #REC-4120</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">இன்று, மதியம் 12:15 • ரொக்கம்</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-ledger-amount-md font-ledger-amount-md text-tertiary block font-bold">+ ₹1,500</span>
+<span class="inline-block mt-1 text-label-sm font-label-sm bg-tertiary-fixed text-tertiary px-1.5 py-0.5 rounded font-bold">வரவு</span>
+</div>
+</div>
+<!-- Transaction Item 2: Renovation Donation -->
+<div class="p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed/40 text-tertiary flex items-center justify-center shrink-0 border border-outline-variant">
+<span class="material-symbols-outlined" data-icon="temple_buddhist">temple_buddhist</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<p class="font-bold text-on-surface text-body-md">சிங்கப்பூர் பக்தர் பேரவை</p>
+<span class="text-label-sm font-label-sm px-1.5 py-0.2 bg-tertiary-fixed text-tertiary rounded font-semibold">வங்கி நெஃப்ட்</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">கோபுர கலச திருப்பணி நன்கொடை • #REC-4119</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">இன்று, காலை 10:30</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-ledger-amount-md font-ledger-amount-md text-tertiary block font-bold">+ ₹50,000</span>
+<span class="inline-block mt-1 text-label-sm font-label-sm bg-tertiary-fixed text-tertiary px-1.5 py-0.5 rounded font-bold">வரவு</span>
+</div>
+</div>
+<!-- Transaction Item 3: Expense Voucher (செலவு வவுச்சர்) -->
+<div class="p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed/40 text-primary flex items-center justify-center shrink-0 border border-outline-variant">
+<span class="material-symbols-outlined" data-icon="local_florist">local_florist</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<p class="font-bold text-on-surface text-body-md">ஸ்ரீ மீனாட்சி பூமாலை கடை</p>
+<span class="text-label-sm font-label-sm px-1.5 py-0.2 bg-error-container text-on-error-container rounded font-semibold">வவுச்சர் #EXP-88</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">அம்மன் அலங்கார மாலை &amp; நறுமணப் பொருட்கள்</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">இன்று, காலை 08:15 • ரொக்கம்</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-ledger-amount-md font-ledger-amount-md text-primary block font-bold">- ₹1,850</span>
+<span class="inline-block mt-1 text-label-sm font-label-sm bg-error-container text-on-error-container px-1.5 py-0.5 rounded font-bold">செலவு</span>
+</div>
+</div>
+<!-- Transaction Item 4: Archana Ticket -->
+<div class="p-space-md flex items-center justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 border border-outline-variant">
+<span class="material-symbols-outlined" data-icon="spa">spa</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<p class="font-bold text-on-surface text-body-md">வி. ரமேஷ் (கார்த்திகை நட்சத்திரம்)</p>
+<span class="text-label-sm font-label-sm px-1.5 py-0.2 bg-surface-container text-on-surface-variant rounded font-semibold">அர்ச்சனை</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">சகஸ்ரநாம அர்ச்சனை கட்டணம் • #TKT-045</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">நேற்று, மாலை 06:30</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-ledger-amount-md font-ledger-amount-md text-tertiary block font-bold">+ ₹250</span>
+<span class="inline-block mt-1 text-label-sm font-label-sm bg-tertiary-fixed text-tertiary px-1.5 py-0.5 rounded font-bold">வரவு</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Trustee Audit Assurance Banner -->
+<div class="bg-surface-container-low p-space-md rounded-xl border border-outline-variant flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-xs">
+<span class="material-symbols-outlined" data-icon="policy" style="font-size: 18px;">policy</span>
+</div>
+<div>
+<p class="text-label-md font-label-md font-bold text-on-surface">நிர்வாக அறங்காவலர் சரிபார்ப்பு</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">அனைத்து வரவு செலவு தொகைகளும் தினமும் மாலை 8:00 மணிக்கு அதிகாரப்பூர்வமாக தணிக்கை செய்யப்படுகின்றன.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-space-xs bg-surface dark:bg-inverse-surface border-t border-outline-variant shadow-lg backdrop-blur-md bg-opacity-95">
+<!-- Tab 1: முகப்பு (Active) -->
+<a aria-current="page" class="flex flex-col items-center justify-center text-primary font-bold bg-primary-fixed rounded-xl px-space-md py-space-xs active:scale-95 transition-transform duration-100" href="admin-home.html">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span class="text-label-sm font-label-sm mt-0.5">முகப்பு</span>
+</a>
+<!-- Tab 2: வரவு -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low transition-colors active:scale-95 duration-100" href="income.html">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="text-label-sm font-label-sm mt-0.5">வரவு</span>
+</a>
+<!-- Tab 3: செலவு -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low transition-colors active:scale-95 duration-100" href="expense.html">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-label-sm font-label-sm mt-0.5">செலவு</span>
+</a>
+<!-- Tab 4: அறிக்கை -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:bg-surface-container-low transition-colors active:scale-95 duration-100" href="reports.html">
+<span class="material-symbols-outlined" data-icon="assessment">assessment</span>
+<span class="text-label-sm font-label-sm mt-0.5">அறிக்கை</span>
+</a>
+</nav>
+</body></html>

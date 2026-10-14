@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html lang="ta"><head>
+<meta name="theme-color" content="#5b0309"/>
+<link rel="stylesheet" href="../css/app.css"/>
+<script src="../js/app.js" defer></script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>அறிக்கைகள் பதிவிறக்கம் &amp; ஏற்றுமதி | கோவில் கணக்கு</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#94d5a7",
+            "error": "#ba1a1a",
+            "secondary": "#815600",
+            "inverse-primary": "#ffb3ad",
+            "on-surface-variant": "#574240",
+            "surface-variant": "#e5e2dc",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#842322",
+            "secondary-container": "#febd59",
+            "surface-container-high": "#ebe8e2",
+            "primary-fixed": "#ffdad7",
+            "primary-fixed-dim": "#ffb3ad",
+            "surface-container": "#f0eee8",
+            "on-secondary-fixed": "#291800",
+            "background": "#fcf9f3",
+            "inverse-surface": "#31312d",
+            "tertiary": "#003119",
+            "surface-container-low": "#f6f3ed",
+            "surface-container-highest": "#e5e2dc",
+            "outline": "#8a716f",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "on-background": "#1c1c18",
+            "tertiary-container": "#014a28",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#0d512f",
+            "on-primary-fixed": "#410004",
+            "on-error-container": "#93000a",
+            "on-tertiary-container": "#79b98e",
+            "on-tertiary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#ff8981",
+            "on-surface": "#1c1c18",
+            "on-tertiary-fixed": "#00210f",
+            "surface-dim": "#dcdad4",
+            "tertiary-fixed": "#aff2c2",
+            "on-secondary-container": "#734c00",
+            "surface-tint": "#a43b37",
+            "secondary-fixed": "#ffddb1",
+            "surface-bright": "#fcf9f3",
+            "primary-container": "#7a1c1c",
+            "on-secondary-fixed-variant": "#624000",
+            "surface": "#fcf9f3",
+            "outline-variant": "#ddc0bd",
+            "inverse-on-surface": "#f3f0ea",
+            "secondary-fixed-dim": "#fbbb56",
+            "primary": "#5b0309"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin": "1rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "headline-lg-mobile": ["Noto Serif"],
+            "headline-xl": ["Noto Serif"],
+            "label-lg": ["Noto Sans"],
+            "headline-xl-mobile": ["Noto Serif"],
+            "body-lg": ["Noto Sans"],
+            "ledger-amount-md": ["Noto Serif"],
+            "headline-lg": ["Noto Serif"],
+            "body-sm": ["Noto Sans"],
+            "label-md": ["Noto Sans"],
+            "title-md": ["Noto Serif"],
+            "label-sm": ["Noto Sans"],
+            "ledger-amount-lg": ["Noto Serif"],
+            "body-md": ["Noto Sans"]
+          },
+          "fontSize": {
+            "headline-lg-mobile": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "headline-xl-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "ledger-amount-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "700" }],
+            "ledger-amount-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body data-screen="export" class="bg-background text-on-background min-h-screen antialiased flex flex-col font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top App Bar (Shared Component Anchor Implementation) -->
+<header class="sticky top-0 z-40 bg-surface shadow-sm">
+<div class="flex justify-between items-center w-full px-margin py-space-sm max-w-full">
+<div class="flex items-center gap-space-sm">
+<button aria-label="பின்செல்க" class="p-space-xs text-primary rounded hover:bg-surface-container transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-primary text-2xl">arrow_back</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">temple_hindu</span>
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">கோவில் கணக்கு</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-tight">ஶ்ரீ ஏழைக்காத்த அம்மன் வல்லடிகார சுவாமி திருக்கோயில்</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="அறிவிப்புகள்" class="p-space-xs text-primary rounded hover:bg-surface-container transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-primary">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 w-full max-w-md mx-auto px-margin pt-space-md pb-28 space-y-space-md">
+<!-- Page Context Title Banner -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-variant shadow-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-9xl text-primary">download_for_offline</span>
+</div>
+<div class="flex items-start justify-between gap-2">
+<div>
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+            அரசு &amp; கிராம தணிக்கை தரநிலைகள்
+          </div>
+<h2 class="font-title-md text-title-md text-primary mt-1">அறிக்கைகள் பதிவிறக்கம் &amp; ஏற்றுமதி</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">PDF &amp; Excel கணக்கு அறிக்கைகள் (Reports Export Hub)</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-3xl">assessment</span>
+</div>
+</div>
+<!-- Export Format Mode Selector Card -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-variant shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-label-lg text-label-lg text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">layers</span>
+          முதன்மையான ஆவண வடிவம்
+        </h3>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Audit Certified</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- PDF Option Card (Active Default) -->
+<label class="cursor-pointer relative flex flex-col p-space-sm rounded-lg border-2 border-primary-container bg-surface-container-low transition-all">
+<input checked="" class="absolute top-2 right-2 text-primary focus:ring-primary h-4 w-4" name="export_format_primary" type="radio"/>
+<div class="flex items-center gap-1.5 text-primary mb-1">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">picture_as_pdf</span>
+<span class="font-label-lg text-label-lg font-bold">PDF வடிவம்</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-snug">
+            அதிகாரப்பூர்வ கையொப்பமிட்ட தாள், அச்சு வடிவம், திருக்கோயில் சீல் தணிக்கை நகல் (A4 Printable).
+          </p>
+<div class="mt-2 pt-1.5 border-t border-surface-variant flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-xs">verified</span>
+<span class="font-label-sm text-label-sm">முத்திரை தயாராக</span>
+</div>
+</label>
+<!-- Excel Option Card -->
+<label class="cursor-pointer relative flex flex-col p-space-sm rounded-lg border border-surface-variant bg-surface-container-lowest hover:bg-surface-container-low transition-all">
+<input class="absolute top-2 right-2 text-primary focus:ring-primary h-4 w-4" name="export_format_primary" type="radio"/>
+<div class="flex items-center gap-1.5 text-tertiary mb-1">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">table_chart</span>
+<span class="font-label-lg text-label-lg font-bold">Excel (.XLSX)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-snug">
+            முழு தரவு விவரங்கள், கணக்கீடுகள், சூத்திரங்களுடன் ஆடிட்டர் தணிக்கை விரிதாள் (Spreadsheet Ready).
+          </p>
+<div class="mt-2 pt-1.5 border-t border-surface-variant flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-xs">calculate</span>
+<span class="font-label-sm text-label-sm">சூத்திரங்கள் அடங்கியது</span>
+</div>
+</label>
+</div>
+</section>
+<!-- Custom Filters Section (தனிப்பயன் வடிகட்டி) -->
+<details class="bg-surface-container-lowest rounded-xl border border-surface-variant p-space-md shadow-sm group">
+<summary class="flex items-center justify-between cursor-pointer list-none select-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">tune</span>
+<span class="font-label-lg text-label-lg text-on-surface">தனிப்பயன் வடிகட்டிகள் (Custom Filter)</span>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="font-label-sm text-label-sm">மாற்று</span>
+<span class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform">expand_more</span>
+</div>
+</summary>
+<div class="mt-space-md pt-space-sm border-t border-surface-variant space-y-space-sm">
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">தொடக்கத் தேதி (From Date)</label>
+<div class="relative">
+<input class="w-full text-xs p-2 rounded bg-surface border border-outline-variant focus:border-primary-container focus:ring-0" type="date" value="2025-03-01"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">முடிவுத் தேதி (To Date)</label>
+<div class="relative">
+<input class="w-full text-xs p-2 rounded bg-surface border border-outline-variant focus:border-primary-container focus:ring-0" type="date" value="2025-03-29"/>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1">கரை தெரிவு (Filter by Karai)</label>
+<select class="w-full text-xs p-2 rounded bg-surface border border-outline-variant focus:border-primary-container focus:ring-0">
+<option>அனைத்து கரைகள் (All Karais)</option>
+<option>வல்லடிகாரன் கரை</option>
+<option>பெரியவீட்டு கரை</option>
+<option>தெற்கு தெரு கரை</option>
+<option>வடக்கு கரை</option>
+</select>
+</div>
+<div class="space-y-1 pt-1">
+<label class="block font-label-sm text-label-sm text-on-surface-variant">நெடுவரிசை தெரிவுகள் (Include Columns in Export)</label>
+<div class="grid grid-cols-2 gap-2 text-xs text-on-surface">
+<label class="flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-primary h-3.5 w-3.5" type="checkbox"/>
+<span>மொபைல் எண்</span>
+</label>
+<label class="flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-primary h-3.5 w-3.5" type="checkbox"/>
+<span>முகவரி / இருப்பிடம்</span>
+</label>
+<label class="flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-primary h-3.5 w-3.5" type="checkbox"/>
+<span>UPI Transaction ID</span>
+</label>
+<label class="flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-primary h-3.5 w-3.5" type="checkbox"/>
+<span>நாட்டாமை ஒப்புதல்</span>
+</label>
+</div>
+</div>
+</div>
+</details>
+<!-- Available Report Types Section (அறிக்கை வகைகள் தேர்வு) -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-label-lg text-label-lg text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">description</span>
+          அறிக்கை வகைகள் தேர்வு (Available Reports)
+        </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 பதிவேடுகள் தயார்</span>
+</div>
+<!-- Card 1: Date-wise Collection & Cash Reconciliation -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-variant shadow-sm space-y-space-sm transition-all hover:border-outline-variant">
+<div class="flex items-start justify-between gap-2">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container inline-block"></span>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface leading-snug">
+                தேதி வாரியான வசூல் &amp; ரொக்க இருப்பு அறிக்கை
+              </h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Date-wise Collection &amp; Cash Reconciliation
+            </p>
+</div>
+<span class="px-2 py-0.5 text-xs font-semibold rounded bg-tertiary-fixed text-on-tertiary-fixed-variant whitespace-nowrap">
+            ₹4,82,500
+          </span>
+</div>
+<div class="bg-surface-container-low p-2 rounded text-xs text-on-surface-variant flex flex-wrap items-center justify-between gap-1 border border-surface-container-high">
+<span>காலம்: 01 மார்ச் 2025 - 29 மார்ச் 2025</span>
+<span class="font-semibold text-on-surface">342 ரசீதுகள் பதிவு</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="h-11 px-space-sm bg-primary text-on-primary rounded flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-primary-container active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+<span>PDF பதிவிறக்கம்</span>
+</button>
+<button class="h-11 px-space-sm bg-surface-container-high text-primary border border-outline-variant rounded flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-lg">table_view</span>
+<span>Excel (.xlsx)</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Thalaikkattu Vari & Dues Ledger -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-variant shadow-sm space-y-space-sm transition-all hover:border-outline-variant">
+<div class="flex items-start justify-between gap-2">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface leading-snug">
+                தலைக்கட்டு வரி முழுப் பதிவேடு &amp; நிலுவை அறிக்கை
+              </h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Thalaikkattu Vari &amp; Dues Ledger
+            </p>
+</div>
+<span class="px-2 py-0.5 text-xs font-semibold rounded bg-secondary-fixed text-on-secondary-fixed whitespace-nowrap">
+            655 குடும்பங்கள்
+          </span>
+</div>
+<div class="bg-surface-container-low p-2 rounded text-xs text-on-surface-variant flex flex-wrap items-center justify-between gap-1 border border-surface-container-high">
+<span>விபரம்: கரை வாரியான நிலுவை மற்றும் கட்டிய விபரம்</span>
+<span class="font-semibold text-secondary">வரி வசூல்: 88%</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="h-11 px-space-sm bg-primary text-on-primary rounded flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-primary-container active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+<span>PDF பதிவிறக்கம்</span>
+</button>
+<button class="h-11 px-space-sm bg-surface-container-high text-primary border border-outline-variant rounded flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-lg">table_view</span>
+<span>Excel (.xlsx)</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Day-end Cash Denomination Docket -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-variant shadow-sm space-y-space-sm transition-all hover:border-outline-variant">
+<div class="flex items-start justify-between gap-2">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface leading-snug">
+                தினசரி வசூல் &amp; ரொக்கப் பெட்டி சரிபார்ப்பு அறிக்கை
+              </h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Day-end Cash Denomination Docket
+            </p>
+</div>
+<span class="px-2 py-0.5 text-xs font-semibold rounded bg-surface-container-high text-on-surface whitespace-nowrap">
+            ரொக்க தணிக்கை
+          </span>
+</div>
+<div class="bg-surface-container-low p-2 rounded text-xs text-on-surface-variant border border-surface-container-high space-y-1">
+<p>₹500, ₹200, ₹100 நோட்டுகள் எண்ணிக்கை, நாணயங்கள் மற்றும் UPI நேரடி பட்டியல்</p>
+<p class="font-semibold text-primary">நாட்டாமை &amp; பொருளாளர் கையொப்ப ஒப்புதல் தாள் இணைக்கப்பட்டது</p>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="h-11 px-space-sm bg-primary text-on-primary rounded flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-primary-container active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+<span>PDF பதிவிறக்கம்</span>
+</button>
+<button class="h-11 px-space-sm bg-surface-container-high text-primary border border-outline-variant rounded flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-lg">table_view</span>
+<span>Excel (.xlsx)</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Expenditure & Voucher Ledger -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-variant shadow-sm space-y-space-sm transition-all hover:border-outline-variant">
+<div class="flex items-start justify-between gap-2">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error inline-block"></span>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface leading-snug">
+                செலவு &amp; வவுச்சர் தணிக்கை அறிக்கை
+              </h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Expenditure &amp; Voucher Ledger
+            </p>
+</div>
+<span class="px-2 py-0.5 text-xs font-semibold rounded bg-error-container text-on-error-container whitespace-nowrap">
+            செலவு நகல்
+          </span>
+</div>
+<div class="bg-surface-container-low p-2 rounded text-xs text-on-surface-variant border border-surface-container-high">
+<span>விபரம்: திருவிழா செலவுகள், அன்னதான சமையல், வாணவேடிக்கை, மின் விளக்கு மற்றும் இதர பற்று வவுச்சர்கள்</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="h-11 px-space-sm bg-primary text-on-primary rounded flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-primary-container active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+<span>PDF பதிவிறக்கம்</span>
+</button>
+<button class="h-11 px-space-sm bg-surface-container-high text-primary border border-outline-variant rounded flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-lg">table_view</span>
+<span>Excel (.xlsx)</span>
+</button>
+</div>
+</article>
+<!-- Card 5: Donors & Ubayam Sponsorship List -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-variant shadow-sm space-y-space-sm transition-all hover:border-outline-variant">
+<div class="flex items-start justify-between gap-2">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container inline-block"></span>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface leading-snug">
+                நன்கொடையாளர்கள் &amp; உபயதாரர்கள் பட்டியல்
+              </h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Donors &amp; Ubayam Sponsorship List
+            </p>
+</div>
+<span class="px-2 py-0.5 text-xs font-semibold rounded bg-secondary-fixed-dim text-on-secondary-fixed whitespace-nowrap">
+            உபயதாரர்
+          </span>
+</div>
+<div class="bg-surface-container-low p-2 rounded text-xs text-on-surface-variant border border-surface-container-high">
+<span>விபரம்: பெயர், ஊர், கோத்திரம், பூஜை உபயத் தொகை, கல்வெட்டு/நினைவுப் பலகை தயாரிப்பு விவரங்கள்</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="h-11 px-space-sm bg-primary text-on-primary rounded flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-primary-container active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+<span>PDF பதிவிறக்கம்</span>
+</button>
+<button class="h-11 px-space-sm bg-surface-container-high text-primary border border-outline-variant rounded flex items-center justify-center gap-1 font-label-md text-label-md hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-lg">table_view</span>
+<span>Excel (.xlsx)</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Direct Sharing & One-Click Bulk Export (ஒருங்கிணைந்த பதிவிறக்கம்) -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-variant shadow-sm space-y-space-sm">
+<h3 class="font-label-lg text-label-lg text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">forward_to_inbox</span>
+        ஒருங்கிணைந்த பகிர்வு &amp; நேரடி ஏற்றுமதி
+      </h3>
+<div class="space-y-space-xs">
+<!-- Download All ZIP Button -->
+<button class="w-full h-12 bg-primary-container text-on-primary rounded-lg flex items-center justify-center gap-2 font-label-lg text-label-lg shadow hover:bg-primary active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-xl">folder_zip</span>
+<span>அனைத்து அறிக்கைகளையும் ZIP கோப்பாக பதிவிறக்குக</span>
+</button>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<!-- WhatsApp to Auditor -->
+<button class="h-11 bg-surface-container-low text-tertiary-container border border-outline-variant rounded-lg flex items-center justify-center gap-1.5 font-label-md text-label-md hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-green-700 text-lg">share</span>
+<span>வாட்ஸ்அப் ஆடிட்டர்</span>
+</button>
+<!-- Email Report -->
+<button class="h-11 bg-surface-container-low text-primary border border-outline-variant rounded-lg flex items-center justify-center gap-1.5 font-label-md text-label-md hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-lg">mail</span>
+<span>மின்னஞ்சல் செய்க</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Official Sign-off & Watermark Notice (அதிகாரப்பூர்வ முத்திரை) -->
+<footer class="p-space-sm rounded-lg bg-surface-container-high border border-outline-variant text-center space-y-1">
+<div class="flex items-center justify-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-sm text-label-sm font-bold">டிஜிட்டல் முத்திரை &amp; சான்றளிப்பு அறிவிப்பு</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-relaxed">
+        அனைத்து PDF அறிக்கைகளிலும் திருக்கோயில் அதிகாரப்பூர்வ முத்திரை மற்றும் நாட்டாமை/பொருளாளர் டிஜிட்டல் கையொப்பம் வாட்டர்மார்க்காக இணைக்கப்படும். தணிக்கை ஆவணமாக செல்லுபடியாகும்.
+      </p>
+</footer>
+</main>
+<!-- Bottom Navigation Bar (Shared Component Anchor Implementation) -->
+<!-- Active Tab: 'அறிக்கை' mapped semantically as current page is Reports Export -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-space-xs bg-surface dark:bg-inverse-surface shadow-[0_-2px_8px_rgba(31,26,23,0.08)]">
+<!-- Tab 1: முகப்பு -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:scale-95" href="admin-home.html">
+<span class="material-symbols-outlined text-2xl">account_balance</span>
+<span class="font-label-sm text-label-sm mt-0.5">முகப்பு</span>
+</a>
+<!-- Tab 2: வரவு -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:scale-95" href="income.html">
+<span class="material-symbols-outlined text-2xl">add_circle</span>
+<span class="font-label-sm text-label-sm mt-0.5">வரவு</span>
+</a>
+<!-- Tab 3: செலவு -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:scale-95" href="expense.html">
+<span class="material-symbols-outlined text-2xl">receipt_long</span>
+<span class="font-label-sm text-label-sm mt-0.5">செலவு</span>
+</a>
+<!-- Tab 4: அறிக்கை (Active Tab) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary font-bold bg-primary-fixed dark:bg-primary-container rounded-xl px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:scale-95" href="reports.html">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">assessment</span>
+<span class="font-label-sm text-label-sm mt-0.5">அறிக்கை</span>
+</a>
+</nav>
+<script>
+    // Lightweight interactions for export triggers
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const text = btn.innerText.trim();
+        if (text.includes('பதிவிறக்கம்') || text.includes('Excel') || text.includes('ZIP')) {
+          const originalContent = btn.innerHTML;
+          btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-sm">sync</span> <span class="text-xs">தயாராகிறது...</span>`;
+          setTimeout(() => {
+            btn.innerHTML = originalContent;
+          }, 1200);
+        }
+      });
+    });
+  </script>
+</body></html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html lang="ta"><head>
+<meta name="theme-color" content="#5b0309"/>
+<link rel="stylesheet" href="../css/app.css"/>
+<script src="../js/app.js" defer></script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>தலைக்கட்டு வரி நிலுவை பட்டியல் | கோவில் கணக்கு</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary": "#003119",
+            "surface-container-high": "#ebe8e2",
+            "on-background": "#1c1c18",
+            "on-surface": "#1c1c18",
+            "secondary-container": "#febd59",
+            "surface-bright": "#fcf9f3",
+            "outline-variant": "#ddc0bd",
+            "on-secondary": "#ffffff",
+            "error": "#ba1a1a",
+            "primary-fixed-dim": "#ffb3ad",
+            "surface-variant": "#e5e2dc",
+            "surface": "#fcf9f3",
+            "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#842322",
+            "inverse-primary": "#ffb3ad",
+            "on-primary": "#ffffff",
+            "surface-container": "#f0eee8",
+            "surface-container-highest": "#e5e2dc",
+            "inverse-surface": "#31312d",
+            "on-primary-container": "#ff8981",
+            "secondary-fixed-dim": "#fbbb56",
+            "inverse-on-surface": "#f3f0ea",
+            "on-surface-variant": "#574240",
+            "tertiary-container": "#014a28",
+            "on-error": "#ffffff",
+            "on-primary-fixed": "#410004",
+            "surface-container-lowest": "#ffffff",
+            "surface-dim": "#dcdad4",
+            "on-tertiary-container": "#79b98e",
+            "on-secondary-fixed": "#291800",
+            "secondary-fixed": "#ffddb1",
+            "primary-container": "#7a1c1c",
+            "tertiary-fixed-dim": "#94d5a7",
+            "on-error-container": "#93000a",
+            "surface-container-low": "#f6f3ed",
+            "tertiary-fixed": "#aff2c2",
+            "secondary": "#815600",
+            "primary": "#5b0309",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed": "#00210f",
+            "surface-tint": "#a43b37",
+            "outline": "#8a716f",
+            "on-secondary-container": "#734c00",
+            "on-tertiary-fixed-variant": "#0d512f",
+            "primary-fixed": "#ffdad7",
+            "on-secondary-fixed-variant": "#624000",
+            "background": "#fcf9f3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "margin": "1rem",
+            "space-xl": "2rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Noto Sans"],
+            "body-sm": ["Noto Sans"],
+            "headline-lg": ["Noto Serif"],
+            "label-md": ["Noto Sans"],
+            "title-md": ["Noto Serif"],
+            "body-md": ["Noto Sans"],
+            "ledger-amount-lg": ["Noto Serif"],
+            "headline-xl-mobile": ["Noto Serif"],
+            "headline-lg-mobile": ["Noto Serif"],
+            "headline-xl": ["Noto Serif"],
+            "body-lg": ["Noto Sans"],
+            "ledger-amount-md": ["Noto Serif"],
+            "label-lg": ["Noto Sans"]
+          },
+          "fontSize": {
+            "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "700"}],
+            "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+            "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+            "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+            "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "ledger-amount-lg": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+            "headline-xl-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}],
+            "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "headline-xl": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "ledger-amount-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body data-screen="arrears" class="bg-background text-on-background min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Shared TopAppBar -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline sticky top-0 z-40">
+<div class="flex justify-between items-center w-full px-margin py-space-sm max-w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="temple_hindu">temple_hindu</span>
+<div>
+<span class="text-headline-lg-mobile font-headline-lg-mobile font-title-md text-primary dark:text-inverse-primary block leading-tight">கோவில் கணக்கு</span>
+<p class="text-label-sm font-label-sm text-on-surface-variant line-clamp-1">ஶ்ரீ ஏழைக்காத்த அம்மன் வல்லடிகார சுவாமி திருக்கோயில்</p>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Notifications" class="p-2 text-primary dark:text-inverse-primary rounded hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 max-w-md mx-auto w-full px-margin pb-36 pt-space-md space-y-space-md">
+<!-- Page Title & Quick Actions Row -->
+<div class="flex items-center justify-between">
+<div>
+<h1 class="text-title-md font-title-md text-primary">தலைக்கட்டு வரி நிலுவை பட்டியல்</h1>
+<p class="text-label-md font-label-md text-on-surface-variant">குடும்ப வரி &amp; வசூல் பதிவேடு (2025)</p>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Search" class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high active:opacity-85 transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button aria-label="Filter" class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high active:opacity-85 transition-colors">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+<!-- Festival / Year Selector Dropdown Pill -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-sm flex items-center justify-between shadow-sm cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="event_note">event_note</span>
+<div>
+<p class="text-label-lg font-label-lg text-primary leading-tight">2025 பங்குனி - சித்திரை பெருந்திருவிழா வரி</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">நிர்ணயிக்கப்பட்ட தலைக்கட்டு வரி: <span class="font-bold text-on-surface">₹1,000</span></p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="expand_more">expand_more</span>
+</div>
+<!-- Summary Metrics Bento Grid -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md space-y-3 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-center justify-between border-b border-surface-container pb-2">
+<span class="text-label-md font-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="groups">groups</span>
+          மொத்த தலைக்கட்டுகள்
+        </span>
+<span class="text-title-md font-title-md text-on-surface">850 <span class="text-body-sm font-body-sm text-on-surface-variant">குடும்பங்கள்</span></span>
+</div>
+<!-- Financial Metrics Dual Row -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Collected -->
+<div class="bg-surface-container-low p-2.5 rounded-lg border border-surface-variant">
+<div class="flex items-center justify-between mb-1">
+<span class="text-label-sm font-label-sm text-tertiary">வசூலானது (620)</span>
+<span class="text-label-sm font-label-sm bg-tertiary-fixed text-tertiary px-1.5 py-0.5 rounded font-bold">73%</span>
+</div>
+<p class="text-ledger-amount-md font-ledger-amount-md text-tertiary">₹6,20,000</p>
+</div>
+<!-- Pending -->
+<div class="bg-surface-container-low p-2.5 rounded-lg border border-surface-variant">
+<div class="flex items-center justify-between mb-1">
+<span class="text-label-sm font-label-sm text-error">நிலுவை (230)</span>
+<span class="text-label-sm font-label-sm bg-error-container text-error px-1.5 py-0.5 rounded font-bold">27%</span>
+</div>
+<p class="text-ledger-amount-md font-ledger-amount-md text-error">₹2,30,000</p>
+</div>
+</div>
+<!-- Visual Progress Bar -->
+<div class="space-y-1 pt-1">
+<div class="w-full bg-surface-container-highest rounded-full h-2.5 overflow-hidden flex">
+<div class="bg-tertiary h-full rounded-full" style="width: 73%"></div>
+</div>
+<div class="flex justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>வசூல் அடைவு: 73%</span>
+<span>இலக்கு: ₹8,50,000</span>
+</div>
+</div>
+</section>
+<!-- Village / Patti Filter Chips (Horizontal Scroll) -->
+<section class="space-y-1.5">
+<div class="flex items-center justify-between">
+<h2 class="text-label-md font-label-md text-on-surface-variant">கிளை / பட்டி வாரியாக தேர்வு:</h2>
+<span class="text-label-sm font-label-sm text-primary font-bold">5 பட்டிகள்</span>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+<button class="whitespace-nowrap px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-primary text-on-primary font-bold shadow-sm">
+          அனைத்தும் (230 நிலுவை)
+        </button>
+<button class="whitespace-nowrap px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-surface-container-lowest text-on-surface border border-outline-variant hover:bg-surface-container">
+          வல்லடிகாரன்பட்டி (85)
+        </button>
+<button class="whitespace-nowrap px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-surface-container-lowest text-on-surface border border-outline-variant hover:bg-surface-container">
+          தெற்கு தெரு (52)
+        </button>
+<button class="whitespace-nowrap px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-surface-container-lowest text-on-surface border border-outline-variant hover:bg-surface-container">
+          மேலக்கொட்டாய் (48)
+        </button>
+<button class="whitespace-nowrap px-3 py-1.5 rounded-full text-label-sm font-label-sm bg-surface-container-lowest text-on-surface border border-outline-variant hover:bg-surface-container">
+          வடக்கு கிளை (45)
+        </button>
+</div>
+</section>
+<!-- Search Input Box -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline" data-icon="search">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg pl-10 pr-4 py-2.5 text-body-md font-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary-container" placeholder="குடும்ப எண் / தலைவர் பெயர் தேடுக..." type="text"/>
+</div>
+<!-- Status Category Tabs -->
+<div class="flex border-b border-outline-variant">
+<button class="flex-1 pb-2 text-center text-label-md font-label-md text-primary font-bold border-b-2 border-primary">
+        நிலுவை மட்டும் (230)
+      </button>
+<button class="flex-1 pb-2 text-center text-label-md font-label-md text-on-surface-variant hover:text-on-surface">
+        முழுதும் செலுத்தியவை (620)
+      </button>
+<button class="flex-1 pb-2 text-center text-label-md font-label-md text-on-surface-variant hover:text-on-surface">
+        பகுதி (18)
+      </button>
+</div>
+<!-- Ledger Records List -->
+<section class="space-y-3">
+<!-- Card 1: Overdue 2 Years -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between border-b border-surface-container pb-2">
+<div class="flex items-center gap-1.5">
+<span class="bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm px-2 py-0.5 rounded font-bold">#TK-108</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">வல்லடிகாரன்பட்டி</span>
+</div>
+<span class="bg-error-container text-error text-label-sm font-label-sm px-2 py-0.5 rounded font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="history">history</span>
+            2 வருட நிலுவை
+          </span>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-title-md font-title-md text-on-surface leading-snug">க. முத்துக்கருப்பன்</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">த/பெ கருப்பையா</p>
+<div class="flex items-center gap-1 mt-1 text-label-md font-label-md text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="call">call</span>
+<span>+91 98421 11223</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm text-error block">வரி நிலுவை</span>
+<span class="text-ledger-amount-lg font-ledger-amount-lg text-error">₹2,000</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">2024 &amp; 2025 வரி</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-surface-container">
+<button class="min-h-[48px] flex items-center justify-center gap-1.5 rounded bg-surface-container-low border border-tertiary text-tertiary font-label-md text-label-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-base text-tertiary" data-icon="chat">chat</span>
+<span>வாட்ஸ்அப்</span>
+</button>
+<button class="min-h-[48px] flex items-center justify-center gap-1.5 rounded bg-primary-container text-on-primary font-label-md text-label-md active:bg-primary transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="currency_rupee">currency_rupee</span>
+<span>உடனடி வரி வசூல்</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Current Year Due -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between border-b border-surface-container pb-2">
+<div class="flex items-center gap-1.5">
+<span class="bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm px-2 py-0.5 rounded font-bold">#TK-245</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">தெற்கு தெரு</span>
+</div>
+<span class="bg-secondary-fixed text-secondary text-label-sm font-label-sm px-2 py-0.5 rounded font-bold">
+            இவ்வருட நிலுவை
+          </span>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-title-md font-title-md text-on-surface leading-snug">சோ. பெரியகருப்பன்</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">த/பெ சோலையப்பன்</p>
+<div class="flex items-center gap-1 mt-1 text-label-md font-label-md text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="call">call</span>
+<span>+91 97890 45612</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm text-error block">வரி நிலுவை</span>
+<span class="text-ledger-amount-lg font-ledger-amount-lg text-error">₹1,000</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">2025 திருவிழா</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-surface-container">
+<button class="min-h-[48px] flex items-center justify-center gap-1.5 rounded bg-surface-container-low border border-tertiary text-tertiary font-label-md text-label-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-base text-tertiary" data-icon="chat">chat</span>
+<span>வாட்ஸ்அப்</span>
+</button>
+<button class="min-h-[48px] flex items-center justify-center gap-1.5 rounded bg-primary-container text-on-primary font-label-md text-label-md active:bg-primary transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="currency_rupee">currency_rupee</span>
+<span>உடனடி வரி வசூல்</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Partial Paid -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between border-b border-surface-container pb-2">
+<div class="flex items-center gap-1.5">
+<span class="bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm px-2 py-0.5 rounded font-bold">#TK-089</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">மேலக்கொட்டாய்</span>
+</div>
+<span class="bg-secondary-fixed-dim text-on-secondary-container text-label-sm font-label-sm px-2 py-0.5 rounded font-bold">
+            பகுதி செலுத்தியது
+          </span>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-title-md font-title-md text-on-surface leading-snug">ரா. தங்கவேல்</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">த/பெ ராமசாமி</p>
+<div class="flex items-center gap-1 mt-1 text-label-md font-label-md text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="call">call</span>
+<span>+91 94432 78901</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm text-error block">மீதி தொகை</span>
+<span class="text-ledger-amount-lg font-ledger-amount-lg text-error">₹500</span>
+<span class="text-label-sm font-label-sm text-tertiary block">செலுத்தியது ₹500</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-surface-container">
+<button class="min-h-[48px] flex items-center justify-center gap-1.5 rounded bg-surface-container-low border border-tertiary text-tertiary font-label-md text-label-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-base text-tertiary" data-icon="chat">chat</span>
+<span>வாட்ஸ்அப்</span>
+</button>
+<button class="min-h-[48px] flex items-center justify-center gap-1.5 rounded bg-primary-container text-on-primary font-label-md text-label-md active:bg-primary transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="currency_rupee">currency_rupee</span>
+<span>உடனடி வரி வசூல்</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Normal Current Year Due -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between border-b border-surface-container pb-2">
+<div class="flex items-center gap-1.5">
+<span class="bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm px-2 py-0.5 rounded font-bold">#TK-312</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">வடக்கு கிளை</span>
+</div>
+<span class="bg-secondary-fixed text-secondary text-label-sm font-label-sm px-2 py-0.5 rounded font-bold">
+            இவ்வருட நிலுவை
+          </span>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-title-md font-title-md text-on-surface leading-snug">வீ. மாணிக்கம்</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">த/பெ வீரணன்</p>
+<div class="flex items-center gap-1 mt-1 text-label-md font-label-md text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="call">call</span>
+<span>+91 98402 99881</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm text-error block">வரி நிலுவை</span>
+<span class="text-ledger-amount-lg font-ledger-amount-lg text-error">₹1,000</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">2025 திருவிழா</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 border-t border-surface-container">
+<button class="min-h-[48px] flex items-center justify-center gap-1.5 rounded bg-surface-container-low border border-tertiary text-tertiary font-label-md text-label-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-base text-tertiary" data-icon="chat">chat</span>
+<span>வாட்ஸ்அப்</span>
+</button>
+<button class="min-h-[48px] flex items-center justify-center gap-1.5 rounded bg-primary-container text-on-primary font-label-md text-label-md active:bg-primary transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="currency_rupee">currency_rupee</span>
+<span>உடனடி வரி வசூல்</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Bulk Action & Export Card -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-sm space-y-2.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="campaign">campaign</span>
+<h4 class="text-title-md font-title-md text-primary">கூட்டு நடவடிக்கைகள் (Bulk Operations)</h4>
+</div>
+<button class="w-full min-h-[48px] flex items-center justify-center gap-2 rounded bg-tertiary text-on-tertiary font-label-md text-label-md hover:bg-tertiary-container transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="send">send</span>
+<span>அனைவருக்கும் வாட்ஸ்அப் அறிக்கை அனுப்புக (Bulk Reminder)</span>
+</button>
+<button class="w-full min-h-[48px] flex items-center justify-center gap-2 rounded bg-surface-container border border-outline-variant text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="download">download</span>
+<span>PDF / Excel நிலுவை பட்டியல் பதிவிறக்கம்</span>
+</button>
+</section>
+</main>
+<!-- Shared BottomNavBar Component -->
+<!-- Context: Tax & Collection Ledger Register maps to 'அறிக்கை' (Report/Register) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-space-xs bg-surface dark:bg-inverse-surface border-t border-outline-variant dark:border-outline shadow-md">
+<!-- Item 1: முகப்பு -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:scale-95 duration-100" href="admin-home.html">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span class="text-label-sm font-label-sm">முகப்பு</span>
+</a>
+<!-- Item 2: வரவு -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:scale-95 duration-100" href="income.html">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="text-label-sm font-label-sm">வரவு</span>
+</a>
+<!-- Item 3: செலவு -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:scale-95 duration-100" href="expense.html">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-label-sm font-label-sm">செலவு</span>
+</a>
+<!-- Item 4: அறிக்கை (Active Tab for Registers & Ledgers) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary font-bold bg-primary-fixed dark:bg-primary-container rounded-xl px-space-md py-space-xs active:scale-95 transition-transform duration-100" href="reports.html">
+<span class="material-symbols-outlined" data-icon="assessment">assessment</span>
+<span class="text-label-sm font-label-sm">அறிக்கை</span>
+</a>
+</nav>
+</body></html>

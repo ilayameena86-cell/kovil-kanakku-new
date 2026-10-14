@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ta"><head>
+<meta name="theme-color" content="#5b0309"/>
+<link rel="stylesheet" href="../css/app.css"/>
+<script src="../js/app.js" defer></script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>வாட்ஸ்அப் பொது அறிவிப்பு - கோவில் கணக்கு</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;family=Noto+Serif:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#5b0309",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#574240",
+            "surface-variant": "#e5e2dc",
+            "outline": "#8a716f",
+            "inverse-surface": "#31312d",
+            "on-primary-fixed": "#410004",
+            "outline-variant": "#ddc0bd",
+            "surface-tint": "#a43b37",
+            "tertiary-fixed": "#aff2c2",
+            "tertiary-container": "#014a28",
+            "tertiary": "#003119",
+            "surface": "#fcf9f3",
+            "on-secondary-container": "#734c00",
+            "primary-container": "#7a1c1c",
+            "tertiary-fixed-dim": "#94d5a7",
+            "on-tertiary-container": "#79b98e",
+            "on-tertiary-fixed": "#00210f",
+            "on-primary-fixed-variant": "#842322",
+            "on-secondary-fixed-variant": "#624000",
+            "surface-container-high": "#ebe8e2",
+            "secondary-fixed-dim": "#fbbb56",
+            "secondary-container": "#febd59",
+            "error-container": "#ffdad6",
+            "primary-fixed": "#ffdad7",
+            "surface-bright": "#fcf9f3",
+            "error": "#ba1a1a",
+            "surface-container": "#f0eee8",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#f3f0ea",
+            "surface-dim": "#dcdad4",
+            "on-background": "#1c1c18",
+            "on-tertiary-fixed-variant": "#0d512f",
+            "secondary": "#815600",
+            "on-primary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-highest": "#e5e2dc",
+            "inverse-primary": "#ffb3ad",
+            "surface-container-low": "#f6f3ed",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed": "#ffddb1",
+            "on-secondary-fixed": "#291800",
+            "on-primary-container": "#ff8981",
+            "primary-fixed-dim": "#ffb3ad",
+            "on-secondary": "#ffffff",
+            "on-surface": "#1c1c18",
+            "background": "#fcf9f3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-xl": "2rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "margin": "1rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "headline-lg-mobile": ["Noto Serif"],
+            "label-sm": ["Noto Sans"],
+            "body-md": ["Noto Sans"],
+            "ledger-amount-md": ["Noto Serif"],
+            "headline-xl": ["Noto Serif"],
+            "title-md": ["Noto Serif"],
+            "label-md": ["Noto Sans"],
+            "headline-lg": ["Noto Serif"],
+            "headline-xl-mobile": ["Noto Serif"],
+            "ledger-amount-lg": ["Noto Serif"],
+            "body-lg": ["Noto Sans"],
+            "body-sm": ["Noto Sans"],
+            "label-lg": ["Noto Sans"]
+          },
+          "fontSize": {
+            "headline-lg-mobile": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "ledger-amount-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "headline-xl-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "700" }],
+            "ledger-amount-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .temple-border-filigree {
+      background-image: radial-gradient(#C88E2D 1px, transparent 1px);
+      background-size: 8px 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #ddc0bd;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body data-screen="whatsapp-broadcast" class="bg-background text-on-background min-h-screen antialiased flex justify-center pb-32">
+<div class="w-full max-w-md bg-surface shadow-2xl flex flex-col min-h-screen relative overflow-hidden border-x border-outline-variant">
+<!-- Top App Bar (Shared Component Anchor) -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline flex justify-between items-center w-full px-margin py-space-sm max-w-full sticky top-0 z-40 shadow-sm backdrop-blur-md">
+<div class="flex items-center gap-2">
+<button aria-label="பின்செல்க" class="w-10 h-10 rounded-full flex items-center justify-center text-primary dark:text-inverse-primary hover:bg-surface-container transition-colors active:opacity-85">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="temple_hindu">temple_hindu</span>
+<span class="text-headline-lg-mobile font-headline-lg-mobile text-primary dark:text-inverse-primary tracking-tight">கோவில் கணக்கு</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="அனுப்பிய வரலாறு" class="w-10 h-10 rounded-full flex items-center justify-center text-primary dark:text-inverse-primary hover:bg-surface-container transition-colors active:opacity-85">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+<button aria-label="அறிவிப்புகள்" class="w-10 h-10 rounded-full flex items-center justify-center text-primary dark:text-inverse-primary hover:bg-surface-container transition-colors active:opacity-85 relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span>
+</button>
+</div>
+</header>
+<!-- Top Hero Banner (Provided Sacred Image) -->
+<section class="relative w-full overflow-hidden bg-primary shadow-inner">
+<div class="relative w-full aspect-[16/9] max-h-56 bg-primary-container">
+<img alt="ஶ்ரீ ஏழைகாத்த அம்மன் வல்லடிகார சுவாமி திருக்கோவில் அலங்கார முத்திரை" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VmS0eG57q07U3_v9DqMiqBsUvUcccHhUDd6RffbYb4VrWneIivmeB2j4LWEUpd6Z_33zcUOjef0G43GqTbqNMnYCLvR0y6MyOSsDktPLxa5C7R7MpMM7LQmQwfyaxsnYv47SyGoNsfwdCSn7GJ-jmndE-dDaOOSRs15k7RG5dnuDjygCj4MSNZFUvUL-FtnOgZ3-qE2kP9AflIvRNVsruBbDqy5Pu7EyCNTPPTU8CRifZNWjCyE99kAl0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-transparent to-black/30"></div>
+<div class="absolute bottom-2 left-3 right-3 flex items-center justify-between text-on-primary">
+<div class="flex items-center gap-1.5 text-xs bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full border border-secondary-container/40">
+<span class="material-symbols-outlined text-secondary-container text-sm" data-icon="verified">verified</span>
+<span class="font-medium text-amber-100">அங்கீகரிக்கப்பட்ட கோவில் நிர்வாகம்</span>
+</div>
+<span class="text-[10px] text-amber-200/90 font-serif tracking-wider">பதிவு எண்: HRCE/MDU/2024</span>
+</div>
+</div>
+<!-- Hero Title Header Strip -->
+<div class="px-margin py-3 bg-gradient-to-r from-primary via-primary-container to-primary text-on-primary border-t border-b border-[#C88E2D]/40">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-primary flex items-center justify-center shrink-0 mt-0.5 shadow-md">
+<span class="material-symbols-outlined text-xl" data-icon="cell_tower">cell_tower</span>
+</div>
+<div>
+<h1 class="text-title-md font-title-md text-amber-100 leading-snug">
+              வாட்ஸ்அப் பொது அறிவிப்பு &amp; செய்தி அனுப்புதல்
+            </h1>
+<p class="text-body-sm font-body-sm text-outline-variant mt-0.5">
+              தலைக்கட்டு வரி &amp; நன்கொடையாளர்களுக்கு மொத்த செய்தி பகிர்வு (WhatsApp Broadcast System)
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Workspace Form Canvas -->
+<main class="flex-1 px-margin py-space-md space-y-5">
+<!-- Section 1: Message Type & Category Selector -->
+<section class="space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-4 bg-primary rounded-full"></span>
+<h2 class="text-label-lg font-label-lg text-primary tracking-wide">1. அறிவிப்பு வகை (Message Category)</h2>
+</div>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">தேர்வு செய்க</span>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1 custom-scrollbar -mx-margin px-margin">
+<button class="shrink-0 px-3 py-2 rounded-xl text-label-md font-label-md bg-primary text-on-primary shadow-sm flex items-center gap-1.5 border border-primary-container ring-1 ring-primary/20">
+<span class="material-symbols-outlined text-base" data-icon="festival">festival</span>
+<span>திருவிழா &amp; விசேஷ அழைப்பு</span>
+</button>
+<button class="shrink-0 px-3 py-2 rounded-xl text-label-md font-label-md bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-low transition-colors border border-outline-variant/60 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary" data-icon="payments">payments</span>
+<span>தலைக்கட்டு வரி நினைவூட்டல்</span>
+</button>
+<button class="shrink-0 px-3 py-2 rounded-xl text-label-md font-label-md bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-low transition-colors border border-outline-variant/60 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-primary" data-icon="handshake">handshake</span>
+<span>திருப்பணி நன்கொடை</span>
+</button>
+<button class="shrink-0 px-3 py-2 rounded-xl text-label-md font-label-md bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-low transition-colors border border-outline-variant/60 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base" data-icon="menu_book">menu_book</span>
+<span>கணக்கு அறிக்கை &amp; கூட்டம்</span>
+</button>
+<button class="shrink-0 px-3 py-2 rounded-xl text-label-md font-label-md bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-low transition-colors border border-outline-variant/60 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base" data-icon="edit_note">edit_note</span>
+<span>தனிப்பயன் பொது அறிவிப்பு</span>
+</button>
+</div>
+</section>
+<!-- Section 2: Target Audience Filter & Selection -->
+<section class="space-y-3 bg-surface-container-lowest p-3.5 rounded-xl border border-[#E5DCB8] shadow-sm">
+<div class="flex items-center justify-between border-b border-surface-variant pb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="group_add">group_add</span>
+<h2 class="text-label-lg font-label-lg text-on-surface">2. செய்தி பெறும் குழுவினர் தேர்வு</h2>
+</div>
+<button class="text-label-sm font-label-sm text-primary underline">அனைத்தும் தேர்வு</button>
+</div>
+<div class="space-y-2">
+<!-- Item 1: Checked -->
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low border border-primary-fixed cursor-pointer transition-colors hover:bg-surface-container">
+<div class="flex items-center gap-2.5">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary border-outline" type="checkbox"/>
+<div>
+<p class="text-body-md font-label-lg text-on-surface">அனைத்து தலைக்கட்டு வரி குடும்பங்கள்</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">12 கரை பரம்பரை குடும்ப உறுப்பினர்கள்</p>
+</div>
+</div>
+<span class="text-label-md font-label-md bg-[#EAF5EE] text-[#1E5E3A] border border-[#B2DEC3] px-2 py-0.5 rounded-full font-semibold">
+              450 நபர்கள்
+            </span>
+</label>
+<!-- Item 2: Checked -->
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low border border-primary-fixed cursor-pointer transition-colors hover:bg-surface-container">
+<div class="flex items-center gap-2.5">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary border-outline" type="checkbox"/>
+<div>
+<p class="text-body-md font-label-lg text-on-surface">நன்கொடையாளர்கள் &amp; உபயதாரர்கள்</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">சிறப்பு பூஜை மற்றும் திருவிழா புரவலர்கள்</p>
+</div>
+</div>
+<span class="text-label-md font-label-md bg-[#EAF5EE] text-[#1E5E3A] border border-[#B2DEC3] px-2 py-0.5 rounded-full font-semibold">
+              280 நபர்கள்
+            </span>
+</label>
+<!-- Item 3: Unchecked -->
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-white border border-surface-variant cursor-pointer transition-colors hover:bg-surface-container-low opacity-80">
+<div class="flex items-center gap-2.5">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary border-outline" type="checkbox"/>
+<div>
+<p class="text-body-md font-label-lg text-on-surface">வரி நிலுவை வைத்துள்ளோர் மட்டும்</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">நடப்பாண்டு தலைக்கட்டு வரி பாக்கி</p>
+</div>
+</div>
+<span class="text-label-md font-label-md bg-[#FDF0F0] text-[#7A1C1C] border border-[#F2BEBE] px-2 py-0.5 rounded-full">
+              68 நபர்கள்
+            </span>
+</label>
+<!-- Item 4: Unchecked -->
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-white border border-surface-variant cursor-pointer transition-colors hover:bg-surface-container-low opacity-80">
+<div class="flex items-center gap-2.5">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary border-outline" type="checkbox"/>
+<div>
+<p class="text-body-md font-label-lg text-on-surface">12 கரை தலைவர்கள் &amp; நாட்டாமை</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">முக்கிய கிராம நிர்வாகிகள் மற்றும் அம்பலக்காரர்கள்</p>
+</div>
+</div>
+<span class="text-label-md font-label-md bg-secondary-fixed text-on-secondary-fixed border border-secondary-fixed-dim px-2 py-0.5 rounded-full">
+              15 நிர்வாகிகள்
+            </span>
+</label>
+<!-- Item 5: Unchecked -->
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-white border border-surface-variant cursor-pointer transition-colors hover:bg-surface-container-low opacity-80">
+<div class="flex items-center gap-2.5">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary border-outline" type="checkbox"/>
+<div>
+<p class="text-body-md font-label-lg text-on-surface">வெளிநாட்டு / வெளியூர் பக்தர்கள்</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">சென்னை, கோவை மற்றும் NRI விஐபி அன்பர்கள்</p>
+</div>
+</div>
+<span class="text-label-md font-label-md bg-surface-container-high text-on-surface-variant border border-outline-variant px-2 py-0.5 rounded-full">
+              95 நபர்கள்
+            </span>
+</label>
+</div>
+<!-- Total Audience Summary Badge -->
+<div class="mt-2 p-3 bg-gradient-to-r from-[#FAF3E0] to-surface-container-low rounded-lg border border-[#C88E2D] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#815600]" data-icon="mark_chat_read">mark_chat_read</span>
+<span class="text-label-md font-label-md text-on-surface font-semibold">தேர்ந்தெடுக்கப்பட்ட மொத்த பக்தர்கள்:</span>
+</div>
+<span class="text-title-md font-title-md text-primary font-bold px-2.5 py-0.5 bg-white rounded border border-[#C88E2D]/40 shadow-xs">
+            730 பேர்
+          </span>
+</div>
+</section>
+<!-- Section 3: Message Template & Custom Composer -->
+<section class="space-y-3 bg-surface-container-lowest p-3.5 rounded-xl border border-[#E5DCB8] shadow-sm">
+<div class="flex items-center justify-between border-b border-surface-variant pb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="rate_review">rate_review</span>
+<h2 class="text-label-lg font-label-lg text-on-surface">3. செய்தி வரைவு (Message Composer)</h2>
+</div>
+<span class="text-label-sm font-label-sm bg-primary-fixed text-primary px-2 py-0.5 rounded font-medium">வாட்ஸ்அப் வடிவம்</span>
+</div>
+<!-- Subject/Title Field -->
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface-variant mb-1 font-medium">செய்தி தலைப்பு (Message Title):</label>
+<input class="w-full text-body-md font-body-md bg-surface-container-lowest border border-outline-variant rounded-lg px-3 py-2 focus:ring-1 focus:ring-primary focus:border-primary text-on-surface shadow-xs" type="text" value="சித்திரைத் திருவிழா &amp; தலைக்கட்டு வரி அழைப்பு"/>
+</div>
+<!-- Dynamic Variable Tag Insertion -->
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface-variant mb-1.5">தனிப்பயன் குறிச்சொற்கள் (Tap to insert variables):</label>
+<div class="flex flex-wrap gap-1.5">
+<button class="text-label-sm font-label-sm bg-surface-container text-primary border border-outline-variant/80 px-2 py-1 rounded hover:bg-primary-fixed active:scale-95 transition-all flex items-center gap-0.5">
+<span class="text-xs">+</span> {பக்தர் பெயர்}
+            </button>
+<button class="text-label-sm font-label-sm bg-surface-container text-primary border border-outline-variant/80 px-2 py-1 rounded hover:bg-primary-fixed active:scale-95 transition-all flex items-center gap-0.5">
+<span class="text-xs">+</span> {கரை பெயர்}
+            </button>
+<button class="text-label-sm font-label-sm bg-surface-container text-primary border border-outline-variant/80 px-2 py-1 rounded hover:bg-primary-fixed active:scale-95 transition-all flex items-center gap-0.5">
+<span class="text-xs">+</span> {வரி நிலை}
+            </button>
+<button class="text-label-sm font-label-sm bg-surface-container text-primary border border-outline-variant/80 px-2 py-1 rounded hover:bg-primary-fixed active:scale-95 transition-all flex items-center gap-0.5">
+<span class="text-xs">+</span> {கோவில் இணைய இணைப்பு}
+            </button>
+</div>
+</div>
+<!-- WhatsApp Chat Simulation Canvas -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-on-surface-variant font-medium">செய்தி நேரடி முன்னோட்டம் (Rendered Chat Preview):</span>
+<span class="text-[11px] text-tertiary font-semibold flex items-center gap-0.5">
+<span class="w-2 h-2 rounded-full bg-emerald-600 inline-block"></span> நேரடி மாதிரி
+            </span>
+</div>
+<div class="bg-[#EFEAE2] p-3 rounded-xl border border-[#D5CEC5] relative shadow-inner">
+<!-- Simulated WhatsApp Message Bubble -->
+<div class="bg-white rounded-lg p-3 shadow-xs border-l-4 border-l-primary space-y-2 text-on-surface max-w-full">
+<div class="flex items-center justify-between border-b border-gray-100 pb-1.5 text-xs text-primary font-serif font-bold">
+<span>✦ ஓம் சக்தி • ஶ்ரீ ஏழைகாத்த அம்மன் துணை ✦</span>
+<span class="material-symbols-outlined text-sm text-amber-600" data-icon="verified">verified</span>
+</div>
+<div class="text-body-sm font-body-sm leading-relaxed text-gray-800 space-y-1.5">
+<p class="font-semibold text-primary">அன்பார்ந்த <span class="bg-amber-100 text-amber-900 px-1 py-0.2 rounded border border-amber-300 font-mono text-xs">{பக்தர் பெயர்}</span> அவர்களுக்கு வணக்கம்,</p>
+<p>நமது திருக்கோவிலின் வருடாந்திர சித்திரைத் திருவிழா வருகின்ற வைகாசி 10 முதல் விமரிசையாக நடைபெற உள்ளது.</p>
+<p>அனைத்து தலைக்கட்டு வரிதாரர்களும் மற்றும் நன்கொடை அன்பர்களும் தங்கள் பங்களிப்பை ஆற்றி அம்மன் திருவருள் பெற வேண்டுகிறோம்.</p>
+<div class="p-2 bg-[#FAF3E0] rounded border border-[#C88E2D]/40 text-[11px] space-y-0.5">
+<div><span class="font-bold">வரி கணக்கு நிலை:</span> <span class="text-emerald-800 font-medium">செலுத்தப்பட்டது (ரசீது #412)</span></div>
+<div><span class="font-bold">இணைப்பு:</span> <a class="text-blue-700 underline font-mono" href="#">kovilkanakku.org/receipt/412</a></div>
+</div>
+</div>
+<!-- Media Flyer Attached Inside Preview -->
+<div class="mt-2 p-2 bg-[#F6F3ED] rounded border border-outline-variant/60 flex items-center justify-between">
+<div class="flex items-center gap-2 overflow-hidden">
+<div class="w-9 h-9 rounded bg-primary-fixed flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-xl" data-icon="image">image</span>
+</div>
+<div class="truncate">
+<p class="text-label-sm font-label-sm truncate text-on-surface font-medium">Chithirai_Thiruvizha_Invitation.jpg</p>
+<p class="text-[10px] text-on-surface-variant">1.4 MB • வண்ண அழைப்பிதழ் படம்</p>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 text-primary hover:bg-surface-container rounded" title="மாற்றுக">
+<span class="material-symbols-outlined text-base" data-icon="sync">sync</span>
+</button>
+<button class="p-1 text-error hover:bg-error-container rounded" title="நீக்குக">
+<span class="material-symbols-outlined text-base" data-icon="close">close</span>
+</button>
+</div>
+</div>
+<div class="flex justify-end items-center gap-1 text-[10px] text-gray-400 pt-1">
+<span>10:30 AM</span>
+<span class="material-symbols-outlined text-xs text-blue-500" data-icon="done_all">done_all</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Attachment Action Trigger -->
+<div class="flex items-center justify-between pt-1">
+<button class="text-label-sm font-label-sm text-primary flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-base" data-icon="attach_file">attach_file</span>
+<span>மற்றொரு ஆவணம் அல்லது PDF சேர்க்க (+ Add Document)</span>
+</button>
+<span class="text-[11px] text-on-surface-variant font-mono">அளவு: 1.4/16 MB</span>
+</div>
+</section>
+<!-- Section 4: WhatsApp Sending Options & Automation -->
+<section class="space-y-3 bg-surface-container-lowest p-3.5 rounded-xl border border-[#E5DCB8] shadow-sm">
+<div class="flex items-center gap-1.5 border-b border-surface-variant pb-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="send_and_archive">send_and_archive</span>
+<h2 class="text-label-lg font-label-lg text-on-surface">4. அனுப்பும் வழிமுறை (Delivery Channels)</h2>
+</div>
+<div class="space-y-2.5">
+<!-- Radio 1: Official API (Active Recommended) -->
+<label class="flex items-start gap-3 p-3 rounded-xl border-2 border-primary bg-primary-fixed/20 cursor-pointer shadow-xs">
+<input checked="" class="mt-1 text-primary focus:ring-primary" name="send_mode" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md text-primary font-bold">நேரடி அதிகாரப்பூர்வ வாட்ஸ்அப் API</span>
+<span class="text-[10px] bg-primary text-on-primary px-1.5 py-0.5 rounded font-sans uppercase">பரிந்துரை</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface mt-0.5">730 உறுப்பினர்களுக்கும் ஒரே நொடியில் தனித்தனியாக அதிகாரப்பூர்வமாகச் சென்றடையும் (1-Click Instant Broadcast).</p>
+<div class="flex items-center gap-2 mt-1.5 text-[11px] text-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-xs text-emerald-700" data-icon="bolt">bolt</span>
+<span>உடனடி விநியோகம் • 99.8% வெற்றி வீதம்</span>
+</div>
+</div>
+</label>
+<!-- Radio 2: Village Groups -->
+<label class="flex items-start gap-3 p-3 rounded-xl border border-outline-variant bg-white cursor-pointer hover:bg-surface-container-low transition-colors">
+<input class="mt-1 text-primary focus:ring-primary" name="send_mode" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md text-on-surface font-semibold">கிராம வாட்ஸ்அப் குழுக்கள் வழியே</span>
+<span class="text-label-sm font-label-sm text-secondary font-bold">4 குழுக்கள்</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">கோவில் அங்கீகரிக்கப்பட்ட 4 அதிகாரப்பூர்வ கிராம குழுக்களில் மட்டும் பிரசுரிக்கப்படும்.</p>
+</div>
+</label>
+<!-- Radio 3: Direct Personal Chat Queue -->
+<label class="flex items-start gap-3 p-3 rounded-xl border border-outline-variant bg-white cursor-pointer hover:bg-surface-container-low transition-colors">
+<input class="mt-1 text-primary focus:ring-primary" name="send_mode" type="radio"/>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md text-on-surface font-semibold">தனிநபர் நேரடி அரட்டை வரிசை (Chat Queue)</span>
+<span class="text-label-sm font-label-sm text-outline font-medium">கையேடு முறை</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">ஒவ்வொரு பக்தருக்கும் வாட்ஸ்அப் வெப்/மொபைல் வழியாக தனித்தனி செய்தியாக அனுப்பும் வரிசை.</p>
+</div>
+</label>
+</div>
+</section>
+<!-- Security / Audit Compliance Badge -->
+<div class="p-3 bg-surface-container-low rounded-xl border border-[#EFE8D3] flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[#C88E2D] text-2xl shrink-0" data-icon="verified_user">verified_user</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-tight">
+          அனைத்து வாட்ஸ்அப் செய்திகளும் கோவில் அறக்கட்டளை கணக்கு தணிக்கை பதிவேட்டில் (Audit Log) தானாகக் காப்பகப்படுத்தப்படும்.
+        </p>
+</div>
+</main>
+<!-- Section 5: Action Footer (Fixed Action Bar) -->
+<footer class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-surface/95 backdrop-blur-md border-t border-outline-variant px-margin py-3 z-50 shadow-2xl space-y-2">
+<!-- Main Primary WhatsApp Send CTA -->
+<button class="w-full bg-[#1E5E3A] hover:bg-[#15462a] text-white py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-lg active:scale-[0.99] transition-transform">
+<span class="material-symbols-outlined text-2xl text-emerald-200" data-icon="send">send</span>
+<span class="text-body-lg font-title-md font-bold tracking-tight text-white">730 பக்தர்களுக்கு வாட்ஸ்அப்பில் அனுப்புக</span>
+</button>
+<!-- Secondary Controls -->
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-2.5 px-3 bg-[#F4EEDF] border border-primary text-primary rounded-lg text-label-md font-label-md font-semibold flex items-center justify-center gap-1.5 hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="visibility">visibility</span>
+<span>முன்னோட்டம் (Test)</span>
+</button>
+<button class="w-full py-2.5 px-3 bg-surface-container text-on-surface border border-outline-variant rounded-lg text-label-md font-label-md font-semibold flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="bookmark_add">bookmark_add</span>
+<span>மாதிரியாக சேமி</span>
+</button>
+</div>
+</footer>
+</div>
+</body></html>

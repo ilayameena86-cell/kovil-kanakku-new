@@ -1,0 +1,11 @@
+{
+  "appId": "org.pallavarayanpatti.kovilkanakku",
+  "appName": "கோவில் கணக்கு",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false
+  }
+}

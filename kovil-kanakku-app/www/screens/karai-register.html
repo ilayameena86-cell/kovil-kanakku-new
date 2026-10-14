@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ta"><head>
+<meta name="theme-color" content="#5b0309"/>
+<link rel="stylesheet" href="../css/app.css"/>
+<script src="../js/app.js" defer></script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>கரை &amp; குடும்பப் பதிவேடு மேலாண்மை - ஶ்ரீ ஏழைக்காத்த அம்மன் வல்லடிகார சுவாமி திருக்கோயில்</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Noto Serif & Noto Sans for Tamil Typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#f0eee8",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "surface-container-high": "#ebe8e2",
+            "outline-variant": "#ddc0bd",
+            "on-surface-variant": "#574240",
+            "primary-container": "#7a1c1c",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#624000",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#410004",
+            "on-tertiary-fixed-variant": "#0d512f",
+            "tertiary-fixed-dim": "#94d5a7",
+            "inverse-primary": "#ffb3ad",
+            "tertiary-fixed": "#aff2c2",
+            "surface-bright": "#fcf9f3",
+            "primary": "#5b0309",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#f3f0ea",
+            "secondary-fixed": "#ffddb1",
+            "on-tertiary-container": "#79b98e",
+            "background": "#fcf9f3",
+            "tertiary": "#003119",
+            "surface": "#fcf9f3",
+            "on-background": "#1c1c18",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#fbbb56",
+            "on-surface": "#1c1c18",
+            "primary-fixed": "#ffdad7",
+            "on-secondary-container": "#734c00",
+            "tertiary-container": "#014a28",
+            "on-secondary-fixed": "#291800",
+            "secondary": "#815600",
+            "on-primary-container": "#ff8981",
+            "on-primary-fixed-variant": "#842322",
+            "outline": "#8a716f",
+            "surface-container-lowest": "#ffffff",
+            "secondary-container": "#febd59",
+            "surface-tint": "#a43b37",
+            "surface-variant": "#e5e2dc",
+            "surface-dim": "#dcdad4",
+            "inverse-surface": "#31312d",
+            "primary-fixed-dim": "#ffb3ad",
+            "surface-container-low": "#f6f3ed",
+            "surface-container-highest": "#e5e2dc",
+            "on-tertiary-fixed": "#00210f"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "gutter": "1rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "margin": "1rem",
+            "space-xl": "2rem"
+          },
+          "fontFamily": {
+            "headline-xl-mobile": ["Noto Serif"],
+            "body-sm": ["Noto Sans"],
+            "ledger-amount-md": ["Noto Serif"],
+            "label-lg": ["Noto Sans"],
+            "ledger-amount-lg": ["Noto Serif"],
+            "label-sm": ["Noto Sans"],
+            "headline-xl": ["Noto Serif"],
+            "label-md": ["Noto Sans"],
+            "body-md": ["Noto Sans"],
+            "headline-lg": ["Noto Serif"],
+            "headline-lg-mobile": ["Noto Serif"],
+            "title-md": ["Noto Serif"],
+            "body-lg": ["Noto Sans"]
+          },
+          "fontSize": {
+            "headline-xl-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "ledger-amount-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "ledger-amount-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "700" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body data-screen="karai-register" class="bg-background text-on-surface antialiased min-h-screen pb-28">
+<!-- Top Navigation Bar (Consistent with Shared Components JSON) -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline sticky top-0 z-40 shadow-sm">
+<div class="flex justify-between items-center w-full px-margin py-space-sm max-w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="temple_hindu">temple_hindu</span>
+<div>
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile font-bold text-primary dark:text-inverse-primary tracking-tight">கோவில் கணக்கு</h1>
+<p class="text-label-sm font-label-sm text-on-surface-variant leading-none">ஶ்ரீ ஏழைக்காத்த அம்மன் திருக்கோயில்</p>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Notifications" class="p-2 rounded-xl text-primary hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors active:opacity-85">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Container -->
+<main class="px-margin pt-4 space-y-4 max-w-xl mx-auto">
+<!-- Screen Title & Temple Context Header -->
+<div class="border-b border-surface-container-high pb-3">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-secondary font-bold flex items-center gap-1 mb-0.5">
+<span class="material-symbols-outlined text-sm" data-icon="folder_shared">folder_shared</span>
+            வல்லடிகார சுவாமி தேவஸ்தான பதிவேடு
+          </span>
+<h2 class="text-headline-xl-mobile font-headline-xl-mobile text-primary font-bold">கரை &amp; குடும்பப் பதிவேடு</h2>
+</div>
+<span class="bg-[#FAF3E0] border border-[#C88E2D] text-secondary text-label-sm font-label-sm px-2.5 py-1 rounded-full flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-xs" data-icon="verified">verified</span>
+          அங்கீகரிக்கப்பட்டது
+        </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+        கிராமப்புற கரை முறைமை மற்றும் வம்சாவளி வரி செலுத்தும் குடும்பங்களின் அதிகாரப்பூர்வ ஆவணம்
+      </p>
+</div>
+<!-- Census & Statistics Summary Banner (Bento Architecture) -->
+<div class="bg-surface-container-lowest border border-[#E5DCB8] rounded-xl p-3.5 shadow-sm">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div class="flex items-center gap-1.5 text-primary font-bold text-label-md font-label-md">
+<span class="material-symbols-outlined text-base" data-icon="bar_chart">bar_chart</span>
+<span>தலைக்கட்டு &amp; கரை புள்ளிவிவரம்</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">பங்குனி 2025 நிலவரம்</span>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-3 text-center">
+<div class="bg-surface-container-low rounded-lg p-2 border-t-2 border-secondary">
+<span class="text-label-sm font-label-sm text-on-surface-variant block">மொத்த கரைகள்</span>
+<span class="text-ledger-amount-md font-ledger-amount-md text-primary font-bold">5</span>
+<span class="text-label-sm font-label-sm text-secondary block font-semibold">கிராமக் கிளை</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2 border-t-2 border-[#7a1c1c]">
+<span class="text-label-sm font-label-sm text-on-surface-variant block">தலைக்கட்டுகள்</span>
+<span class="text-ledger-amount-md font-ledger-amount-md text-primary font-bold">850</span>
+<span class="text-label-sm font-label-sm text-primary-container block font-semibold">குடும்பங்கள்</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2 border-t-2 border-tertiary-container">
+<span class="text-label-sm font-label-sm text-on-surface-variant block">உறுப்பினர்கள்</span>
+<span class="text-ledger-amount-md font-ledger-amount-md text-tertiary-container font-bold">3,420</span>
+<span class="text-label-sm font-label-sm text-tertiary block font-semibold">நபர்கள்</span>
+</div>
+</div>
+</div>
+<!-- Primary Quick Actions: Two Main Buttons -->
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-primary-container text-on-primary py-3 px-3 rounded-lg flex items-center justify-center gap-1.5 shadow-sm active:opacity-90 font-label-lg text-label-lg font-bold min-h-[48px]">
+<span class="material-symbols-outlined text-lg" data-icon="person_add">person_add</span>
+<span>+ புதிய குடும்பம்</span>
+</button>
+<button class="bg-[#F4EEDF] border border-[#7A1C1C] text-primary py-3 px-3 rounded-lg flex items-center justify-center gap-1.5 active:opacity-90 font-label-lg text-label-lg font-bold min-h-[48px]">
+<span class="material-symbols-outlined text-lg" data-icon="add_moderator">add_moderator</span>
+<span>+ புதிய கரை</span>
+</button>
+</div>
+<!-- Segmented Navigation Control / Tabs -->
+<div class="bg-surface-container-high p-1 rounded-xl flex text-center">
+<button class="flex-1 py-2 rounded-lg bg-surface-container-lowest text-primary font-bold shadow-xs text-label-md font-label-md flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="account_tree">account_tree</span>
+<span>கரைகள் (5)</span>
+</button>
+<button class="flex-1 py-2 rounded-lg text-on-surface-variant hover:text-on-surface text-label-md font-label-md flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="groups">groups</span>
+<span>குடும்பங்கள் (850)</span>
+</button>
+<button class="flex-1 py-2 rounded-lg text-on-surface-variant hover:text-on-surface text-label-md font-label-md flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="edit_document">edit_document</span>
+<span>புதிய பதிவு</span>
+</button>
+</div>
+<!-- Live Search & Karai Quick Filter Bar -->
+<div class="space-y-2">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline" data-icon="search">search</span>
+<input class="w-full pl-10 pr-10 py-2.5 bg-surface-container-lowest border border-[#D4C9A8] rounded-lg text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container" placeholder="குடும்ப எண், தலைவர் பெயர், அலைபேசி தேடுக..." type="text"/>
+<button aria-label="Voice Search" class="absolute right-2.5 p-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg" data-icon="mic">mic</span>
+</button>
+</div>
+<!-- Quick Filter Chips Horizontal Scroll -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-label-sm font-label-sm">
+<span class="bg-primary text-on-primary px-3 py-1 rounded-full whitespace-nowrap font-bold">அனைத்து கரைகள்</span>
+<span class="bg-surface-container border border-[#D4C9A8] text-on-surface px-3 py-1 rounded-full whitespace-nowrap">வல்லடிகாரன் கரை (210)</span>
+<span class="bg-surface-container border border-[#D4C9A8] text-on-surface px-3 py-1 rounded-full whitespace-nowrap">பெரியவீட்டு கரை (185)</span>
+<span class="bg-surface-container border border-[#D4C9A8] text-on-surface px-3 py-1 rounded-full whitespace-nowrap">தெற்கு தெரு (160)</span>
+</div>
+</div>
+<!-- Active Highlighted Form: 'புதிய குடும்பம் / கரை விரைவுப் பதிவுப் படிவம்' -->
+<div class="bg-surface-container-lowest border-2 border-[#C88E2D] rounded-xl p-4 shadow-md relative overflow-hidden">
+<!-- Decorative Gold Corner Ribbon -->
+<div class="absolute top-0 right-0 bg-[#C88E2D] text-surface-container-lowest px-3 py-0.5 rounded-bl-lg text-label-sm font-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="star">star</span>
+        நேரடி விரைவுப் படிவம்
+      </div>
+<div class="flex items-start justify-between mb-3">
+<div>
+<h3 class="text-title-md font-title-md text-primary font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-container" data-icon="family_history">family_history</span>
+            புதிய தலைக்கட்டு குடும்பப் பதிவு
+          </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">குடும்ப எண் மற்றும் வாரிசு இணைப்பு உடனடியாக உறுதி செய்யப்படும்</p>
+</div>
+</div>
+<!-- Auto Family ID Pill -->
+<div class="bg-[#EAF5EE] border border-[#B2DEC3] rounded-lg p-2.5 mb-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#1E5E3A]" data-icon="badge">badge</span>
+<div>
+<span class="text-label-sm font-label-sm text-[#1E5E3A] block">தானியங்கி புதிய குடும்ப எண் (Family ID):</span>
+<span class="text-ledger-amount-md font-ledger-amount-md text-[#1E5E3A] font-bold">#TK-851</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm bg-surface-container-lowest text-[#1E5E3A] px-2 py-0.5 rounded border border-[#B2DEC3] font-semibold">
+          அடுத்த தொடர் எண்
+        </span>
+</div>
+<!-- Form Inputs Grid -->
+<form class="space-y-3" onsubmit="event.preventDefault();">
+<!-- Karai Select Dropdown -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface font-semibold mb-1">
+            சொந்த கரை தேர்வு <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-[#D4C9A8] rounded-lg py-2 pl-3 pr-8 text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary-container">
+<option selected="">1. வல்லடிகாரன் கரை (முதன்மை கரை - 210 குடும்பங்கள்)</option>
+<option>2. பெரியவீட்டு கரை (மேலக்கொட்டாய் - 185 குடும்பங்கள்)</option>
+<option>3. தெற்கு தெரு கரை (160 குடும்பங்கள்)</option>
+<option>4. வடக்கு கிளை கரை (145 குடும்பங்கள்)</option>
+<option class="text-primary font-bold">+ புதிய கரை சேர்க்கவும்</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline pointer-events-none" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+</div>
+<!-- Family Head Name & Father Name -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+<div>
+<label class="block text-label-md font-label-md text-on-surface font-semibold mb-1">
+              குடும்பத் தலைவர் பெயர் <span class="text-error">*</span>
+</label>
+<input class="w-full bg-surface-container-lowest border border-[#D4C9A8] rounded-lg p-2 text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary-container" placeholder="பெயர் உள்ளிடவும்" type="text" value="சு. முருகானந்தம்"/>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface font-semibold mb-1">
+              தந்தை / கணவர் பெயர் <span class="text-error">*</span>
+</label>
+<input class="w-full bg-surface-container-lowest border border-[#D4C9A8] rounded-lg p-2 text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary-container" placeholder="தந்தை பெயர்" type="text" value="மு. சுந்தரராஜன் சேர்வை"/>
+</div>
+</div>
+<!-- Mobile & Branch -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+<div>
+<label class="block text-label-md font-label-md text-on-surface font-semibold mb-1">
+              முதன்மை அலைபேசி (WhatsApp) <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-tertiary text-lg" data-icon="chat">chat</span>
+<input class="w-full pl-9 pr-3 py-2 bg-surface-container-lowest border border-[#D4C9A8] rounded-lg text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary-container" type="tel" value="+91 98402 34567"/>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block mt-0.5">வரி ரசீது தானாக வாட்ஸ்அப் அனுப்பப்படும்</span>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface font-semibold mb-1">
+              கிளை / வசிக்கும் பட்டி <span class="text-error">*</span>
+</label>
+<select class="w-full bg-surface-container-lowest border border-[#D4C9A8] rounded-lg py-2 px-3 text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary-container">
+<option selected="">வல்லடிகாரன்பட்டி (வடக்கு கிளை)</option>
+<option>மேலத்தெரு நத்தம்</option>
+<option>கோவில்பட்டி கிராமம்</option>
+<option>சென்னை / வெளிவூர் குடிபெயர்வு</option>
+</select>
+</div>
+</div>
+<!-- Member Count Counters -->
+<div class="bg-surface-container-low rounded-lg p-2.5 border border-[#E5DCB8]">
+<div class="flex items-center justify-between mb-1.5">
+<label class="text-label-md font-label-md text-on-surface font-bold">
+              உறுப்பினர்கள் விபரம் (மொத்தம்: 5 நபர்கள்)
+            </label>
+<span class="text-label-sm font-label-sm text-secondary font-bold">கட்டாயக் கணக்கெடுப்பு</span>
+</div>
+<div class="grid grid-cols-3 gap-2 text-center">
+<div class="bg-surface-container-lowest p-1.5 rounded border border-[#D4C9A8]">
+<span class="text-label-sm font-label-sm text-on-surface-variant block">ஆண்கள்</span>
+<div class="flex items-center justify-center gap-2 mt-0.5">
+<button class="w-6 h-6 rounded bg-surface-container text-primary font-bold text-base flex items-center justify-center" type="button">-</button>
+<span class="font-bold text-body-md font-body-md">2</span>
+<button class="w-6 h-6 rounded bg-surface-container text-primary font-bold text-base flex items-center justify-center" type="button">+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-1.5 rounded border border-[#D4C9A8]">
+<span class="text-label-sm font-label-sm text-on-surface-variant block">பெண்கள்</span>
+<div class="flex items-center justify-center gap-2 mt-0.5">
+<button class="w-6 h-6 rounded bg-surface-container text-primary font-bold text-base flex items-center justify-center" type="button">-</button>
+<span class="font-bold text-body-md font-body-md">2</span>
+<button class="w-6 h-6 rounded bg-surface-container text-primary font-bold text-base flex items-center justify-center" type="button">+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-1.5 rounded border border-[#D4C9A8]">
+<span class="text-label-sm font-label-sm text-on-surface-variant block">குழந்தைகள்</span>
+<div class="flex items-center justify-center gap-2 mt-0.5">
+<button class="w-6 h-6 rounded bg-surface-container text-primary font-bold text-base flex items-center justify-center" type="button">-</button>
+<span class="font-bold text-body-md font-body-md">1</span>
+<button class="w-6 h-6 rounded bg-surface-container text-primary font-bold text-base flex items-center justify-center" type="button">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Lineage / Succession Link Input -->
+<div class="bg-[#FAF3E0] border border-[#C88E2D] rounded-lg p-2.5">
+<div class="flex items-center gap-1.5 text-secondary font-bold text-label-md font-label-md mb-1">
+<span class="material-symbols-outlined text-base" data-icon="schema">schema</span>
+<span>மூத்த தலைக்கட்டு வாரிசு தொடர்பு (கிளை பிரிந்த விபரம்)</span>
+</div>
+<div class="flex items-center gap-2">
+<input class="flex-1 bg-surface-container-lowest border border-[#D4C9A8] rounded p-2 text-body-md font-body-md text-on-surface" type="text" value="#TK-402 (மு. சுந்தரராஜன் சேர்வை - தந்தை குடும்பம்)"/>
+<button class="bg-secondary text-surface-container-lowest px-2.5 py-2 rounded text-label-sm font-label-sm font-bold flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="link">link</span>
+              இணை
+            </button>
+</div>
+</div>
+<!-- Action Buttons inside Form -->
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 bg-primary-container text-on-primary py-3 rounded-lg font-bold text-label-lg font-label-lg shadow-sm flex items-center justify-center gap-1.5 active:opacity-90 min-h-[48px]" type="submit">
+<span class="material-symbols-outlined text-lg" data-icon="how_to_reg">how_to_reg</span>
+<span>பதிவு செய்க (Save Family)</span>
+</button>
+<button class="px-4 py-3 bg-surface-container border border-outline-variant text-on-surface-variant rounded-lg font-bold text-label-lg font-label-lg min-h-[48px]" type="button">
+            ரத்து
+          </button>
+</div>
+</form>
+</div>
+<!-- Section: Directory List of Existing Karai & Families (கரை வாரியான குடும்பப் பதிவேடு) -->
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between">
+<h3 class="text-title-md font-title-md text-primary font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary" data-icon="account_balance">account_balance</span>
+          கரை வாரியான குடும்பப் பதிவேடு
+        </h3>
+<span class="text-label-sm font-label-sm text-primary font-bold">அனைத்தையும் காட்டு</span>
+</div>
+<!-- Karai 1 Accordion Card -->
+<div class="bg-surface-container-lowest border border-[#E5DCB8] rounded-xl overflow-hidden shadow-xs">
+<div class="p-3.5 bg-[#FAF3E0] border-b border-[#E5DCB8] flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary text-label-sm font-bold flex items-center justify-center">1</span>
+<h4 class="text-body-lg font-body-lg font-bold text-primary">வல்லடிகாரன் கரை (முதன்மை கரை)</h4>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5 ml-8">
+              பெரியதனக்காரர் / நாட்டாமையார்: <span class="text-on-surface font-semibold">மு. ராமலிங்கம் அம்பலம்</span>
+</p>
+</div>
+<div class="text-right">
+<span class="bg-surface-container-lowest text-primary font-bold px-2 py-0.5 rounded border border-[#C88E2D] text-label-sm font-label-sm">
+              210 குடும்பங்கள்
+            </span>
+<span class="material-symbols-outlined text-primary block mt-1 ml-auto" data-icon="expand_less">expand_less</span>
+</div>
+</div>
+<!-- Child Families inside Karai 1 -->
+<div class="p-3 space-y-2.5 bg-surface-bright">
+<!-- Family Entry 1 -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-lg p-2.5 shadow-xs flex flex-col gap-1.5">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-2">
+<span class="bg-[#EAF5EE] text-[#1E5E3A] border border-[#B2DEC3] text-label-sm font-label-sm px-1.5 py-0.5 rounded font-bold">
+                  #TK-850
+                </span>
+<div>
+<h5 class="text-body-md font-body-md font-bold text-on-surface">சு. கார்த்திகேயன்</h5>
+<p class="text-label-sm font-label-sm text-on-surface-variant">தந்தை: சுப்பிரமணியன் | வல்லடிகாரன்பட்டி</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded font-semibold text-secondary">
+                  5 நபர்கள்
+                </span>
+</div>
+</div>
+<!-- Action Chips for Family -->
+<div class="flex items-center justify-end gap-1.5 pt-1 border-t border-surface-container">
+<button class="px-2 py-1 bg-surface-container-low text-primary text-label-sm font-label-sm rounded flex items-center gap-0.5 hover:bg-surface-container font-semibold">
+<span class="material-symbols-outlined text-xs" data-icon="edit">edit</span>
+                திருத்து
+              </button>
+<button class="px-2 py-1 bg-surface-container-low text-secondary text-label-sm font-label-sm rounded flex items-center gap-0.5 hover:bg-surface-container font-semibold">
+<span class="material-symbols-outlined text-xs" data-icon="diversity_3">diversity_3</span>
+                வாரிசு மாற்று
+              </button>
+<button class="px-2.5 py-1 bg-primary-container text-on-primary text-label-sm font-label-sm rounded flex items-center gap-0.5 font-bold">
+<span class="material-symbols-outlined text-xs" data-icon="currency_rupee">currency_rupee</span>
+                வரி பதிவு
+              </button>
+</div>
+</div>
+<!-- Family Entry 2 -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-lg p-2.5 shadow-xs flex flex-col gap-1.5">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-2">
+<span class="bg-[#EAF5EE] text-[#1E5E3A] border border-[#B2DEC3] text-label-sm font-label-sm px-1.5 py-0.5 rounded font-bold">
+                  #TK-849
+                </span>
+<div>
+<h5 class="text-body-md font-body-md font-bold text-on-surface">வெ. மாணிக்கம் சேர்வை</h5>
+<p class="text-label-sm font-label-sm text-on-surface-variant">தந்தை: வெள்ளையன் | தெற்கு மேடு</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded font-semibold text-secondary">
+                  4 நபர்கள்
+                </span>
+</div>
+</div>
+<!-- Action Chips for Family -->
+<div class="flex items-center justify-end gap-1.5 pt-1 border-t border-surface-container">
+<button class="px-2 py-1 bg-surface-container-low text-primary text-label-sm font-label-sm rounded flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-xs" data-icon="edit">edit</span>
+                திருத்து
+              </button>
+<button class="px-2 py-1 bg-surface-container-low text-secondary text-label-sm font-label-sm rounded flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-xs" data-icon="diversity_3">diversity_3</span>
+                வாரிசு மாற்று
+              </button>
+<button class="px-2.5 py-1 bg-primary-container text-on-primary text-label-sm font-label-sm rounded flex items-center gap-0.5 font-bold">
+<span class="material-symbols-outlined text-xs" data-icon="currency_rupee">currency_rupee</span>
+                வரி பதிவு
+              </button>
+</div>
+</div>
+<!-- View all 210 Families in Karai 1 -->
+<button class="w-full py-2 bg-surface-container-high text-primary font-bold text-label-md font-label-md rounded-lg text-center hover:bg-surface-container transition-colors">
+            வல்லடிகாரன் கரையின் மீதமுள்ள 208 குடும்பங்களைக் காண்க →
+          </button>
+</div>
+</div>
+<!-- Karai 2 Condensed Card -->
+<div class="bg-surface-container-lowest border border-[#E5DCB8] rounded-xl p-3.5 shadow-xs flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-secondary text-surface-container-lowest text-label-sm font-bold flex items-center justify-center">2</span>
+<h4 class="text-body-lg font-body-lg font-bold text-on-surface">பெரியவீட்டு கரை (மேலக்கொட்டாய்)</h4>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5 ml-8">
+            கரை தலைவர்: <span class="text-on-surface font-semibold">செ. பெரியகருப்பன்</span> | 185 தலைக்கட்டு
+          </p>
+</div>
+<div class="flex items-center gap-1 text-primary">
+<span class="text-label-sm font-label-sm font-bold">விரி</span>
+<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- Karai 3 Condensed Card -->
+<div class="bg-surface-container-lowest border border-[#E5DCB8] rounded-xl p-3.5 shadow-xs flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-secondary text-surface-container-lowest text-label-sm font-bold flex items-center justify-center">3</span>
+<h4 class="text-body-lg font-body-lg font-bold text-on-surface">தெற்கு தெரு கரை</h4>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5 ml-8">
+            கரை தலைவர்: <span class="text-on-surface font-semibold">ஆர். சின்னச்சாமி நாட்டார்</span> | 160 தலைக்கட்டு
+          </p>
+</div>
+<div class="flex items-center gap-1 text-primary">
+<span class="text-label-sm font-label-sm font-bold">விரி</span>
+<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Devotee / Patron Endowment Card (Special Notice) -->
+<div class="bg-[#FAF3E0] border border-[#C88E2D] rounded-xl p-3 text-center space-y-1 mt-3">
+<div class="flex items-center justify-center gap-1.5 text-secondary font-bold text-label-md font-label-md">
+<span class="material-symbols-outlined text-sm" data-icon="campaign">campaign</span>
+<span>திருவிழா வரி &amp; கொடைத் தகவல் குறிப்பு</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface">
+        கரையில் புதிய வாரிசு குடும்பம் பதியப்பட்டவுடன் 2025 பங்குனி திருவிழா வரி வசூல் ரசீது வரிசை எண் தானாக ஒதுக்கப்படும்.
+      </p>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Docked Full Width Bottom - Consistent with Shared Components JSON) -->
+<!-- Contextual state: 'முகப்பு' (Home/Dashboard/Directory hub) is active -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-space-xs bg-surface dark:bg-inverse-surface border-t border-outline-variant dark:border-outline shadow-lg">
+<!-- Tab 1: முகப்பு (Active Navigation) -->
+<button class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary font-bold bg-primary-fixed dark:bg-primary-container rounded-xl px-space-md py-space-xs transition-transform duration-100 active:scale-95">
+<span class="material-symbols-outlined" data-icon="account_balance" data-weight="fill" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+<span class="text-label-sm font-label-sm">முகப்பு</span>
+</button>
+<!-- Tab 2: வரவு (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high duration-100 active:scale-95">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="text-label-sm font-label-sm">வரவு</span>
+</button>
+<!-- Tab 3: செலவு (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high duration-100 active:scale-95">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-label-sm font-label-sm">செலவு</span>
+</button>
+<!-- Tab 4: அறிக்கை (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-high duration-100 active:scale-95">
+<span class="material-symbols-outlined" data-icon="assessment">assessment</span>
+<span class="text-label-sm font-label-sm">அறிக்கை</span>
+</button>
+</nav>
+</body></html>

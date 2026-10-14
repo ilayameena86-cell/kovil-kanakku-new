@@ -1,0 +1,5 @@
+/* Android safe-area & touch behaviour */
+html{-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
+body{padding-top:env(safe-area-inset-top);min-height:100dvh!important}
+nav.fixed.bottom-0{padding-bottom:calc(env(safe-area-inset-bottom) + .25rem)}
+.kk-toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#31312d;color:#fff;padding:10px 16px;border-radius:10px;font:500 14px 'Noto Sans',sans-serif;z-index:9999;max-width:88vw;text-align:center}

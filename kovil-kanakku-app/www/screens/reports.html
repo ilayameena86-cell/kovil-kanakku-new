@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html lang="ta"><head>
+<meta name="theme-color" content="#5b0309"/>
+<link rel="stylesheet" href="../css/app.css"/>
+<script src="../js/app.js" defer></script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>கோவில் கணக்கு - கணக்கு அறிக்கைகள் &amp; தணிக்கை</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-fixed": "#291800",
+            "outline": "#8a716f",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed-dim": "#94d5a7",
+            "primary-fixed": "#ffdad7",
+            "tertiary-container": "#014a28",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "secondary": "#815600",
+            "inverse-on-surface": "#f3f0ea",
+            "surface-container": "#f0eee8",
+            "on-surface-variant": "#574240",
+            "on-tertiary-container": "#79b98e",
+            "secondary-fixed-dim": "#fbbb56",
+            "on-secondary-container": "#734c00",
+            "surface-container-lowest": "#ffffff",
+            "inverse-primary": "#ffb3ad",
+            "surface-container-high": "#ebe8e2",
+            "on-error-container": "#93000a",
+            "surface-variant": "#e5e2dc",
+            "on-surface": "#1c1c18",
+            "primary": "#5b0309",
+            "primary-fixed-dim": "#ffb3ad",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fcf9f3",
+            "tertiary": "#003119",
+            "secondary-fixed": "#ffddb1",
+            "background": "#fcf9f3",
+            "surface-container-low": "#f6f3ed",
+            "surface-dim": "#dcdad4",
+            "surface-tint": "#a43b37",
+            "on-secondary-fixed-variant": "#624000",
+            "on-tertiary-fixed": "#00210f",
+            "on-primary-container": "#ff8981",
+            "on-primary": "#ffffff",
+            "inverse-surface": "#31312d",
+            "surface-container-highest": "#e5e2dc",
+            "surface": "#fcf9f3",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed-variant": "#0d512f",
+            "on-background": "#1c1c18",
+            "tertiary-fixed": "#aff2c2",
+            "on-primary-fixed-variant": "#842322",
+            "on-primary-fixed": "#410004",
+            "secondary-container": "#febd59",
+            "outline-variant": "#ddc0bd",
+            "primary-container": "#7a1c1c"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "margin": "1rem",
+            "space-xl": "2rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-md": ["Noto Sans"],
+            "title-md": ["Noto Serif"],
+            "label-sm": ["Noto Sans"],
+            "label-md": ["Noto Sans"],
+            "headline-xl": ["Noto Serif"],
+            "body-sm": ["Noto Sans"],
+            "headline-lg": ["Noto Serif"],
+            "ledger-amount-lg": ["Noto Serif"],
+            "label-lg": ["Noto Sans"],
+            "body-lg": ["Noto Sans"],
+            "headline-xl-mobile": ["Noto Serif"],
+            "ledger-amount-md": ["Noto Serif"],
+            "headline-lg-mobile": ["Noto Serif"]
+          },
+          "fontSize": {
+            "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "700"}],
+            "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+            "headline-xl": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+            "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+            "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+            "ledger-amount-lg": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-xl-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "700"}],
+            "ledger-amount-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body data-screen="reports" class="bg-surface text-on-surface antialiased min-h-screen pb-24 font-body-md text-body-md selection:bg-primary-fixed selection:text-primary">
+<!-- TopAppBar Component (Immutable Identity from JSON with Financial Report Context) -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm sticky top-0 z-40">
+<div class="flex justify-between items-center w-full px-margin py-space-sm max-w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" style="font-variation-settings: 'FILL' 1;">temple_hindu</span>
+<div>
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-title-md text-primary dark:text-inverse-primary block leading-tight">கோவில் கணக்கு</span>
+<span class="font-label-sm text-label-sm text-secondary block">அறக்கட்டளை தணிக்கை கட்டுப்பாட்டு அறை</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="பதிவிறக்கம்" class="p-2 rounded-lg hover:bg-surface-container active:opacity-85 text-primary dark:text-inverse-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">download</span>
+</button>
+<button aria-label="அறிவிப்புகள்" class="p-2 rounded-lg hover:bg-surface-container active:opacity-85 text-primary dark:text-inverse-primary transition-colors flex items-center justify-center relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="w-2 h-2 rounded-full bg-primary absolute top-2 right-2"></span>
+</button>
+</div>
+</div>
+<!-- Subheader: Screen Title & Fiscal Year Switcher -->
+<div class="px-margin pb-3 pt-1 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary font-headline-lg-mobile">assessment</span>
+<h1 class="font-title-md text-title-md text-primary font-bold">கணக்கு அறிக்கைகள்</h1>
+</div>
+<div class="inline-flex items-center gap-1 bg-surface-container-low border border-outline-variant px-2.5 py-1 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-base">calendar_month</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">2024 - 2025 நிதியாண்டு</span>
+</div>
+</div>
+</header>
+<!-- Main Content Container -->
+<main class="px-margin max-w-2xl mx-auto space-y-4 pt-3">
+<!-- Report Period Segmented Selector -->
+<section class="bg-surface-container-low p-1 rounded-xl border border-outline-variant grid grid-cols-3 gap-1">
+<button class="py-2 px-1 text-center font-label-md text-label-md rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors">
+        மாதாந்திர அறிக்கை
+      </button>
+<button class="py-2 px-1 text-center font-label-md text-label-md rounded-lg bg-primary text-on-primary font-bold shadow-sm transition-transform active:scale-95">
+        வருடாந்திர தணிக்கை
+      </button>
+<button class="py-2 px-1 text-center font-label-md text-label-md rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors">
+        திருவிழா வாரியாக
+      </button>
+</section>
+<!-- Financial Summary Statement Card (வரவு-செலவு சுருக்கம்) -->
+<section class="bg-surface-container-lowest rounded-xl border border-[#E5DCB8] shadow-sm overflow-hidden">
+<div class="border-t-4 border-primary-container p-4">
+<div class="flex items-center justify-between pb-3 border-b border-[#EFE8D3]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<h2 class="font-title-md text-title-md text-primary font-bold">வரவு - செலவு சுருக்க அறிக்கை</h2>
+</div>
+<span class="bg-[#FAF3E0] border border-secondary text-secondary font-label-sm text-label-sm px-2 py-0.5 rounded-full">
+            நிறைவுற்றது
+          </span>
+</div>
+<!-- Net Surplus Balance Highlight -->
+<div class="mt-4 p-3.5 bg-surface-container-low rounded-lg border border-outline-variant flex flex-col justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">நிகர உபரி இருப்பு (Net Surplus)</span>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-ledger-amount-lg text-ledger-amount-lg text-tertiary font-bold tracking-tight">₹ 14,85,300</span>
+<span class="font-label-sm text-label-sm text-[#1E5E3A] bg-[#EAF5EE] border border-[#B2DEC3] px-2 py-0.5 rounded">
+              உபரி நிலை (Surplus)
+            </span>
+</div>
+</div>
+<!-- Inflow & Outflow Bento Blocks -->
+<div class="grid grid-cols-2 gap-3 mt-3">
+<!-- Total Inflow -->
+<div class="p-3 bg-[#EAF5EE]/40 border border-[#B2DEC3] rounded-lg">
+<div class="flex items-center gap-1 text-[#1E5E3A] font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-base">arrow_downward</span>
+<span>மொத்த வரவு</span>
+</div>
+<p class="font-ledger-amount-md text-ledger-amount-md text-[#1E5E3A] font-bold mt-1">
+              ₹ 24,80,500
+            </p>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">3,420 ரசீதுகள்</span>
+</div>
+<!-- Total Outflow -->
+<div class="p-3 bg-[#FDF0F0]/50 border border-[#F2BEBE] rounded-lg">
+<div class="flex items-center gap-1 text-primary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+<span>மொத்த செலவு</span>
+</div>
+<p class="font-ledger-amount-md text-ledger-amount-md text-primary-container font-bold mt-1">
+              ₹ 9,95,200
+            </p>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">142 பற்றுச்சீட்டுகள்</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Income Breakdown Section (வரவு விவரம்) -->
+<section class="bg-surface-container-lowest rounded-xl border border-[#E5DCB8] p-4 shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<h3 class="font-title-md text-title-md text-primary font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-xl">pie_chart</span>
+          வரவு விவர பகுப்பாய்வு
+        </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">மொத்தம்: 100%</span>
+</div>
+<!-- Segmented Stack Bar -->
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden flex mb-4">
+<div class="bg-[#7A1C1C] h-full" style="width: 45%;" title="உண்டியல் வருமானம்: 45%"></div>
+<div class="bg-[#C88E2D] h-full" style="width: 25%;" title="அன்னதானம்: 25%"></div>
+<div class="bg-[#003119] h-full" style="width: 20%;" title="திருப்பணி நன்கொடை: 20%"></div>
+<div class="bg-[#815600] h-full" style="width: 10%;" title="சிறப்பு அர்ச்சனை: 10%"></div>
+</div>
+<!-- Category Rows -->
+<div class="space-y-3 font-body-sm text-body-sm">
+<!-- 1. Undiyal -->
+<div class="flex items-center justify-between border-b border-[#EFE8D3] pb-2">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-[#7A1C1C] inline-block"></span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold block">உண்டியல் காணிக்கை (Hundi)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">மாதாந்திர எண்ணிகை &amp; சிறப்பு திறப்பு</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md text-on-surface font-bold">₹ 11,16,225</span>
+<span class="font-label-sm text-label-sm text-[#1E5E3A] block font-semibold">45%</span>
+</div>
+</div>
+<!-- 2. Annadhanam -->
+<div class="flex items-center justify-between border-b border-[#EFE8D3] pb-2">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-[#C88E2D] inline-block"></span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold block">அன்னதான நன்கொடை</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">நித்திய அன்னதான அறக்கட்டளை</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md text-on-surface font-bold">₹ 6,20,125</span>
+<span class="font-label-sm text-label-sm text-[#1E5E3A] block font-semibold">25%</span>
+</div>
+</div>
+<!-- 3. Thiruppani -->
+<div class="flex items-center justify-between border-b border-[#EFE8D3] pb-2">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-[#003119] inline-block"></span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold block">திருப்பணி நன்கொடை</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">கோபுர விமான &amp; பிரகார புனரமைப்பு</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md text-on-surface font-bold">₹ 4,96,100</span>
+<span class="font-label-sm text-label-sm text-[#1E5E3A] block font-semibold">20%</span>
+</div>
+</div>
+<!-- 4. Archana & Tickets -->
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-[#815600] inline-block"></span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold block">சிறப்பு அர்ச்சனை &amp; கட்டண சீட்டு</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">அபிஷேகம் மற்றும் விசேஷ தீபாராதனை</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md text-on-surface font-bold">₹ 2,48,050</span>
+<span class="font-label-sm text-label-sm text-[#1E5E3A] block font-semibold">10%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bank Reconciliation & Cash-in-hand Card -->
+<section class="bg-surface-container-lowest rounded-xl border border-[#E5DCB8] p-4 shadow-sm">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+<h3 class="font-title-md text-title-md text-primary font-bold">வங்கி இருப்பு &amp; ரொக்கம் சரிபார்ப்பு</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- Indian Bank -->
+<div class="p-3 bg-surface-container-low border border-outline-variant rounded-lg relative">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">இந்தியன் வங்கி சேமிப்பு கணக்கு</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">கணக்கு எண்: ****4512</span>
+</div>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="mt-3 pt-2 border-t border-[#EFE8D3] flex justify-between items-baseline">
+<span class="font-label-sm text-label-sm text-on-surface-variant">வங்கி இருப்பு:</span>
+<span class="font-title-md text-title-md font-bold text-primary">₹ 12,40,100</span>
+</div>
+</div>
+<!-- Cash in Hand -->
+<div class="p-3 bg-surface-container-low border border-outline-variant rounded-lg relative">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">நிர்வாகி கையில் ரொக்கம்</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">அன்றாட சிலவு இருப்பு (Cash in Hand)</span>
+</div>
+<span class="material-symbols-outlined text-secondary">payments</span>
+</div>
+<div class="mt-3 pt-2 border-t border-[#EFE8D3] flex justify-between items-baseline">
+<span class="font-label-sm text-label-sm text-on-surface-variant">ரொக்க இருப்பு:</span>
+<span class="font-title-md text-title-md font-bold text-primary">₹ 2,45,200</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Trustee / Auditor Verification Badge & Seal -->
+<section class="bg-[#FAF3E0] border-2 border-secondary/40 rounded-xl p-4 relative overflow-hidden shadow-sm">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary text-surface flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-lg text-label-lg font-bold text-primary">அரசு இந்து சமய அறநிலையத்துறை தணிக்கை</span>
+<span class="bg-[#EAF5EE] border border-[#B2DEC3] text-[#1E5E3A] font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">
+              சரிபார்க்கப்பட்டது ✓
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            தர்மகர்த்தா குழு மற்றும் பதிவுபெற்ற தணிக்கையாளர் (Chartered Accountant) மூலம் 2024-2025 கணக்கு ஏடுகள் பரிசீலிக்கப்பட்டு முழு ஒப்புதல் வழங்கப்பட்டுள்ளது.
+          </p>
+<div class="pt-2 flex items-center justify-between border-t border-secondary/20 mt-2">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">சான்றிதழ் எண்: TN-HRCE/2024/AUD-8821</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">தேதி: 31 மார்ச் 2025</span>
+</div>
+<!-- Digital Sign Placeholder glyph -->
+<div class="text-right">
+<span class="font-title-md text-title-md italic text-primary font-serif">M. R. Sundaram</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">தலைமை தணிக்கையாளர்</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Export Action Cards -->
+<section class="grid grid-cols-1 sm:grid-cols-2 gap-3 pb-2">
+<!-- Download PDF Action -->
+<button class="bg-primary text-on-primary p-3 rounded-lg flex items-center justify-between shadow-sm active:scale-95 transition-all min-h-[48px] hover:bg-[#5E1515]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl text-on-primary">picture_as_pdf</span>
+<div class="text-left">
+<span class="font-label-lg text-label-lg font-bold block leading-tight">PDF அறிக்கையாக பதிவிறக்குக</span>
+<span class="font-label-sm text-label-sm text-on-primary-container block">முழுமையான தணிக்கை அறிக்கை</span>
+</div>
+</div>
+<span class="material-symbols-outlined">download</span>
+</button>
+<!-- Excel / Share Action -->
+<button class="bg-[#F4EEDF] border border-primary text-primary p-3 rounded-lg flex items-center justify-between shadow-sm active:scale-95 transition-all min-h-[48px] hover:bg-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl text-secondary">table_view</span>
+<div class="text-left">
+<span class="font-label-lg text-label-lg font-bold block leading-tight">Excel விரிதாள் அறிக்கை</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">வரிசைப்படுத்தப்பட்ட ஏடுகள் (.XLSX)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary">share</span>
+</button>
+</section>
+</main>
+<!-- BottomNavBar Component (Immutable Content and Mandatory Injected Styles from JSON) -->
+<!-- Active state autonomously locked to 'அறிக்கை' (Reports destination) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-space-xs bg-surface dark:bg-inverse-surface border-t border-outline-variant dark:border-outline shadow-md">
+<!-- 1. முகப்பு (Home) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:scale-95" href="admin-home.html">
+<span class="material-symbols-outlined text-xl">account_balance</span>
+<span class="text-label-sm font-label-sm">முகப்பு</span>
+</a>
+<!-- 2. வரவு (Income) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:scale-95" href="income.html">
+<span class="material-symbols-outlined text-xl">add_circle</span>
+<span class="text-label-sm font-label-sm">வரவு</span>
+</a>
+<!-- 3. செலவு (Expense) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-space-md py-space-xs hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors active:scale-95" href="expense.html">
+<span class="material-symbols-outlined text-xl">receipt_long</span>
+<span class="text-label-sm font-label-sm">செலவு</span>
+</a>
+<!-- 4. அறிக்கை (Report) - ACTIVE -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-inverse-primary font-bold bg-primary-fixed dark:bg-primary-container rounded-xl px-space-md py-space-xs active:scale-95 transition-transform" href="reports.html">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">assessment</span>
+<span class="text-label-sm font-label-sm">அறிக்கை</span>
+</a>
+</nav>
+</body></html>
